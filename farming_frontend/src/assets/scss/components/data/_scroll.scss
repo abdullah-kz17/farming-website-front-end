@@ -1,0 +1,17 @@
+.scroll {
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 2px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--muted);
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--dark);
+    }
+}

@@ -1,0 +1,92 @@
+.profile-page {
+    // background-color: var(--light);
+    padding-top: 100px;
+    padding-bottom: 40px;
+
+    .profile-row {
+        background-color: var(--body);
+        border-radius: var(--rounded);
+        border: 1px solid var(--border);
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 40px;
+
+        .col-left {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            width: 480px;
+            min-width: 350px;
+            border-right: 1px solid var(--border);
+            .media {
+                --media-title-fs: 1.2rem;
+                --media-subtitle-fs: 1.1rem;
+                --media-desc-fs: 1rem;
+                .media-title,
+                .media-subtitle {
+                    text-wrap: wrap;
+                    word-wrap: break-word;
+                }
+                margin: 0;
+                padding: 10px;
+            }
+            .scores-panel {
+                padding: 10px;
+                border-top: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                text-align: center;
+            }
+
+            @media (max-width: screen-size(lg)) {
+                width: 100%;
+                min-width: 100%;
+                border-right: none;
+            }
+        }
+        .col-right {
+            width: 100%;
+            @media (max-width: screen-size(lg)) {
+                width: 100%;
+            }
+            .card-profile-details {
+                .card-body {
+                    border-top: 1px solid var(--border);
+                    &:first-child {
+                        border-top: none;
+                    }
+                }
+            }
+        }
+        .card-profile-details {
+            --card-head-p: 1rem 2rem;
+            --card-body-p: 1rem 2rem;
+            --card-foot-p: 1rem 2rem;
+            --card-bs: none;
+            --card-b: none;
+            --card-m: 0;
+            --card-title-fs: 1.4rem;
+            --card-subtitle-fs: 1.2rem;
+            --card-desc-fs: 1rem;
+            --card-desc-lh: 1.8;
+            --card-desc-fg: var(--text);
+            b {
+                color: var(--text);
+            }
+        }
+
+        @media (max-width: screen-size(lg)) {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+    .reviews {
+       .card{
+        --card-bs:none;
+        --card-b:1px solid var(--border);
+        .card-body {
+            border: none !important;
+        }
+       }
+    }
+}

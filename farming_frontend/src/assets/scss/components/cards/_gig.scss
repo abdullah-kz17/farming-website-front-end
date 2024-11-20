@@ -1,0 +1,47 @@
+.card-gig {
+    --card-b: none;
+    --card-h: 100%;
+    --card-image-h: 170px;
+    --card-title-m: 0 0 20px 0;
+    --card-title-fs: 1.2rem;
+    --card-badge-m: 0;
+
+    .card-body {
+        .media {
+            padding: 0;
+        }
+
+        .delete-save-gig {
+            color: var(--danger) !important;
+        }
+    }
+
+    .card-foot {
+        --card-subtitle-m: 0;
+        --card-subtitle-fs: 1.2rem;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0;
+
+        .rating {
+            --card-subtitle-fs: 1rem;
+        }
+
+        .bx {
+            color: orangered;
+        }
+
+        .per_hour {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+    }
+
+    &:hover {
+        transform: scale(0.97);
+        --card-bs: var(--shadow-lg);
+        --card-title-fg: var(--primary) !important;
+    }
+}

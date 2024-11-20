@@ -1,0 +1,97 @@
+.collapsible {
+    --collapse-p: 1rem;
+    --collapse-bg: var(--body);
+    --collapse-b: var(--border);
+    --collapse-title-fg: var(--text);
+    --collapse-title-fs: 1.8rem;
+    --collapse-title-lh: 1.6;
+    --collapse-title-fw: 600;
+    --collapse-title-p: 1rem 1.5rem;
+    --collapse-desc-fg: var(--muted);
+    --collapse-desc-fs: 1.4rem;
+    --collapse-desc-lh: 1.6;
+    --collapse-desc-fw: 500;
+    --collapse-desc-p: 1rem 1.5rem;
+    background-color: var(--collapse-bg);
+    padding: var(--collapse-p);
+    border-radius: var(--rounded);
+    .collapse-item {
+        position: relative;
+        border-bottom: 1px solid var(--collapse-b);
+
+        .collapse-head {
+            cursor: pointer;
+            font-weight: var(--collapse-title-fw);
+            color: var(--collapse-title-fg);
+            font-size: var(--collapse-title-fs);
+            line-height: var(--collapse-title-lh);
+            padding: var(--collapse-title-p);
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: left;
+
+            &::after {
+                content: "\ebc1";
+                font-family: "icons";
+                font-size: 1.8rem;
+                transition: 0.5s transform;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                margin-right: 10px;
+                font-weight: normal;
+                color: var(--primary);
+            }
+        }
+
+        .collapse-body {
+            display: none;
+            font-weight: var(--collapse-desc-fw);
+            color: var(--collapse-desc-fg);
+            font-size: var(--collapse-desc-fs);
+            line-height: var(--collapse-desc-lh);
+            padding: var(--collapse-desc-p);
+        }
+
+        &.active {
+            .collapse-head {
+                color: var(--primary);
+                padding-bottom: 0;
+
+                &::after {
+                    content: "\eb8d";
+                    transform: rotate(-180deg);
+                    color: var(--primary);
+                }
+            }
+
+            .collapse-body {
+                display: block;
+            }
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.collapsible-sm {
+    --collapse-p: 0.5rem;
+    --collapse-bg: var(--light);
+    --collapse-b: var(--border);
+    --collapse-title-fg: var(--text);
+    --collapse-title-fs: 1.8rem;
+    --collapse-title-p: 0.4rem 0;
+    --collapse-title-lh: 1.8;
+    --collapse-title-fw: 600;
+    --collapse-desc-fg: var(--muted);
+    --collapse-desc-fs: 1.3rem;
+    --collapse-desc-lh: 1.6;
+    --collapse-desc-fw: 400;
+    --collapse-desc-p: 2rem 0;
+}
+.collapsible-bg-none {
+    --collapse-bg: transparent;
+}

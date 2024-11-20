@@ -1,0 +1,123 @@
+@import "../../variables/global-variables";
+
+.services-section {
+  position: relative;
+  background: linear-gradient(to bottom, $secondary-color 70%, $gray-light 30%);
+
+  .grass-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    .service-card {
+      position: relative;
+      width: 300px;
+      border-radius: $border-radius;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      padding: 10px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: $border-radius;
+      }
+
+      .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $white;
+        color: $primary-color;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .image-hover-overlay {
+        position: absolute;
+        top: -100%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background: $white;
+        border-radius: $border-radius;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem;
+        transition: all 0.4s ease;
+
+        i {
+          font-size: 2rem;
+          color: $primary-color;
+          margin-bottom: 1rem;
+        }
+
+        h1 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: $grey;
+          margin-bottom: 1rem;
+        }
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: bold;
+          color: $white;
+          background: $secondary-color;
+          padding: 0.5rem 1rem;
+          border-radius: $border-radius;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: darken($secondary-color, 10%);
+          }
+        }
+      }
+
+      &:hover {
+        .image-hover-overlay {
+          top: 10%;
+        }
+
+        .image-overlay {
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+}

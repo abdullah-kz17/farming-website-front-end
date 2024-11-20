@@ -1,0 +1,94 @@
+.messages {
+    position: fixed;
+    right: 50%;
+    top: 10px;
+    z-index: 99999;
+    width: auto;
+    transform: translateX(50%);
+}
+
+.message {
+    --message-fg: var(--text);
+    --message-bg: var(--body);
+    --message-bc: var(--border);
+    --message-icon-bg: var(--light);
+    --message-icon-fg: var(--text);
+    min-width: 230px;
+    max-width: 340px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--rounded);
+    background-color: var(--message-bg);
+    color: var(--message-fg);
+    box-shadow: var(--shadow-lg);
+    transition: all 1s;
+    border: 1px solid var(--border);
+    gap: 10px;
+
+    .message-icon {
+        color: var(--message-icon-fg);
+        background-color: var(--message-icon-bg);
+        padding: 5px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+    }
+    .message-title {
+        margin-bottom: 3px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--text);
+    }
+
+    .message-desc {
+        font-weight: 400;
+        font-size: 1rem;
+        color: var(--muted);
+    }
+}
+
+.message-primary {
+    --message-bc: var(--primary);
+    --message-icon-bg: var(--primary-subtle);
+    --message-icon-fg: var(--primary);
+}
+
+.message-secondary {
+    --message-bc: var(--secondary);
+    --message-icon-bg: var(--secondary-subtle);
+    --message-icon-fg: var(--secondary);
+}
+.message-info {
+    --message-bc: var(--info);
+    --message-icon-bg: var(--info-subtle);
+    --message-icon-fg: var(--info);
+}
+.message-warning {
+    --message-bc: var(--warning);
+    --message-icon-bg: var(--warning-subtle);
+    --message-icon-fg: var(--warning);
+}
+
+.message-success {
+    --message-bc: var(--success);
+    --message-icon-bg: var(--success-subtle);
+    --message-icon-fg: var(--success);
+}
+
+.message-danger {
+    --message-bc: var(--danger);
+    --message-icon-bg: var(--danger-subtle);
+    --message-icon-fg: var(--danger);
+}
+.message-dark {
+    --message-bc: var(--dark);
+    --message-icon-bg: var(--dark-subtle);
+    --message-icon-fg: var(--dark);
+}
+.message-light {
+    --message-bc: var(--border-color);
+    --message-icon-bg: var(--light);
+    --message-icon-fg: var(--text);
+}

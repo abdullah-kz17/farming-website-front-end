@@ -1,0 +1,24 @@
+.card-step {
+    --card-bg: transparent;
+    --card-b: none;
+    --card-bs: none;
+    --card-br: 2rem;
+    --card-title-fs: 1.6rem;
+    --card-desc-fs: 1.3rem;
+    --card-h: 100%;
+    --card-p: 2rem 1rem;
+    --card-icon-br: 2rem 0 2rem 0;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    border-bottom: 5px solid transparent;
+    .card-icon {
+        background-color: var(--primary-subtle);
+        transition: all 1s;
+    }
+    &:hover {
+        border-color: var(--primary);
+        color: white;
+        --card-icon-br: 0 2rem 0 2rem;
+    }
+}

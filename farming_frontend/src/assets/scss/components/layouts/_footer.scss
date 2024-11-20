@@ -1,0 +1,185 @@
+.footer {
+    background-color: var(--dark);
+    position: relative;
+    z-index: 1;
+
+    .top {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        .row {
+            row-gap: 30px;
+            justify-content: space-between;
+        }
+    }
+
+    .subscribe-form {
+        display: flex;
+        align-items: center;
+        border: 1px solid #16162b;
+        border-radius: var(--rounded);
+        background-color: #26263d;
+        padding: 4px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        input {
+            background-color: transparent;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: block;
+            width: 100%;
+        }
+
+        button {
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: var(--rounded);
+        }
+
+        @media (max-width: screen-size(lg)) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .title-bubble {
+        position: relative;
+
+        &::before {
+            background-color: rgba(var(--primary-rgb), 0.5);
+            content: "";
+            border-radius: 50px;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            margin-top: -10px;
+            margin-left: -20px;
+            z-index: -1;
+        }
+    }
+
+    .title {
+        color: white;
+        font-weight: 700;
+        font-size: clamp(12px, 80vw, 16px);
+        margin-bottom: 20px;
+    }
+
+    .title-xl {
+        font-weight: 700;
+        font-size: clamp(18px, 80vw, 36px);
+        margin-bottom: 5px;
+    }
+
+    .description {
+        font-weight: 500;
+        color: #ccc;
+        margin: 0;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .menu-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 10px;
+
+        .menu-item {
+            margin: 7px 0;
+
+            .menu-link {
+                transition: all 0.5s;
+                text-decoration: none;
+                color: #aeaeae;
+                display: inline-flex;
+                align-items: center;
+                font-size: clamp(12px, 50vw, 14px);
+                font-weight: 500;
+                gap: 5px;
+
+                .bxs-circle {
+                    color: var(--primary);
+                }
+
+                span {
+                    font-size: 1.4rem;
+                }
+
+                &:hover {
+                    padding-left: 2px;
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        border-top: 1px solid #333;
+        background-color: var(--dark);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @media (max-width: screen-size(sm)) {
+            padding-bottom: 40px;
+        }
+        .boxed {
+            text-align: right;
+            color: #ddd;
+
+            .description {
+                margin: 0;
+            }
+        }
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        .social-link {
+            display: inline-block;
+            color: #ccc;
+            font-size: 24px;
+            text-decoration: none;
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+.interaction {
+    position: fixed;
+    background-color: white;
+    color: var(--text);
+    padding: 3px 6px;
+    border-radius: 2px;
+    z-index: 999;
+    bottom: 2px;
+    right: 10px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    font-size: clamp(0.7rem, 2vw + 0.5rem, 1rem);
+    text-decoration: none;
+    &:hover {
+        color: var(--primary);
+    }
+}
+
+.live-chat-btn {
+    --btn-p: 1rem;
+    --btn-fs: 2.1rem;
+    position: fixed;
+    right: 24px;
+    bottom: 20px;
+    z-index: 1000;
+    font-weight: normal;
+}

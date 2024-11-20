@@ -1,0 +1,41 @@
+.field-wysiwyg {
+    border: 2px solid var(--dark) !important;
+    border-radius: 0 0 5px 5px;
+    display: block !important;
+    .ql-container {
+        height: 300px;
+        .ql-editor {
+            height: 100% !important;
+        }
+    }
+    .ql-picker-options {
+        box-shadow: var(--shadow) !important;
+        border-radius: var(--rounded);
+        border: none !important;
+        .ql-picker-item {
+            color: var(--text);
+        }
+    }
+    .ql-link {
+        color: var(--text) !important;
+    }
+    .ql-selected,
+    .ql-active {
+        color: var(--primary) !important;
+    }
+    .ql-stroke {
+        color: var(--text) !important;
+        &:hover {
+            stroke: var(--primary) !important;
+        }
+    }
+
+    .ql-toolbar {
+        border: none;
+        border-bottom: 1px solid var(--dark) !important;
+    }
+
+    &:focus-within {
+        border: 2px solid var(--primary) !important;
+    }
+}

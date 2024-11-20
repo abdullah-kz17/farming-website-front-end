@@ -1,0 +1,113 @@
+@import "../../variables/global-variables";
+
+.blog-section {
+  padding: 4rem 2rem;
+  background-color: $gray-light;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: $primary-color;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $grey;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-container {
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .blog-card {
+      background-color: $white;
+      border-radius: $border-radius;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .blog-image {
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .badge {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background-color: $secondary-color;
+          color: $primary-color;
+          padding: 0.5rem 1rem;
+          border-radius: $border-radius;
+          font-size: 0.9rem;
+        }
+      }
+
+      .blog-content {
+        padding: 1.5rem;
+
+        h3 {
+          font-size: 1.4rem;
+          color: $primary-color;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: $grey;
+          margin-bottom: 1rem;
+        }
+
+        .blog-meta {
+          font-size: 0.9rem;
+          color: darken($grey, 20%);
+          margin-bottom: 1rem;
+        }
+
+        .read-more {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: bold;
+          color: $white;
+          background-color: $secondary-color;
+          padding: 0.5rem 1rem;
+          border-radius: $border-radius;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken($secondary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: 1rem;
+    .swiper-pagination-bullet {
+      background-color: $secondary-color;
+    }
+  }
+}

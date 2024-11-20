@@ -1,0 +1,40 @@
+.popover {
+  position: relative;
+
+  .popover-content {
+    display: none;
+    position: absolute;
+    background-color: var(--body);
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    z-index: 999;
+    border-radius: 5px;
+
+    .popover-list {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      padding: 10px 0;
+
+      .list-item {
+        padding: 5px 10px;
+        display: inline-block;
+        text-decoration: none;
+        vertical-align: middle;
+        color: var(--text);
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--primary);
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .show {
+    display: block;
+  }
+}

@@ -1,0 +1,9 @@
+.card-team {
+    --card-p: 2rem 0;
+    --card-image-m: auto;
+    --card-image-w: 120px;
+    --card-image-h: 120px;
+    --card-image-br: 120px;
+    --card-subtitle-fg: var(--muted);
+    --card-br: calc(var(--rounded) + 5px);
+}

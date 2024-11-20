@@ -1,0 +1,51 @@
+.card-talent {
+    --card-image-w: 80px;
+    --card-image-h: 80px;
+    --card-image-br: 80px;
+    --card-image-m: 1.3rem 0 0 1.3rem;
+    --card-h: 100%;
+    --card-b: 1px solid transparent;
+
+    .username {
+        font-weight: normal;
+    }
+
+    .card-image {
+        padding: 3px;
+        border: 1px solid var(--border);
+    }
+    .card-head {
+        .media {
+            padding: 0;
+            .media-body {
+                padding: 0;
+            }
+            .media-actions {
+                align-self: flex-start;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+    .card-body {
+        --card-title-fs: 13px;
+        --card-subtitle-fs: 12px;
+        --card-desc-fs: 14px;
+        padding-bottom: 0;
+
+        padding-top: 0;
+        padding-bottom: 20px;
+        margin-top: auto;
+        .card-badges {
+            margin-top: 10px;
+        }
+    }
+    .card-foot {
+        --card-subtitle-fs: 1.1rem;
+        --card-desc-fw: 500;
+        .bx {
+            color: orangered;
+        }
+    }
+}

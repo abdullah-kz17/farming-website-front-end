@@ -1,0 +1,177 @@
+.badges-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.badge {
+    --badge-p: 0.1rem 0.4rem;
+    --badge-fs: 0.9rem;
+    --badge-fg: white;
+    --badge-bg: var(--primary);
+    --badge-bc: var(--primary);
+    --badge-br: 5px;
+    background-color: var(--badge-bg);
+    color: var(--badge-fg);
+    padding: var(--badge-p);
+    font-size: var(--badge-fs);
+    border-radius: var(--badge-br);
+    border: 1px solid var(--badge-bc);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: capitalize;
+    text-decoration: none;
+    .bx{
+        font-size: 16px;
+        margin-right: 5px;
+    }
+    &:empty {
+        display: none;
+    }
+}
+
+button.badge,
+a.badge {
+    cursor: pointer;
+}
+// Solid
+.badge-primary {
+    --badge-fg: #fff;
+    --badge-bg: var(--primary);
+    --badge-bc: var(--primary);
+}
+.badge-secondary {
+    --badge-fg: #fff;
+    --badge-bg: var(--secondary);
+    --badge-bc: var(--secondary);
+}
+.badge-success {
+    --badge-fg: #fff;
+    --badge-bg: var(--success);
+    --badge-bc: var(--success);
+}
+.badge-info {
+    --badge-fg: #fff;
+    --badge-bg: var(--info);
+    --badge-bc: var(--info);
+}
+.badge-warning {
+    --badge-fg: #fff;
+    --badge-bg: var(--warning);
+    --badge-bc: var(--warning);
+}
+.badge-danger {
+    --badge-fg: #fff;
+    --badge-bg: var(--danger);
+    --badge-bc: var(--danger);
+}
+.badge-dark {
+    --badge-fg: #fff;
+    --badge-bg: var(--dark);
+    --badge-bc: var(--dark);
+}
+.badge-light {
+    --badge-fg: var(--text);
+    --badge-bg: var(--light);
+    --badge-bc: var(--border-color);
+}
+
+// Subtle
+.badge-primary-subtle {
+    --badge-fg: var(--primary);
+    --badge-bg: var(--primary-subtle);
+    --badge-bc: var(--primary);
+}
+.badge-secondary-subtle {
+    --badge-fg: var(--secondary);
+    --badge-bg: var(--secondary-subtle);
+    --badge-bc: var(--secondary);
+}
+.badge-success-subtle {
+    --badge-fg: var(--success);
+    --badge-bg: var(--success-subtle);
+    --badge-bc: var(--success);
+}
+.badge-info-subtle {
+    --badge-fg: var(--info);
+    --badge-bg: var(--info-subtle);
+    --badge-bc: var(--info);
+}
+.badge-warning-subtle {
+    --badge-fg: var(--warning);
+    --badge-bg: var(--warning-subtle);
+    --badge-bc: var(--warning);
+}
+.badge-danger-subtle {
+    --badge-fg: var(--danger);
+    --badge-bg: var(--danger-subtle);
+    --badge-bc: var(--danger);
+}
+.badge-dark-subtle {
+    --badge-fg: var(--body);
+    --badge-bg: var(--dark-subtle);
+    --badge-bc: var(--dark);
+}
+.badge-light-subtle {
+    --badge-fg: var(--text);
+    --badge-bg: var(--light-subtle);
+    --badge-bc: var(--border-color);
+}
+
+// Outline
+.badge-o-primary {
+    --badge-fg: var(--primary);
+    --badge-bg: transparent;
+    --badge-bc: var(--primary);
+}
+.badge-o-secondary {
+    --badge-fg: var(--secondary);
+    --badge-bg: transparent;
+    --badge-bc: var(--secondary);
+}
+.badge-o-success {
+    --badge-fg: var(--success);
+    --badge-bg: transparent;
+    --badge-bc: var(--success);
+}
+.badge-o-info {
+    --badge-fg: var(--info);
+    --badge-bg: transparent;
+    --badge-bc: var(--info);
+}
+.badge-o-warning {
+    --badge-fg: var(--warning);
+    --badge-bg: transparent;
+    --badge-bc: var(--warning);
+}
+.badge-o-danger {
+    --badge-fg: var(--danger);
+    --badge-bg: transparent;
+    --badge-bc: var(--danger);
+}
+.badge-o-dark {
+    --badge-fg: var(--dark);
+    --badge-bg: transparent;
+    --badge-bc: var(--dark);
+}
+.badge-o-light {
+    --badge-fg: var(--muted);
+    --badge-bg: transparent;
+    --badge-bc: var(--light);
+}
+
+.badge-sm {
+    --badge-p: 0.1rem 0.2rem;
+    --badge-fs: 0.8rem;
+}
+.badge-lg {
+    --badge-p: 0.4rem 0.6rem;
+    --badge-fs: 1rem;
+}
+.badge-pill {
+    --badge-br: 50px;
+}

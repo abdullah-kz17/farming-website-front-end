@@ -1,0 +1,82 @@
+@import "../../variables/global-variables";
+
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: $gray-light;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .col-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      img {
+        max-width: 100%;
+        border-radius: $border-radius;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .col-right {
+    flex: 1;
+    .swiper-container {
+      width: 100%;
+      height: auto;
+
+      .swiper-slide {
+        padding: 1.5rem;
+        background-color: $white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: $border-radius;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .testimonial-item {
+          p {
+            font-size: 1rem;
+            color: $grey;
+            margin-bottom: 1rem;
+          }
+
+          h4 {
+            font-size: 1.2rem;
+            color: $primary-color;
+            font-weight: bold;
+          }
+
+          p:last-child {
+            font-size: 0.9rem;
+            color: $secondary-color;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $primary-color;
+    font-size: 2rem;
+    transition: 0.3s;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}

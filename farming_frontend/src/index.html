@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DonalFarm - Agriculture & Organic Farms</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <section class="hero-section">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="contact">
+            <div class="top-bar-heading">
+              <p>
+                Welcome to Donal farm <span>&#183;</span> Agriculture and
+                Organic Farms
+              </p>
+            </div>
+            <div class="contact-details">
+              <a href="tel:+19876543210" class="contact-item">
+                <i class="bi bi-telephone-fill"></i> +1 987 654 3210
+              </a>
+              <a href="mailto:donalfarms@gmail.com" class="contact-item">
+                <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
+              </a>
+              <div class="social-links">
+                <a href="#" class="social-item"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-pinterest"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="nav-left">
+            <a href="/" class="logo">
+              <i
+                class="bi bi-leaf"
+                style="
+                  border-radius: 50%;
+                  padding: 0.5rem;
+                  background-color: #e0e0e0;
+                "
+              ></i>
+              DonalFarm
+            </a>
+            <nav class="nav">
+              <!-- Home Dropdown -->
+              <div x-data="{ open: false }" class="nav-item">
+                <a href="#" @click.prevent="open =!open" class="nav-link">
+                  <i class="bi bi-house"></i> Home
+                  <i class="bi bi-caret-down"></i>
+                </a>
+                <div
+                  x-show="open"
+                  x-transition
+                  @click.away="open = false"
+                  class="dropdown-menu"
+                >
+                  <a href="#">Homepage 1</a>
+                  <a href="#">Homepage 2</a>
+                </div>
+              </div>
+              <!-- Pages Dropdown -->
+              <div x-data="{ open: false }" class="nav-item">
+                <a href="#" @click.prevent="open =!open" class="nav-link">
+                  Pages <i class="bi bi-caret-down"></i>
+                </a>
+                <div
+                  x-show="open"
+                  x-transition
+                  @click.away="open = false"
+                  class="dropdown-menu"
+                >
+                  <a href="#">About</a>
+                  <a href="#">404</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">FAQs</a>
+                </div>
+              </div>
+              <!-- Shop Dropdown -->
+              <div x-data="{ open: false }" class="nav-item">
+                <a href="#" @click.prevent="open =!open" class="nav-link">
+                  Shop <i class="bi bi-caret-down"></i>
+                </a>
+                <div
+                  x-show="open"
+                  x-transition
+                  @click.away="open = false"
+                  class="dropdown-menu"
+                >
+                  <a href="#">Products</a>
+                  <a href="#">Cart</a>
+                  <a href="#">Checkout</a>
+                  <a href="#">My Account</a>
+                </div>
+              </div>
+              <a href="#" class="nav-item">Services</a>
+              <a href="#" class="nav-item">Blogs</a>
+              <a href="#" class="nav-item">Contact</a>
+            </nav>
+          </div>
+
+          <div class="nav-right">
+            <ul>
+              <li>
+                <i
+                  class="bi bi-search icon-with-badge"
+                  style="
+                    border-radius: 50%;
+                    padding: 1rem;
+                    background-color: #e0e0e0;
+                    border: 2px solid #e0e0e0;
+                  "
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="bi bi-cart icon-with-badge"
+                  style="
+                    border-radius: 50%;
+                    padding: 1rem;
+                    background-color: #e0e0e0;
+                    border: 2px solid #e0e0e0;
+                  "
+                >
+                  <span class="cart-badge">3</span>
+                </i>
+              </li>
+              <li>
+                <i
+                  class="bi bi-0-square-fill icon-with-badge"
+                  style="
+                    border-radius: 50%;
+                    padding: 1rem;
+                    background-color: #e0e0e0;
+                    border: 2px solid #e0e0e0;
+                  "
+                ></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slide">
+              <div
+                class="container"
+                style="
+                  background-image: url('./assets/images/h1-slide2.webp');
+                  background-size: cover;
+                  background-position: center;
+                  height: 100%;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <span class="hero-text"
+                    >Better Agriculture for Better Future</span
+                  >
+                  <h1 class="hero-title">
+                    EVERY CROP COUNTS, <br />EVERY FARMER MATTERS.
+                  </h1>
+                  <p class="hero-subtitle">
+                    The paramount doctrine of the economic and technological
+                    euphoria of recent decades has been that everything depends
+                    on innovation.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >See Our Services <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Additional slides -->
+            <div class="swiper-slide hero-slide">
+              <div
+                class="container"
+                style="
+                  background-image: url('./assets/images/h1-slide2.webp');
+                  background-size: cover;
+                  background-position: center;
+                  height: 100%;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <h1 class="hero-title">Innovative Farming Techniques</h1>
+                  <p class="hero-subtitle">
+                    Empowering farmers with modern tools for a sustainable
+                    future.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <img src="./assets/images/footer-grass.webp" alt="" class="grass-image" />
+      <div class="container">
+        <!-- Card 1 -->
+        <div class="service-card">
+          <img
+            src="./assets/images/blog-post-1-382x326.webp"
+            alt="Technology"
+          />
+          <div class="image-overlay">
+            <h1>We Use New Technology</h1>
+          </div>
+          <div class="image-hover-overlay">
+            <i class="bi bi-bookmark-fill"></i>
+            <h1>We Use New Technology</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              saepe impedit corporis eum ut delectus?
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card">
+          <img
+            src="./assets/images/blog-post-2-382x326.webp"
+            alt="Innovation"
+          />
+          <div class="image-overlay">
+            <h1>Innovative Solutions</h1>
+          </div>
+          <div class="image-hover-overlay">
+            <i class="bi bi-lightbulb-fill"></i>
+            <h1>Innovative Solutions</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              saepe impedit corporis eum ut delectus?
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+          <img
+            src="./assets/images/blog-post-6-300x300.webp"
+            alt="Creative Ideas"
+          />
+          <div class="image-overlay">
+            <h1>Creative Ideas</h1>
+          </div>
+          <div class="image-hover-overlay">
+            <i class="bi bi-palette-fill"></i>
+            <h1>Creative Ideas</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              saepe impedit corporis eum ut delectus?
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="about-content">
+              <h4>We have 30 years of agriculture & eco farming experience</h4>
+              <h1>Providing The Finest Products To The Best Feed Suppliers.</h1>
+              <p>
+                Elders is headquartered in Adelaide, South Australia, where our
+                story began in 1839, but our expansive network now reaches every
+                corner of Australia.
+              </p>
+              <p>
+                At Mycorrhizal Applications (MA), we are dedicated to
+                sustainability by providing the agriculture, horticulture,
+                landscaping, and forestry industries with efficient and
+                effective microbial-based biOrational solutions. As the world's
+                leading manufacturer and supplier of mycorrhizal fungi
+                inoculants, MA researches, produces, and markets mycorrhizal
+                fungi which accelerate plant performance.
+              </p>
+              <a href="#" class="btn">More About Us</a>
+            </div>
+            <div class="about-image">
+              <img src="./assets/images/about-image.webp" alt="" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="trust-section">
+              <div class="trust-content">
+                <h3>Trust By Clients</h3>
+                <h2>12,980+</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  non porttitor felis.
+                </p>
+              </div>
+            </div>
+            <div class="about-details">
+              <div class="about-us">
+                <h3>Modern Agriculture Equipment</h3>
+                <p>Awesome Harvest of Wheat</p>
+                <p>Fresh Fruits & Vegedatas</p>
+                <div class="about-item">
+                  <i class="bi bi-person-check-fill"></i>
+                  <h4>HIGHLY QUALIFIED & SPECIALIZED FARMERS</h4>
+                </div>
+                <div class="about-item">
+                  <i class="bi bi-flower1"></i>
+                  <h4>FRUIT, VEGEDATAS AND LIVESTOCK</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-expertise">
+      <div class="container">
+        <div class="section-header">
+          <h2>What is our expertise?</h2>
+          <h1>We Providing The Best Agricultural Services</h1>
+          <p>
+            Our expertise spans across a wide range of agricultural and
+            ecological technologies.
+          </p>
+        </div>
+        <div class="cards-container">
+          <div class="expertise-card">
+            <div class="icon-container">
+              <i class="bi bi-brightness-high-fill"></i>
+            </div>
+            <h3>Crop Rotation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="expertise-card">
+            <div class="icon-container">
+              <i class="bi bi-cloud-lightning-rain"></i>
+            </div>
+            <h3>Organic Farming</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="expertise-card">
+            <div class="icon-container">
+              <i class="bi bi-collection"></i>
+            </div>
+            <h3>Sustainable Farming</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="expertise-card">
+            <div class="icon-container">
+              <i class="bi bi-duffle"></i>
+            </div>
+            <h3>Hydroponics</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <div class="container">
+        <div class="row">
+          <div class="col-left">
+            <div class="content">
+              <h2>Why Choose Donal Farm?</h2>
+              <h1>
+                We are committed to providing the highest quality products and
+                services in agriculture
+              </h1>
+              <p>
+                At Donal Farm, we have a rich history of sustainable farming
+                practices that have been honed over generations. Our commitment
+                to eco-friendly methods ensures that we provide the best produce
+                while maintaining the health of our land. Our dedication to
+                quality, innovation, and customer satisfaction sets us apart
+                from others in the industry.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i> Over 30 years of experience
+                  in sustainable agriculture
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Commitment to eco-friendly
+                  farming practices
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> High-quality, fresh produce
+                  direct from our farm
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Innovative techniques for
+                  maximum yield and minimal waste
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="image">
+              <img src="./assets/images/h1-img2.webp" alt="Donal Farm" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-commitment">
+      <div class="container">
+        <div class="row">
+          <div class="col-left">
+            <div class="content">
+              <h2>Our Commitment</h2>
+              <h1>Dedicated to Excellence in Agriculture</h1>
+              <p>
+                At Donal Farm, we believe in the importance of quality,
+                sustainability, and innovation. Our commitment is to provide the
+                highest standard of products and services to our clients,
+                ensuring the best outcomes for agriculture and the environment.
+              </p>
+              <div class="icons-row">
+                <div class="icon">
+                  <i class="bi bi-leaf"></i>
+                  <h4>Sustainability</h4>
+                </div>
+                <div class="icon">
+                  <i class="bi bi-lightbulb"></i>
+                  <h4>Innovation</h4>
+                </div>
+                <div class="icon">
+                  <i class="bi bi-people"></i>
+                  <h4>Collaboration</h4>
+                </div>
+                <div class="icon">
+                  <i class="bi bi-shield-check"></i>
+                  <h4>Quality Assurance</h4>
+                </div>
+              </div>
+              <a href="#" class="btn">Learn More About Our Commitment</a>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="image">
+              <img src="./assets/images/fancy-img3.webp" alt="Our Commitment" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest Projects</h2>
+          <p>
+            Check out our latest projects where we apply the most innovative
+            farming techniques for optimal results.
+          </p>
+        </div>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide project-card">
+              <div class="project-image">
+                <img src="./assets/images/project1.jpg" alt="Project 1" />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Project Title 1</h3>
+                    <p>
+                      Details about project 1. Description of the work done.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide project-card">
+              <div class="project-image">
+                <img src="./assets/images/project2.jpg" alt="Project 2" />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Project Title 2</h3>
+                    <p>
+                      Details about project 2. Description of the work done.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide project-card">
+              <div class="project-image">
+                <img src="./assets/images/project3.jpg" alt="Project 3" />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Project Title 3</h3>
+                    <p>
+                      Details about project 3. Description of the work done.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more project cards as needed -->
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-left">
+            <div class="image">
+              <!-- <img src="./assets/images/h1-img2.webp" alt="Client Image" /> -->
+            </div>
+          </div>
+          <div class="col-right">
+            <h2>What Our Clients Say</h2>
+            <div class="swiper-container testimonial-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      "Donal Farm has completely transformed our farming
+                      practices. Their commitment to sustainable farming is
+                      outstanding!"
+                    </p>
+                    <h4>John Doe</h4>
+                    <p>Farmer</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      "The produce from Donal Farm is always fresh, and their
+                      innovative techniques help us get the best yields every
+                      season."
+                    </p>
+                    <h4>Jane Smith</h4>
+                    <p>Farm Manager</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      "We highly recommend Donal Farm for their dedication to
+                      quality and sustainability. Their service is top-notch!"
+                    </p>
+                    <h4>Michael Johnson</h4>
+                    <p>Business Owner</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Swiper navigation (optional) -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs">
+      <div class="container">
+        <div class="row">
+          <!-- FAQ Column -->
+          <div class="col-left">
+            <h2>Frequently Asked Questions</h2>
+            <div x-data="{ open: null }" class="faq-list">
+              <div class="faq-item" x-data="{ isOpen: false }">
+                <div @click="isOpen = !isOpen" class="faq-question">
+                  <h3>What is sustainable farming?</h3>
+                  <span x-text="isOpen ? '-' : '+'"></span>
+                </div>
+                <div x-show="isOpen" x-transition class="faq-answer">
+                  <p>
+                    Sustainable farming ensures long-term agricultural
+                    productivity with minimal impact on the environment.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item" x-data="{ isOpen: false }">
+                <div @click="isOpen = !isOpen" class="faq-question">
+                  <h3>How does Donal Farm practice eco-friendly farming?</h3>
+                  <span x-text="isOpen ? '-' : '+'"></span>
+                </div>
+                <div x-show="isOpen" x-transition class="faq-answer">
+                  <p>
+                    We use organic methods, crop rotation, and advanced
+                    technologies to ensure sustainability.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item" x-data="{ isOpen: false }">
+                <div @click="isOpen = !isOpen" class="faq-question">
+                  <h3>Do you offer farm tours?</h3>
+                  <span x-text="isOpen ? '-' : '+'"></span>
+                </div>
+                <div x-show="isOpen" x-transition class="faq-answer">
+                  <p>
+                    Yes, we organize guided tours to showcase our sustainable
+                    farming practices and facilities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="col-right">
+            <img src="./assets/images/farm-faq-image.jpg" alt="Farm FAQs" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Blog</h2>
+          <h1>Latest News & Insights</h1>
+          <p>
+            Stay informed with our latest articles on agriculture,
+            sustainability, and innovation.
+          </p>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Blog Card 1 -->
+            <div class="swiper-slide blog-card">
+              <div class="blog-image">
+                <img
+                  src="./assets/images/blog-post-1-382x326.webp"
+                  alt="Blog Image"
+                />
+                <span class="badge">Agriculture | Oct 15, 2024</span>
+              </div>
+              <div class="blog-content">
+                <h3>Innovative Farming Techniques</h3>
+                <p>
+                  Discover the latest advancements in sustainable farming and
+                  how they impact the industry.
+                </p>
+                <div class="blog-meta">By John Doe</div>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <!-- Blog Card 2 -->
+            <div class="swiper-slide blog-card">
+              <div class="blog-image">
+                <img
+                  src="./assets/images/blog-post-2-382x326.webp"
+                  alt="Blog Image"
+                />
+                <span class="badge">Sustainability | Nov 10, 2024</span>
+              </div>
+              <div class="blog-content">
+                <h3>Eco-Friendly Farming Practices</h3>
+                <p>
+                  Learn how eco-friendly practices are essential for preserving
+                  our environment and resources.
+                </p>
+                <div class="blog-meta">By Jane Smith</div>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <!-- Blog Card 3 -->
+            <div class="swiper-slide blog-card">
+              <div class="blog-image">
+                <img
+                  src="./assets/images/blog-post-6-300x300.webp"
+                  alt="Blog Image"
+                />
+                <span class="badge">Innovation | Nov 20, 2024</span>
+              </div>
+              <div class="blog-content">
+                <h3>Tech in Agriculture</h3>
+                <p>
+                  Explore the role of technology in revolutionizing farming
+                  methods and boosting productivity.
+                </p>
+                <div class="blog-meta">By Mark Evans</div>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <!-- Add more blog cards as needed -->
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us">
+      <div class="container">
+        <div class="row">
+          <!-- Left Column: Contact Info -->
+          <div class="contact-info">
+            <img src="./assets/images/ev7-img.webp" alt="Farmer" />
+            <div class="info-box">
+              <div class="info-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <h4>Farm Address</h4>
+                  <p>
+                    Prinsengracht 250, 2501016 PM<br />Amsterdam Netherlands
+                  </p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <h4>Contact Us</h4>
+                  <p>Donalfarms@gmail.com<br />Call Us 24/7: +1 987 654 3210</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-clock"></i>
+                <div>
+                  <h4>Working Hours</h4>
+                  <p>
+                    Mon - Fri: 8.00am - 18.00pm<br />Sat: 9.00am - 17.00pm
+                    Holidays: Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-form">
+            <div class="form-header">
+              <h4>Let's Cooperate Together</h4>
+              <h2>Contact Us Today!</h2>
+              <p>
+                We will reply within 24 hours via email, thank you for
+                contacting
+              </p>
+            </div>
+            <form>
+              <div class="form-row">
+                <input type="text" placeholder="Name*" required />
+                <input type="email" placeholder="Email*" required />
+              </div>
+              <div class="form-row">
+                <input type="tel" placeholder="Phone Number*" required />
+                <select>
+                  <option value="">You need support?</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="services">Services</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <textarea placeholder="Message..." rows="4"></textarea>
+              <div class="form-footer">
+                <label>
+                  <input type="checkbox" required />
+                  Agree to our terms and conditions
+                </label>
+                <button type="submit">
+                  Send Message <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <!-- Top Section -->
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+              Donal Farm is committed to sustainable and eco-friendly farming.
+              We deliver the highest quality produce directly from our farm to
+              your table.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="bi bi-geo-alt"></i> Prinsengracht 250, Amsterdam, NL
+              </li>
+              <li><i class="bi bi-envelope"></i> Donalfarms@gmail.com</li>
+              <li><i class="bi bi-telephone"></i> +1 987 654 3210</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Subscribe</h3>
+            <p>Stay updated with our latest news and products.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Your Email" />
+              <button type="submit"><i class="bi bi-envelope"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Donal Farm. All Rights Reserved.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper for the Latest Projects section
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

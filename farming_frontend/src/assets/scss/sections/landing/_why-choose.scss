@@ -1,0 +1,73 @@
+@import "../../variables/global-variables";
+
+.why-choose {
+  padding: 4rem 2rem;
+  background-color: $gray-light;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .col-left {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .col-right {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .content {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $grey;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      font-size: 1rem;
+      color: $grey;
+
+      li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        i {
+          color: $secondary-color;
+          margin-right: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+  }
+}
