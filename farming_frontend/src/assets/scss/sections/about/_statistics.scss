@@ -1,0 +1,56 @@
+@import "../../variables/global-variables";
+
+.statistics-section {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  .intro-text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    color: $dark;
+    line-height: 1.8;
+
+    span {
+      text-decoration: underline;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  .stats-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .stat-item {
+      text-align: center;
+
+      .icon-circle {
+        width: 80px;
+        height: 80px;
+        background-color: $primary-color;
+        color: $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem;
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $secondary-color;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: $dark;
+        font-weight: 500;
+      }
+    }
+  }
+}
