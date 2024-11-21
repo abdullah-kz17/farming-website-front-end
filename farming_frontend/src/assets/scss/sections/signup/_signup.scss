@@ -1,5 +1,6 @@
 $background-image: url("../../../../assets/images/fancy-img1.webp");
-.login-page {
+
+.signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,14 +15,14 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
     max-width: 350px;
   }
 
-  .login-wrapper {
+  .signup-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .login-card {
+  .signup-card {
     background-color: $white;
     border-radius: $border-radius-pill;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -45,13 +46,14 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
       z-index: -1;
     }
 
-    .login-card-body {
+    .signup-card-body {
       z-index: 2;
 
       h2 {
-        margin-bottom: 2rem;
+        margin-bottom: 1.6rem;
       }
-      .login-title {
+
+      .signup-title {
         font-size: 2.5rem;
         color: $primary-color;
         margin-bottom: 1rem;
@@ -59,7 +61,7 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
         text-transform: capitalize;
       }
 
-      .login-description {
+      .signup-description {
         font-size: 1.1rem;
         color: $grey;
         margin-bottom: 2rem;
@@ -85,12 +87,12 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
         }
       }
 
-      .login-actions {
+      .signup-actions {
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
-        .login-btn {
+        .signup-btn {
           background-color: $primary-color;
           color: $white;
           font-size: 1.2rem;
@@ -139,7 +141,7 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
   }
 
   @media (max-width: 768px) {
-    .login-card {
+    .signup-card {
       width: 90%;
       padding: 2rem;
     }

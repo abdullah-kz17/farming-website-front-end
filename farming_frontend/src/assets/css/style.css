@@ -14969,6 +14969,1021 @@ a.section-badge:hover {
   }
 }
 
+.login-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
+  background-size: cover;
+  padding: 2rem;
+}
+.login-page .container {
+  width: 100%;
+  max-width: 350px;
+}
+.login-page .login-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.login-page .login-card {
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.login-page .login-card::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.login-page .login-card .login-card-body {
+  z-index: 2;
+}
+.login-page .login-card .login-card-body h2 {
+  margin-bottom: 2rem;
+}
+.login-page .login-card .login-card-body .login-title {
+  font-size: 2.5rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.login-page .login-card .login-card-body .login-description {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.login-page .login-card .login-card-body .input-group {
+  margin-bottom: 1.5rem;
+}
+.login-page .login-card .login-card-body .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1.6rem;
+  border: 1px solid #5a5a5a;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  background-color: #f7f7f7;
+}
+.login-page .login-card .login-card-body .input-group input:focus {
+  border-color: #0d401c;
+  outline: none;
+}
+.login-page .login-card .login-card-body .login-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.login-page .login-card .login-card-body .login-actions .login-btn {
+  background-color: #0d401c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 1.6rem;
+  margin-top: 0.6rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.login-page .login-card .login-card-body .login-actions .login-btn:hover {
+  background-color: #041609;
+}
+.login-page .login-card .login-card-body .login-actions .forgot-password {
+  color: #0d401c;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.login-page .login-card .login-card-body .login-actions .forgot-password:hover {
+  color: #041609;
+}
+.login-page .login-card .login-card-body .register-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+.login-page .login-card .login-card-body .register-link a {
+  color: #0d401c;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.login-page .login-card .login-card-body .register-link a:hover {
+  color: #041609;
+}
+@media (max-width: 768px) {
+  .login-page .login-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+.signup-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
+  background-size: cover;
+  padding: 2rem;
+}
+.signup-page .container {
+  width: 100%;
+  max-width: 350px;
+}
+.signup-page .signup-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.signup-page .signup-card {
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.signup-page .signup-card::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.signup-page .signup-card .signup-card-body {
+  z-index: 2;
+}
+.signup-page .signup-card .signup-card-body h2 {
+  margin-bottom: 1.6rem;
+}
+.signup-page .signup-card .signup-card-body .signup-title {
+  font-size: 2.5rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.signup-page .signup-card .signup-card-body .signup-description {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.signup-page .signup-card .signup-card-body .input-group {
+  margin-bottom: 1.5rem;
+}
+.signup-page .signup-card .signup-card-body .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1.6rem;
+  border: 1px solid #5a5a5a;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  background-color: #f7f7f7;
+}
+.signup-page .signup-card .signup-card-body .input-group input:focus {
+  border-color: #0d401c;
+  outline: none;
+}
+.signup-page .signup-card .signup-card-body .signup-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.signup-page .signup-card .signup-card-body .signup-actions .signup-btn {
+  background-color: #0d401c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 1.6rem;
+  margin-top: 0.6rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.signup-page .signup-card .signup-card-body .signup-actions .signup-btn:hover {
+  background-color: #041609;
+}
+.signup-page .signup-card .signup-card-body .signup-actions .forgot-password {
+  color: #0d401c;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.signup-page .signup-card .signup-card-body .signup-actions .forgot-password:hover {
+  color: #041609;
+}
+.signup-page .signup-card .signup-card-body .register-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+.signup-page .signup-card .signup-card-body .register-link a {
+  color: #0d401c;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.signup-page .signup-card .signup-card-body .register-link a:hover {
+  color: #041609;
+}
+@media (max-width: 768px) {
+  .signup-page .signup-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+.forgot-password-page,
+.reset-password-page {
+  font-family: "Inter", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
+  background-size: cover;
+  padding: 2rem;
+}
+.forgot-password-page .container,
+.reset-password-page .container {
+  width: 100%;
+  max-width: 350px;
+}
+.forgot-password-page .forgot-password-wrapper,
+.forgot-password-page .reset-password-wrapper,
+.reset-password-page .forgot-password-wrapper,
+.reset-password-page .reset-password-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.forgot-password-page .forgot-password-card,
+.forgot-password-page .reset-password-card,
+.reset-password-page .forgot-password-card,
+.reset-password-page .reset-password-card {
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.forgot-password-page .forgot-password-card::after,
+.forgot-password-page .reset-password-card::after,
+.reset-password-page .forgot-password-card::after,
+.reset-password-page .reset-password-card::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body,
+.forgot-password-page .forgot-password-card .reset-password-card-body,
+.forgot-password-page .reset-password-card .forgot-password-card-body,
+.forgot-password-page .reset-password-card .reset-password-card-body,
+.reset-password-page .forgot-password-card .forgot-password-card-body,
+.reset-password-page .forgot-password-card .reset-password-card-body,
+.reset-password-page .reset-password-card .forgot-password-card-body,
+.reset-password-page .reset-password-card .reset-password-card-body {
+  z-index: 2;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-title,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-title,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-title,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-title,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-title,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-title,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-title,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-title,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-title,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-title,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-title,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-title,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-title,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-title,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-title,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-title {
+  font-size: 2.5rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-description,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-description,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-description,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-description,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-description,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-description,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-description,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-description,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-description,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-description,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-description,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-description,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-description,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-description,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-description,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-description {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group,
+.forgot-password-page .forgot-password-card .reset-password-card-body .input-group,
+.forgot-password-page .reset-password-card .forgot-password-card-body .input-group,
+.forgot-password-page .reset-password-card .reset-password-card-body .input-group,
+.reset-password-page .forgot-password-card .forgot-password-card-body .input-group,
+.reset-password-page .forgot-password-card .reset-password-card-body .input-group,
+.reset-password-page .reset-password-card .forgot-password-card-body .input-group,
+.reset-password-page .reset-password-card .reset-password-card-body .input-group {
+  margin-bottom: 1.5rem;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group input,
+.forgot-password-page .forgot-password-card .reset-password-card-body .input-group input,
+.forgot-password-page .reset-password-card .forgot-password-card-body .input-group input,
+.forgot-password-page .reset-password-card .reset-password-card-body .input-group input,
+.reset-password-page .forgot-password-card .forgot-password-card-body .input-group input,
+.reset-password-page .forgot-password-card .reset-password-card-body .input-group input,
+.reset-password-page .reset-password-card .forgot-password-card-body .input-group input,
+.reset-password-page .reset-password-card .reset-password-card-body .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1.6rem;
+  border: 1px solid #5a5a5a;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  background-color: #f7f7f7;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group input:focus,
+.forgot-password-page .forgot-password-card .reset-password-card-body .input-group input:focus,
+.forgot-password-page .reset-password-card .forgot-password-card-body .input-group input:focus,
+.forgot-password-page .reset-password-card .reset-password-card-body .input-group input:focus,
+.reset-password-page .forgot-password-card .forgot-password-card-body .input-group input:focus,
+.reset-password-page .forgot-password-card .reset-password-card-body .input-group input:focus,
+.reset-password-page .reset-password-card .forgot-password-card-body .input-group input:focus,
+.reset-password-page .reset-password-card .reset-password-card-body .input-group input:focus {
+  border-color: #0d401c;
+  outline: none;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn {
+  background-color: #0d401c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 1.6rem;
+  margin-top: 0.6rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover {
+  background-color: #041609;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link a,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link a {
+  color: #0d401c;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link a:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link a:hover {
+  color: #041609;
+}
+@media (max-width: 768px) {
+  .forgot-password-page .forgot-password-card,
+  .forgot-password-page .reset-password-card,
+  .reset-password-page .forgot-password-card,
+  .reset-password-page .reset-password-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+.forgot-password-page,
+.reset-password-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
+  background-size: cover;
+  padding: 2rem;
+}
+.forgot-password-page .container,
+.reset-password-page .container {
+  width: 100%;
+  max-width: 350px;
+}
+.forgot-password-page .forgot-password-wrapper,
+.forgot-password-page .reset-password-wrapper,
+.reset-password-page .forgot-password-wrapper,
+.reset-password-page .reset-password-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.forgot-password-page .forgot-password-card,
+.forgot-password-page .reset-password-card,
+.reset-password-page .forgot-password-card,
+.reset-password-page .reset-password-card {
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.forgot-password-page .forgot-password-card::after,
+.forgot-password-page .reset-password-card::after,
+.reset-password-page .forgot-password-card::after,
+.reset-password-page .reset-password-card::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body,
+.forgot-password-page .forgot-password-card .reset-password-card-body,
+.forgot-password-page .reset-password-card .forgot-password-card-body,
+.forgot-password-page .reset-password-card .reset-password-card-body,
+.reset-password-page .forgot-password-card .forgot-password-card-body,
+.reset-password-page .forgot-password-card .reset-password-card-body,
+.reset-password-page .reset-password-card .forgot-password-card-body,
+.reset-password-page .reset-password-card .reset-password-card-body {
+  z-index: 2;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-title,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-title,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-title,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-title,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-title,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-title,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-title,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-title,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-title,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-title,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-title,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-title,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-title,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-title,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-title,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-title {
+  font-size: 2.5rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-description,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-description,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-description,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-description,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-description,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-description,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-description,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-description,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-description,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-description,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-description,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-description,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-description,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-description,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-description,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-description {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group,
+.forgot-password-page .forgot-password-card .reset-password-card-body .input-group,
+.forgot-password-page .reset-password-card .forgot-password-card-body .input-group,
+.forgot-password-page .reset-password-card .reset-password-card-body .input-group,
+.reset-password-page .forgot-password-card .forgot-password-card-body .input-group,
+.reset-password-page .forgot-password-card .reset-password-card-body .input-group,
+.reset-password-page .reset-password-card .forgot-password-card-body .input-group,
+.reset-password-page .reset-password-card .reset-password-card-body .input-group {
+  margin-bottom: 1.5rem;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group input,
+.forgot-password-page .forgot-password-card .reset-password-card-body .input-group input,
+.forgot-password-page .reset-password-card .forgot-password-card-body .input-group input,
+.forgot-password-page .reset-password-card .reset-password-card-body .input-group input,
+.reset-password-page .forgot-password-card .forgot-password-card-body .input-group input,
+.reset-password-page .forgot-password-card .reset-password-card-body .input-group input,
+.reset-password-page .reset-password-card .forgot-password-card-body .input-group input,
+.reset-password-page .reset-password-card .reset-password-card-body .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1.6rem;
+  border: 1px solid #5a5a5a;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  background-color: #f7f7f7;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group input:focus,
+.forgot-password-page .forgot-password-card .reset-password-card-body .input-group input:focus,
+.forgot-password-page .reset-password-card .forgot-password-card-body .input-group input:focus,
+.forgot-password-page .reset-password-card .reset-password-card-body .input-group input:focus,
+.reset-password-page .forgot-password-card .forgot-password-card-body .input-group input:focus,
+.reset-password-page .forgot-password-card .reset-password-card-body .input-group input:focus,
+.reset-password-page .reset-password-card .forgot-password-card-body .input-group input:focus,
+.reset-password-page .reset-password-card .reset-password-card-body .input-group input:focus {
+  border-color: #0d401c;
+  outline: none;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn {
+  background-color: #0d401c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 1.6rem;
+  margin-top: 0.6rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover {
+  background-color: #041609;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link a,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link a {
+  color: #0d401c;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a:hover,
+.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link a:hover,
+.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a:hover,
+.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a:hover,
+.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link a:hover {
+  color: #041609;
+}
+@media (max-width: 768px) {
+  .forgot-password-page .forgot-password-card,
+  .forgot-password-page .reset-password-card,
+  .reset-password-page .forgot-password-card,
+  .reset-password-page .reset-password-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+.registration-success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+.registration-success .container {
+  width: 100%;
+  max-width: 600px;
+}
+.registration-success .success-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.registration-success .success-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.registration-success .success-card .success-icon {
+  font-size: 3rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+.registration-success .success-card h2 {
+  font-size: 2rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+.registration-success .success-card p {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  margin-bottom: 2rem;
+}
+.registration-success .success-card .success-btn {
+  display: inline-block;
+  background-color: #0d401c;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.6rem;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.registration-success .success-card .success-btn:hover {
+  background-color: #041609;
+}
+
+@media (max-width: 768px) {
+  .success-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
 .page-head {
   --page-head-bg: var(--light);
   --head-title-fg: var(--text);
