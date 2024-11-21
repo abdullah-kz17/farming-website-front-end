@@ -1,0 +1,72 @@
+@import "../../variables/global-variables";
+
+.mission-vision {
+  padding: 4rem 2rem;
+  background-color: rgb(210, 210, 210);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .col {
+      flex: 1 1 calc(50% - 2rem);
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+
+      .card {
+        background-color: $white;
+        border-radius: $border-radius-lg;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 550px;
+        text-align: center;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+          font-size: 3rem;
+          color: $primary-color;
+          margin-bottom: 1.5rem;
+
+          i {
+            font-size: inherit;
+          }
+        }
+
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          color: $primary-color;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $grey;
+          line-height: 1.6;
+        }
+      }
+
+      .vision-card {
+        border-top: 5px solid $secondary-color;
+      }
+
+      .mission-card {
+        border-top: 5px solid $primary-color;
+      }
+    }
+  }
+}

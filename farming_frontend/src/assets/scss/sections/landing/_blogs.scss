@@ -9,20 +9,22 @@
     margin-bottom: 3rem;
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: normal;
       color: $primary-color;
+      letter-spacing: 0.05rem;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       margin: 1rem 0;
+      font-weight: bold;
     }
 
     p {
       font-size: 1rem;
       color: $grey;
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
     }
   }
@@ -30,74 +32,91 @@
   .swiper-container {
     .swiper-wrapper {
       display: flex;
+      gap: 1.5rem;
     }
 
     .blog-card {
       background-color: $white;
-      border-radius: $border-radius;
+      border-radius: $border-radius-lg;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 320px;
       display: flex;
       flex-direction: column;
 
       &:hover {
         transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
 
       .blog-image {
         position: relative;
+        overflow: hidden;
+
         img {
           width: 100%;
-          height: auto;
+          height: 180px;
+          object-fit: cover;
           display: block;
-        }
+          transition: transform 0.3s ease;
 
-        .badge {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-          background-color: $secondary-color;
-          color: $primary-color;
-          padding: 0.5rem 1rem;
-          border-radius: $border-radius;
-          font-size: 0.9rem;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
 
       .blog-content {
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .badge {
+          font-size: 0.8rem;
+          font-weight: bold;
+          color: $white;
+          background-color: $secondary-color;
+          padding: 0.3rem 0.6rem;
+          border-radius: $border-radius-pill;
+          margin-bottom: 1rem;
+        }
 
         h3 {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
+          font-weight: bold;
           color: $primary-color;
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
         }
 
         p {
           font-size: 0.9rem;
           color: $grey;
           margin-bottom: 1rem;
+          line-height: 1.5;
         }
 
         .blog-meta {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           color: darken($grey, 20%);
           margin-bottom: 1rem;
         }
 
         .read-more {
-          display: inline-block;
+          font-size: 0.9rem;
           text-decoration: none;
           font-weight: bold;
           color: $white;
-          background-color: $secondary-color;
-          padding: 0.5rem 1rem;
-          border-radius: $border-radius;
-          transition: background-color 0.3s ease;
+          background-color: $primary-color;
+          padding: 0.6rem 1.2rem;
+          border-radius: $border-radius-pill;
+          transition: background-color 0.3s ease, transform 0.3s ease;
 
           &:hover {
-            background-color: darken($secondary-color, 10%);
+            background-color: lighten($primary-color, 10%);
+            transform: translateY(-2px);
           }
         }
       }
@@ -105,9 +124,18 @@
   }
 
   .swiper-pagination {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+
     .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
       background-color: $secondary-color;
+      opacity: 1;
+      transition: transform 0.3s ease;
+
+      &-active {
+        transform: scale(1.3);
+      }
     }
   }
 }

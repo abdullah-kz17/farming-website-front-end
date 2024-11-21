@@ -765,42 +765,89 @@
           <!-- FAQ Column -->
           <div class="col-left">
             <h2>Frequently Asked Questions</h2>
-            <div x-data="{ open: null }" class="faq-list">
-              <div class="faq-item" x-data="{ isOpen: false }">
-                <div @click="isOpen = !isOpen" class="faq-question">
+            <div x-data="{ openFaq: null }" class="faq-list">
+              <!-- FAQ 1 -->
+              <div class="faq-item">
+                <div
+                  @click="openFaq === 1 ? openFaq = null : openFaq = 1"
+                  class="faq-question"
+                >
                   <h3>What is sustainable farming?</h3>
-                  <span x-text="isOpen ? '-' : '+'"></span>
+                  <span x-text="openFaq === 1 ? '-' : '+'"></span>
                 </div>
-                <div x-show="isOpen" x-transition class="faq-answer">
+                <div x-show="openFaq === 1" x-transition class="faq-answer">
                   <p>
                     Sustainable farming ensures long-term agricultural
-                    productivity with minimal impact on the environment.
+                    productivity while minimizing environmental impact.
                   </p>
                 </div>
               </div>
 
-              <div class="faq-item" x-data="{ isOpen: false }">
-                <div @click="isOpen = !isOpen" class="faq-question">
+              <!-- FAQ 2 -->
+              <div class="faq-item">
+                <div
+                  @click="openFaq === 2 ? openFaq = null : openFaq = 2"
+                  class="faq-question"
+                >
                   <h3>How does Donal Farm practice eco-friendly farming?</h3>
-                  <span x-text="isOpen ? '-' : '+'"></span>
+                  <span x-text="openFaq === 2 ? '-' : '+'"></span>
                 </div>
-                <div x-show="isOpen" x-transition class="faq-answer">
+                <div x-show="openFaq === 2" x-transition class="faq-answer">
                   <p>
                     We use organic methods, crop rotation, and advanced
-                    technologies to ensure sustainability.
+                    technologies to ensure sustainability and reduce
+                    environmental impact.
                   </p>
                 </div>
               </div>
 
-              <div class="faq-item" x-data="{ isOpen: false }">
-                <div @click="isOpen = !isOpen" class="faq-question">
+              <!-- FAQ 3 -->
+              <div class="faq-item">
+                <div
+                  @click="openFaq === 3 ? openFaq = null : openFaq = 3"
+                  class="faq-question"
+                >
                   <h3>Do you offer farm tours?</h3>
-                  <span x-text="isOpen ? '-' : '+'"></span>
+                  <span x-text="openFaq === 3 ? '-' : '+'"></span>
                 </div>
-                <div x-show="isOpen" x-transition class="faq-answer">
+                <div x-show="openFaq === 3" x-transition class="faq-answer">
                   <p>
                     Yes, we organize guided tours to showcase our sustainable
                     farming practices and facilities.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="faq-item">
+                <div
+                  @click="openFaq === 4 ? openFaq = null : openFaq = 4"
+                  class="faq-question"
+                >
+                  <h3>What crops do you grow on your farm?</h3>
+                  <span x-text="openFaq === 4 ? '-' : '+'"></span>
+                </div>
+                <div x-show="openFaq === 4" x-transition class="faq-answer">
+                  <p>
+                    We grow a variety of crops, including fruits, vegetables,
+                    and grains, all using eco-friendly practices.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="faq-item">
+                <div
+                  @click="openFaq === 5 ? openFaq = null : openFaq = 5"
+                  class="faq-question"
+                >
+                  <h3>How can I purchase products from your farm?</h3>
+                  <span x-text="openFaq === 5 ? '-' : '+'"></span>
+                </div>
+                <div x-show="openFaq === 5" x-transition class="faq-answer">
+                  <p>
+                    You can purchase our fresh produce directly through our
+                    website or visit our farm's local store.
                   </p>
                 </div>
               </div>
@@ -809,7 +856,9 @@
 
           <!-- Image Column -->
           <div class="col-right">
-            <img src="./assets/images/farm-faq-image.jpg" alt="Farm FAQs" />
+            <div class="image">
+              <img src="./assets/images/faqs.png" alt="Farm FAQs" />
+            </div>
           </div>
         </div>
       </div>
@@ -834,9 +883,9 @@
                   src="./assets/images/blog-post-1-382x326.webp"
                   alt="Blog Image"
                 />
-                <span class="badge">Agriculture | Oct 15, 2024</span>
               </div>
               <div class="blog-content">
+                <div class="badge">Agriculture | Oct 15, 2024</div>
                 <h3>Innovative Farming Techniques</h3>
                 <p>
                   Discover the latest advancements in sustainable farming and
@@ -853,9 +902,9 @@
                   src="./assets/images/blog-post-2-382x326.webp"
                   alt="Blog Image"
                 />
-                <span class="badge">Sustainability | Nov 10, 2024</span>
               </div>
               <div class="blog-content">
+                <div class="badge">Sustainability | Nov 10, 2024</div>
                 <h3>Eco-Friendly Farming Practices</h3>
                 <p>
                   Learn how eco-friendly practices are essential for preserving
@@ -872,9 +921,9 @@
                   src="./assets/images/blog-post-6-300x300.webp"
                   alt="Blog Image"
                 />
-                <span class="badge">Innovation | Nov 20, 2024</span>
               </div>
               <div class="blog-content">
+                <div class="badge">Innovation | Nov 20, 2024</div>
                 <h3>Tech in Agriculture</h3>
                 <p>
                   Explore the role of technology in revolutionizing farming
@@ -884,9 +933,8 @@
                 <a href="#" class="read-more">Read More</a>
               </div>
             </div>
-            <!-- Add more blog cards as needed -->
           </div>
-          <!-- Pagination -->
+          <!-- Swiper Pagination -->
         </div>
       </div>
     </section>

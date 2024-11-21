@@ -296,6 +296,115 @@
       </div>
     </section>
 
+    <section class="features-section">
+      <div class="swiper feature-swiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide feature-card">
+            <div class="card-content">
+              <i class="bi bi-check-circle-fill icon"></i>
+              <h4>100% Organic Products</h4>
+              <p>
+                Ultrices sagittis orci a scelerisque purus semper eget duis at.
+                Sollicitudin nibh sit amet commodo nulla.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide feature-card">
+            <div class="card-content">
+              <i class="bi bi-check-circle-fill icon"></i>
+              <h4>100% Organic Products</h4>
+              <p>
+                Ultrices sagittis orci a scelerisque purus semper eget duis at.
+                Sollicitudin nibh sit amet commodo nulla.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide feature-card">
+            <div class="card-content">
+              <i class="bi bi-check-circle-fill icon"></i>
+              <h4>100% Organic Products</h4>
+              <p>
+                Ultrices sagittis orci a scelerisque purus semper eget duis at.
+                Sollicitudin nibh sit amet commodo nulla.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide feature-card">
+            <div class="card-content">
+              <i class="bi bi-check-circle-fill icon"></i>
+              <h4>100% Organic Products</h4>
+              <p>
+                Ultrices sagittis orci a scelerisque purus semper eget duis at.
+                Sollicitudin nibh sit amet commodo nulla.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide feature-card">
+            <div class="card-content">
+              <i class="bi bi-check-circle-fill icon"></i>
+              <h4>100% Organic Products</h4>
+              <p>
+                Ultrices sagittis orci a scelerisque purus semper eget duis at.
+                Sollicitudin nibh sit amet commodo nulla.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide feature-card">
+            <div class="card-content">
+              <i class="bi bi-check-circle-fill icon"></i>
+              <h4>100% Organic Products</h4>
+              <p>
+                Ultrices sagittis orci a scelerisque purus semper eget duis at.
+                Sollicitudin nibh sit amet commodo nulla.
+              </p>
+            </div>
+          </div>
+
+          <!-- Additional cards -->
+          <!-- ... -->
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-vision">
+      <div class="container">
+        <div class="row">
+          <!-- Our Vision -->
+          <div class="col">
+            <div class="card vision-card">
+              <div class="icon">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <h3>Our Vision</h3>
+              <p>
+                Our mission is to contribute to the promotion of agricultural
+                products in Vietnam with a commitment to produce sustainable
+                values that meet international standards and thereby create a
+                fair and competitive market
+              </p>
+            </div>
+          </div>
+
+          <!-- Our Mission -->
+          <div class="col">
+            <div class="card mission-card">
+              <div class="icon">
+                <i class="bi bi-palette-fill"></i>
+              </div>
+              <h3>Our Mission</h3>
+              <p>
+                Our vision is to be a prestigious standard system that aims
+                towards sustainable and fair agricultural development where
+                Vietnamese producers can produce and benefit from global markets
+                through equitable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="site-footer">
       <div class="container">
         <!-- Top Section -->
@@ -377,6 +486,25 @@
           },
           1024: {
             slidesPerView: 3,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".feature-swiper", {
+        slidesPerView: 3, // Show 3 cards at a time
+        spaceBetween: 20, // Gap between cards
+        loop: true, // Enable looping
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          // Responsive settings
+          768: {
+            slidesPerView: 2, // Show 2 cards on smaller screens
+          },
+          576: {
+            slidesPerView: 1, // Show 1 card on very small screens
           },
         },
       });
