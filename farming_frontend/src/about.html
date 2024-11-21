@@ -20,184 +20,165 @@
   </head>
 
   <body>
-    <section class="hero-section">
-      <!-- Top Bar -->
-      <div class="top-bar">
-        <div class="container">
-          <div class="contact">
-            <div class="top-bar-heading">
-              <p>
-                Welcome to Donal farm <span>&#183;</span> Agriculture and
-                Organic Farms
-              </p>
-            </div>
-            <div class="contact-details">
-              <a href="tel:+19876543210" class="contact-item">
-                <i class="bi bi-telephone-fill"></i> +1 987 654 3210
-              </a>
-              <a href="mailto:donalfarms@gmail.com" class="contact-item">
-                <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
-              </a>
-              <div class="social-links">
-                <a href="#" class="social-item"
-                  ><i class="bi bi-twitter"></i
-                ></a>
-                <a href="#" class="social-item"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a href="#" class="social-item"
-                  ><i class="bi bi-pinterest"></i
-                ></a>
-                <a href="#" class="social-item"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-              </div>
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact">
+          <div class="top-bar-heading">
+            <p>
+              Welcome to Donal farm <span>&#183;</span> Agriculture and Organic
+              Farms
+            </p>
+          </div>
+          <div class="contact-details">
+            <a href="tel:+19876543210" class="contact-item">
+              <i class="bi bi-telephone-fill"></i> +1 987 654 3210
+            </a>
+            <a href="mailto:donalfarms@gmail.com" class="contact-item">
+              <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
+            </a>
+            <div class="social-links">
+              <a href="#" class="social-item"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="social-item"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-item"
+                ><i class="bi bi-pinterest"></i
+              ></a>
+              <a href="#" class="social-item"
+                ><i class="bi bi-instagram"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-left">
+          <a href="/" class="logo">
+            <i
+              class="bi bi-leaf"
+              style="
+                border-radius: 50%;
+                padding: 0.5rem;
+                background-color: #e0e0e0;
+              "
+            ></i>
+            DonalFarm
+          </a>
+          <nav class="nav">
+            <!-- Home Dropdown -->
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Home
+                <i class="bi bi-caret-down-fill"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Homepage 1</a>
+                <a href="#">Homepage 2</a>
+              </div>
+            </div>
 
-      <!-- Header -->
-      <header class="header">
-        <div class="container">
-          <div class="nav-left">
-            <a href="/" class="logo">
+            <!-- Pages Dropdown -->
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Pages
+                <i class="bi bi-caret-down-fill"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">About</a>
+                <a href="#">404</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">FAQs</a>
+              </div>
+            </div>
+
+            <!-- Shop Dropdown -->
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Shop
+                <i class="bi bi-caret-down-fill"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Products</a>
+                <a href="#">Cart</a>
+                <a href="#">Checkout</a>
+                <a href="#">My Account</a>
+              </div>
+            </div>
+
+            <a href="#" class="nav-item">Services</a>
+            <a href="#" class="nav-item">Blogs</a>
+            <a href="#" class="nav-item">Contact</a>
+          </nav>
+        </div>
+
+        <div class="nav-right">
+          <ul>
+            <li>
+              <a href="#" class="btn">
+                <span>
+                  Get In Touch
+                  <i class="bi bi-caret-right-fill"></i>
+                </span>
+              </a>
+            </li>
+            <li>
               <i
-                class="bi bi-leaf"
+                class="bi bi-search icon-with-badge"
                 style="
                   border-radius: 50%;
-                  padding: 0.5rem;
+                  padding: 1rem;
                   background-color: #e0e0e0;
+                  border: 2px solid #6c6c6c;
                 "
               ></i>
-              DonalFarm
-            </a>
-            <nav class="nav">
-              <!-- Home Dropdown -->
-              <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open =!open" class="nav-link">
-                  <i class="bi bi-house"></i> Home
-                  <i class="bi bi-caret-down"></i>
-                </a>
-                <div
-                  x-show="open"
-                  x-transition
-                  @click.away="open = false"
-                  class="dropdown-menu"
-                >
-                  <a href="#">Homepage 1</a>
-                  <a href="#">Homepage 2</a>
-                </div>
-              </div>
-              <!-- Pages Dropdown -->
-              <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open =!open" class="nav-link">
-                  Pages <i class="bi bi-caret-down"></i>
-                </a>
-                <div
-                  x-show="open"
-                  x-transition
-                  @click.away="open = false"
-                  class="dropdown-menu"
-                >
-                  <a href="#">About</a>
-                  <a href="#">404</a>
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">FAQs</a>
-                </div>
-              </div>
-              <!-- Shop Dropdown -->
-              <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open =!open" class="nav-link">
-                  Shop <i class="bi bi-caret-down"></i>
-                </a>
-                <div
-                  x-show="open"
-                  x-transition
-                  @click.away="open = false"
-                  class="dropdown-menu"
-                >
-                  <a href="#">Products</a>
-                  <a href="#">Cart</a>
-                  <a href="#">Checkout</a>
-                  <a href="#">My Account</a>
-                </div>
-              </div>
-              <a href="#" class="nav-item">Services</a>
-              <a href="#" class="nav-item">Blogs</a>
-              <a href="#" class="nav-item">Contact</a>
-            </nav>
-          </div>
-
-          <div class="nav-right">
-            <ul>
-              <li>
-                <i
-                  class="bi bi-search icon-with-badge"
-                  style="
-                    border-radius: 50%;
-                    padding: 1rem;
-                    background-color: #e0e0e0;
-                    border: 2px solid #e0e0e0;
-                  "
-                ></i>
-              </li>
-              <li>
-                <i
-                  class="bi bi-cart icon-with-badge"
-                  style="
-                    border-radius: 50%;
-                    padding: 1rem;
-                    background-color: #e0e0e0;
-                    border: 2px solid #e0e0e0;
-                  "
-                >
-                  <span class="cart-badge">3</span>
-                </i>
-              </li>
-              <li>
-                <i
-                  class="bi bi-0-square-fill icon-with-badge"
-                  style="
-                    border-radius: 50%;
-                    padding: 1rem;
-                    background-color: #e0e0e0;
-                    border: 2px solid #e0e0e0;
-                  "
-                ></i>
-              </li>
-            </ul>
-          </div>
+            </li>
+            <li>
+              <i
+                class="bi bi-cart icon-with-badge"
+                style="
+                  border-radius: 50%;
+                  padding: 1rem;
+                  background-color: #e0e0e0;
+                  border: 2px solid #6c6c6c;
+                "
+              >
+                <span class="cart-badge">3</span>
+              </i>
+            </li>
+            <li>
+              <i
+                class="bi bi-0-square-fill icon-with-badge"
+                style="
+                  border-radius: 50%;
+                  padding: 1rem;
+                  background-color: #e0e0e0;
+                  border: 2px solid #6c6c6c;
+                "
+              ></i>
+            </li>
+          </ul>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <div class="hero hero-static">
-        <!-- Breadcrumb -->
-        <div class="breadcrumbs">
-          <div class="container">
-            <a href="index.html">Home</a>
-            <i class="bi bi-chevron-right"></i>
-            <span>About</span>
-          </div>
-        </div>
-
-        <!-- Hero Content -->
-        <div
-          class="hero-background"
-          style="
-            background-image: url('./assets/images/h1-slide3.webp');
-            background-size: cover;
-            background-position: center;
-          "
-        >
+    <section class="hero-section contact-hero">
+      <div class="hero-container">
+        <div class="hero-image-wrapper">
+          <img
+            src="./assets/images/shop-pt-bg.webp"
+            alt="Contact Us"
+            class="hero-image"
+          />
           <div class="hero-overlay">
-            <div class="container">
-              <div class="hero-content">
-                <h1 class="hero-title">About Us</h1>
-                <p class="hero-subtitle">
-                  Learn more about our journey, our vision, and our commitment
-                  to revolutionizing agriculture for a sustainable future.
-                </p>
+            <div class="hero-content">
+              <div class="hero-heading">
+                <h5>Contact Us Today To Work Together</h5>
+                <h1>About Us</h1>
+              </div>
+              <div class="hero-breadcrumbs">
+                <a href="#">Home <i class="bi bi-arrow-right"></i></a>
+                <span>About Us</span>
               </div>
             </div>
           </div>

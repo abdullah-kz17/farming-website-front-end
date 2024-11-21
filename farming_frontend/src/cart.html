@@ -177,95 +177,68 @@
         </div>
       </div>
     </section>
-
-    <section class="contact-us">
+    <section class="cart-page">
       <div class="container">
-        <div class="row">
-          <!-- Left Column: Contact Info -->
-          <div class="contact-info">
-            <img src="./assets/images/ev7-img.webp" alt="Farmer" />
-            <div class="info-box">
-              <div class="info-item">
-                <i class="bi bi-geo-alt"></i>
-                <div>
-                  <h4>Farm Address</h4>
-                  <p>
-                    Prinsengracht 250, 2501016 PM<br />Amsterdam Netherlands
-                  </p>
+        <h1 class="cart-title">Your Cart</h1>
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr>
+              <td class="product-info">
+                <img src="./assets/images/product1.jpg" alt="Product 1" />
+                <span>Organic Tomatoes</span>
+              </td>
+              <td>$3.50</td>
+              <td>
+                <div class="quantity-control">
+                  <button class="decrement">-</button>
+                  <input type="number" value="2" min="1" />
+                  <button class="increment">+</button>
                 </div>
-              </div>
-              <div class="info-item">
-                <i class="bi bi-envelope"></i>
-                <div>
-                  <h4>Contact Us</h4>
-                  <p>Donalfarms@gmail.com<br />Call Us 24/7: +1 987 654 3210</p>
+              </td>
+              <td>$7.00</td>
+              <td><button class="remove-btn">&times;</button></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+              <td class="product-info">
+                <img src="./assets/images/product2.jpg" alt="Product 2" />
+                <span>Fresh Lettuce</span>
+              </td>
+              <td>$2.00</td>
+              <td>
+                <div class="quantity-control">
+                  <button class="decrement">-</button>
+                  <input type="number" value="3" min="1" />
+                  <button class="increment">+</button>
                 </div>
-              </div>
-              <div class="info-item">
-                <i class="bi bi-clock"></i>
-                <div>
-                  <h4>Working Hours</h4>
-                  <p>
-                    Mon - Fri: 8.00am - 18.00pm<br />Sat: 9.00am - 17.00pm
-                    Holidays: Closed
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+              </td>
+              <td>$6.00</td>
+              <td><button class="remove-btn">&times;</button></td>
+            </tr>
+            <!-- Add more products as needed -->
+          </tbody>
+        </table>
 
-          <!-- Right Column: Contact Form -->
-          <div class="contact-form">
-            <div class="form-header">
-              <h4>Let's Cooperate Together</h4>
-              <h2>Contact Us Today!</h2>
-              <p>
-                We will reply within 24 hours via email, thank you for
-                contacting
-              </p>
-            </div>
-            <form>
-              <div class="form-row">
-                <input type="text" placeholder="Name*" required />
-                <input type="email" placeholder="Email*" required />
-              </div>
-              <div class="form-row">
-                <input type="tel" placeholder="Phone Number*" required />
-                <select>
-                  <option value="">You need support?</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="services">Services</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <textarea placeholder="Message..." rows="4"></textarea>
-              <div class="form-footer">
-                <label>
-                  <input type="checkbox" required />
-                  Agree to our terms and conditions
-                </label>
-                <button type="submit">
-                  Send Message <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </form>
+        <div class="cart-footer">
+          <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <p><span>Total Items:</span> <span>5</span></p>
+            <p><span>Total Price:</span> <span>$13.00</span></p>
+            <button class="checkout-btn">Proceed to Checkout</button>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="contact-map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.291799713112!2d111.4698686731941!3d-7.758845576940377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7999de2a274185%3A0xe8935777131a6b9b!2sDonalfarm!5e0!3m2!1sen!2s!4v1732198622799!5m2!1sen!2s"
-        width="1270"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-
     <footer class="site-footer">
       <div class="container">
         <!-- Top Section -->

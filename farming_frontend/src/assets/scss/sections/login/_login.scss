@@ -1,0 +1,113 @@
+.login-page {
+  padding: 4rem 2rem;
+  background-color: $gray-light;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .login-card {
+    background-color: $white;
+    border-radius: $border-radius;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    .login-title {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 2rem;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      label {
+        font-size: 1rem;
+        color: $grey;
+        text-align: left;
+      }
+
+      input {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: $border-radius;
+        border: 1px solid $grey;
+        margin-bottom: 1rem;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: $primary-color;
+        }
+      }
+
+      .login-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .login-btn {
+        background-color: $primary-color;
+        color: $white;
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: $border-radius;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+
+      .forgot-password {
+        font-size: 1rem;
+        color: $primary-color;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+    }
+
+    .register-link {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: $grey;
+
+      a {
+        color: $primary-color;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-card {
+      width: 90%;
+      padding: 2rem;
+    }
+  }
+}
