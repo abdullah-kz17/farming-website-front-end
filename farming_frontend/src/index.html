@@ -75,7 +75,7 @@
             <nav class="nav">
               <!-- Home Dropdown -->
               <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open =!open" class="nav-link">
+                <a href="#" @click.prevent="open = !open" class="nav-link">
                   <i class="bi bi-house"></i> Home
                   <i class="bi bi-caret-down"></i>
                 </a>
@@ -89,10 +89,12 @@
                   <a href="#">Homepage 2</a>
                 </div>
               </div>
+
               <!-- Pages Dropdown -->
               <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open =!open" class="nav-link">
-                  Pages <i class="bi bi-caret-down"></i>
+                <a href="#" @click.prevent="open = !open" class="nav-link">
+                  Pages
+                  <i class="bi bi-caret-down"></i>
                 </a>
                 <div
                   x-show="open"
@@ -106,10 +108,12 @@
                   <a href="#">FAQs</a>
                 </div>
               </div>
+
               <!-- Shop Dropdown -->
               <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open =!open" class="nav-link">
-                  Shop <i class="bi bi-caret-down"></i>
+                <a href="#" @click.prevent="open = !open" class="nav-link">
+                  Shop
+                  <i class="bi bi-caret-down"></i>
                 </a>
                 <div
                   x-show="open"
@@ -512,7 +516,7 @@
           </p>
         </div>
 
-        <div class="swiper-container">
+        <div class="swiper-container latest-projects-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide project-card">
               <div class="project-image">
@@ -607,8 +611,8 @@
                 </div>
               </div>
               <!-- Swiper navigation (optional) -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
             </div>
           </div>
         </div>
@@ -681,7 +685,7 @@
             sustainability, and innovation.
           </p>
         </div>
-        <div class="swiper-container">
+        <div class="swiper-container blog-swiper">
           <div class="swiper-wrapper">
             <!-- Blog Card 1 -->
             <div class="swiper-slide blog-card">
@@ -743,7 +747,6 @@
             <!-- Add more blog cards as needed -->
           </div>
           <!-- Pagination -->
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -882,13 +885,33 @@
     <!-- Swiper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     <script>
-      // Initialize Swiper for the Latest Projects section
-      var swiper = new Swiper(".swiper-container", {
+      // Initialize Swiper for the Hero section
+      var heroSwiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 20,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".mySwiper .swiper-button-next",
+          prevEl: ".mySwiper .swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        // Optional pagination
+        // pagination: {
+        //   el: ".mySwiper .swiper-pagination",
+        //   clickable: true,
+        // },
+      });
+
+      // Initialize Swiper for the Latest Projects section
+      var latestProjectsSwiper = new Swiper(".latest-projects-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".latest-projects-swiper .swiper-button-next",
+          prevEl: ".latest-projects-swiper .swiper-button-prev",
         },
         loop: true,
         autoplay: {
@@ -896,7 +919,50 @@
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".latest-projects-swiper .swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      // Initialize Swiper for the Testimonials section
+      var testimonialSwiper = new Swiper(".testimonial-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        // Optional navigation
+        // navigation: {
+        //   nextEl: ".testimonial-swiper .swiper-button-next",
+        //   prevEl: ".testimonial-swiper .swiper-button-prev",
+        // },
+      });
+
+      // Initialize Swiper for the Blog section
+      var blogSwiper = new Swiper(".blog-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".blog-swiper .swiper-button-next",
+          prevEl: ".blog-swiper .swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".blog-swiper .swiper-pagination",
           clickable: true,
         },
         breakpoints: {
