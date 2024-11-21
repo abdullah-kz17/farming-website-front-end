@@ -290,8 +290,8 @@
 
     <section class="about-section">
       <div class="container">
-        <div class="row">
-          <div class="col">
+        <div class="about-section-row">
+          <div class="column">
             <div class="about-content">
               <h4>We have 30 years of agriculture & eco farming experience</h4>
               <h1>Providing The Finest Products To The Best Feed Suppliers.</h1>
@@ -309,13 +309,18 @@
                 inoculants, MA researches, produces, and markets mycorrhizal
                 fungi which accelerate plant performance.
               </p>
-              <a href="#" class="btn">More About Us</a>
+              <a href="#" class="btn">
+                <span>
+                  More About Us
+                  <i class="bi bi-caret-right-fill"></i>
+                </span>
+              </a>
             </div>
             <div class="about-image">
               <img src="./assets/images/about-image.webp" alt="" />
             </div>
           </div>
-          <div class="col">
+          <div class="column">
             <div class="trust-section">
               <div class="trust-content">
                 <h3>Trust By Clients</h3>
@@ -328,17 +333,37 @@
             </div>
             <div class="about-details">
               <div class="about-us">
-                <h3>Modern Agriculture Equipment</h3>
-                <p>Awesome Harvest of Wheat</p>
-                <p>Fresh Fruits & Vegedatas</p>
+                <!-- List of items -->
+                <ul class="about-list">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Modern Agriculture Equipment
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Awesome Harvest of Wheat
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Fresh Fruits & Vegetables
+                  </li>
+                </ul>
+
+                <!-- Divider -->
+                <hr />
+
+                <!-- Additional Details -->
                 <div class="about-item">
                   <i class="bi bi-person-check-fill"></i>
                   <h4>HIGHLY QUALIFIED & SPECIALIZED FARMERS</h4>
                 </div>
                 <div class="about-item">
                   <i class="bi bi-flower1"></i>
-                  <h4>FRUIT, VEGEDATAS AND LIVESTOCK</h4>
+                  <h4>FRUIT, VEGETABLES AND LIVESTOCK</h4>
                 </div>
+
+                <!-- Read More -->
+                <a href="#" class="about-read-more">Read More</a>
               </div>
             </div>
           </div>
@@ -395,7 +420,82 @@
 
     <section class="why-choose">
       <div class="container">
-        <div class="row">
+        <div class="section-row">
+          <div class="features-section">
+            <div class="swiper feature-swiper">
+              <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide feature-card">
+                  <div class="card-content">
+                    <i class="bi bi-check-circle-fill icon"></i>
+                    <h4>100% Organic Products</h4>
+                    <p>
+                      Ultrices sagittis orci a scelerisque purus semper eget
+                      duis at. Sollicitudin nibh sit amet commodo nulla.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feature-card">
+                  <div class="card-content">
+                    <i class="bi bi-check-circle-fill icon"></i>
+                    <h4>100% Organic Products</h4>
+                    <p>
+                      Ultrices sagittis orci a scelerisque purus semper eget
+                      duis at. Sollicitudin nibh sit amet commodo nulla.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feature-card">
+                  <div class="card-content">
+                    <i class="bi bi-check-circle-fill icon"></i>
+                    <h4>100% Organic Products</h4>
+                    <p>
+                      Ultrices sagittis orci a scelerisque purus semper eget
+                      duis at. Sollicitudin nibh sit amet commodo nulla.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feature-card">
+                  <div class="card-content">
+                    <i class="bi bi-check-circle-fill icon"></i>
+                    <h4>100% Organic Products</h4>
+                    <p>
+                      Ultrices sagittis orci a scelerisque purus semper eget
+                      duis at. Sollicitudin nibh sit amet commodo nulla.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feature-card">
+                  <div class="card-content">
+                    <i class="bi bi-check-circle-fill icon"></i>
+                    <h4>100% Organic Products</h4>
+                    <p>
+                      Ultrices sagittis orci a scelerisque purus semper eget
+                      duis at. Sollicitudin nibh sit amet commodo nulla.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide feature-card">
+                  <div class="card-content">
+                    <i class="bi bi-check-circle-fill icon"></i>
+                    <h4>100% Organic Products</h4>
+                    <p>
+                      Ultrices sagittis orci a scelerisque purus semper eget
+                      duis at. Sollicitudin nibh sit amet commodo nulla.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Additional cards -->
+                <!-- ... -->
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="image">
+              <img src="./assets/images/h1-img2.webp" alt="Donal Farm" />
+            </div>
+          </div>
           <div class="col-left">
             <div class="content">
               <h2>Why Choose Donal Farm?</h2>
@@ -431,11 +531,6 @@
               </ul>
             </div>
           </div>
-          <div class="col-right">
-            <div class="image">
-              <img src="./assets/images/h1-img2.webp" alt="Donal Farm" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -455,7 +550,7 @@
               </p>
               <div class="icons-row">
                 <div class="icon">
-                  <i class="bi bi-leaf"></i>
+                  <i class="bi bi-usb-mini"></i>
                   <h4>Sustainability</h4>
                 </div>
                 <div class="icon">
@@ -486,55 +581,77 @@
     <section class="latest-projects">
       <div class="container">
         <div class="section-header">
-          <h2>Latest Projects</h2>
+          <h2>Latest Projects List</h2>
           <p>
-            Check out our latest projects where we apply the most innovative
-            farming techniques for optimal results.
+            Duis eleifend euismod arcu, nec faucibus mauris finibus id. Integer
+            mattis, tellus non finibus rutrum.
           </p>
         </div>
 
         <div class="swiper-container latest-projects-swiper">
           <div class="swiper-wrapper">
+            <!-- Project Card 1 -->
             <div class="swiper-slide project-card">
               <div class="project-image">
-                <img src="./assets/images/project1.jpg" alt="Project 1" />
-                <div class="overlay">
-                  <div class="overlay-content">
-                    <h3>Project Title 1</h3>
-                    <p>
-                      Details about project 1. Description of the work done.
+                <img
+                  src="./assets/images/fancy-img1.webp"
+                  alt="Seasonal Farming"
+                />
+                <div class="card-overlay">
+                  <h3 class="card-title">Farm - Plants</h3>
+                  <div class="card-hidden-content">
+                    <p class="card-description">
+                      Explore the latest seasonal farming innovations.
                     </p>
+                    <a href="#" class="read-more">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Project Card 2 -->
             <div class="swiper-slide project-card">
               <div class="project-image">
-                <img src="./assets/images/project2.jpg" alt="Project 2" />
-                <div class="overlay">
-                  <div class="overlay-content">
-                    <h3>Project Title 2</h3>
-                    <p>
-                      Details about project 2. Description of the work done.
+                <img
+                  src="./assets/images/fancy-img2.webp"
+                  alt="Cattle Farming"
+                />
+                <div class="card-overlay">
+                  <h3 class="card-title">Farm - Animals</h3>
+                  <div class="card-hidden-content">
+                    <p class="card-description">
+                      Learn how we care for cattle using sustainable practices.
                     </p>
+                    <a href="#" class="read-more">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Project Card 3 -->
             <div class="swiper-slide project-card">
               <div class="project-image">
-                <img src="./assets/images/project3.jpg" alt="Project 3" />
-                <div class="overlay">
-                  <div class="overlay-content">
-                    <h3>Project Title 3</h3>
-                    <p>
-                      Details about project 3. Description of the work done.
+                <img
+                  src="./assets/images/fancy-img3.webp"
+                  alt="Sheep Farming"
+                />
+                <div class="card-overlay">
+                  <h3 class="card-title">Agriculture - Farm</h3>
+                  <div class="card-hidden-content">
+                    <p class="card-description">
+                      Discover the joy and techniques of sheep farming.
                     </p>
+                    <a href="#" class="read-more">
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Add more project cards as needed -->
           </div>
 
           <div class="swiper-pagination"></div>
@@ -544,54 +661,100 @@
 
     <section class="testimonials">
       <div class="container">
-        <div class="row">
-          <div class="col-left">
-            <div class="image">
-              <!-- <img src="./assets/images/h1-img2.webp" alt="Client Image" /> -->
-            </div>
-          </div>
-          <div class="col-right">
-            <h2>What Our Clients Say</h2>
-            <div class="swiper-container testimonial-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <p>
-                      "Donal Farm has completely transformed our farming
-                      practices. Their commitment to sustainable farming is
-                      outstanding!"
-                    </p>
-                    <h4>John Doe</h4>
-                    <p>Farmer</p>
-                  </div>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="swiper-container testimonial-swiper">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="client-avatar">
+                  <img
+                    src="./assets/images/testi-img1-120x120.webp"
+                    alt="Client Image"
+                  />
                 </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <p>
-                      "The produce from Donal Farm is always fresh, and their
-                      innovative techniques help us get the best yields every
-                      season."
-                    </p>
-                    <h4>Jane Smith</h4>
-                    <p>Farm Manager</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <p>
-                      "We highly recommend Donal Farm for their dedication to
-                      quality and sustainability. Their service is top-notch!"
-                    </p>
-                    <h4>Michael Johnson</h4>
-                    <p>Business Owner</p>
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "Donal Farm has completely transformed our farming
+                    practices. Their commitment to sustainable farming is
+                    outstanding!"
+                  </p>
+                  <div class="client-info">
+                    <h4 class="client-name">John Doe</h4>
+                    <p class="client-role">Farmer</p>
+                    <div class="rating">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Swiper navigation (optional) -->
-              <!-- <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div> -->
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="client-avatar">
+                  <img
+                    src="./assets/images/testi-img2-120x120.webp"
+                    alt="Client Image"
+                  />
+                </div>
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "The produce from Donal Farm is always fresh, and their
+                    innovative techniques help us get the best yields every
+                    season."
+                  </p>
+                  <div class="client-info">
+                    <h4 class="client-name">Jane Smith</h4>
+                    <p class="client-role">Farm Manager</p>
+                    <div class="rating">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="client-avatar">
+                  <img
+                    src="./assets/images/testi-img1-120x120.webp"
+                    alt="Client Image"
+                  />
+                </div>
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "We highly recommend Donal Farm for their dedication to
+                    quality and sustainability. Their service is top-notch!"
+                  </p>
+                  <div class="client-info">
+                    <h4 class="client-name">Michael Johnson</h4>
+                    <p class="client-role">Business Owner</p>
+                    <div class="rating">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- Swiper pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -943,6 +1106,25 @@
           },
           1024: {
             slidesPerView: 3,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".feature-swiper", {
+        slidesPerView: 3, // Show 3 cards at a time
+        spaceBetween: 20, // Gap between cards
+        loop: true, // Enable looping
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          // Responsive settings
+          768: {
+            slidesPerView: 2, // Show 2 cards on smaller screens
+          },
+          576: {
+            slidesPerView: 1, // Show 1 card on very small screens
           },
         },
       });

@@ -8,21 +8,21 @@
     margin: 0 auto;
   }
 
-  .row {
+  .about-section-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
     gap: 2rem;
 
-    .col {
+    .column {
       flex: 1;
     }
 
-    .col:first-child {
+    .column:first-child {
       flex: 7;
     }
 
-    .col:last-child {
+    .column:last-child {
       flex: 3;
     }
   }
@@ -36,7 +36,7 @@
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 3.4rem;
       margin-bottom: 1.5rem;
     }
 
@@ -45,17 +45,29 @@
     }
 
     .btn {
-      display: inline-block;
-      background-color: $secondary-color;
-      color: $primary-color;
       text-decoration: none;
-      font-weight: bold;
-      padding: 0.75rem 1.5rem;
-      border-radius: $border-radius;
-      transition: background-color 0.3s ease;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 25px;
+      background-color: $primary-color;
+      color: $white;
+      transition: background-color 0.3s ease-in-out;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          background-color: $secondary-color;
+          padding: 0.1rem 0.4rem;
+          border-radius: 50%;
+          margin-block: 5px; // Add space at top and bottom
+        }
+      }
 
       &:hover {
-        background-color: darken($secondary-color, 10%);
+        background-color: darken($primary-color, 10%);
       }
     }
   }
@@ -70,68 +82,109 @@
   }
 
   .trust-section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     background-color: $secondary-color;
     padding: 2rem;
-    border-radius: $border-radius;
+    border-radius: $border-radius-lg;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 
     .trust-content {
-      padding: 10px;
+      padding: 1.2rem;
       border-radius: $border-radius;
 
-      border: 1px dotted $primary-color;
+      border: 1px dashed $white;
       h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: normal;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
       }
 
       h2 {
-        font-size: 2.4rem;
+        font-size: 3.4rem;
         margin-bottom: 0.5rem;
       }
 
       p {
-        font-size: 0.9rem;
+        font-size: 1rem;
         color: $grey;
       }
     }
   }
 
   .about-details {
-    border-radius: $border-radius;
-    padding: 1rem;
-    background-color: $primary-color;
+    background-color: $primary-color; // Updated primary color
+    border-radius: 10px; // Rounded corners
+    padding: 2rem;
+    color: $white; // Text color for contrast
+    width: 100%; // Ensures responsive design
 
     .about-us {
-      padding: 10px;
-      border: 1px dotted $secondary-color;
+      border: 1px dashed $white;
+      padding: 1.5rem;
       border-radius: $border-radius;
-      h3 {
-        font-size: 1rem;
-        font-weight: normal;
-        margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      // List styling
+      .about-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          gap: 0.5rem;
+
+          i {
+            color: $secondary-color; // Yellow for icons
+            font-size: 1.2rem;
+          }
+        }
       }
 
-      p {
-        margin-bottom: 0.5rem;
+      // Divider styling
+      hr {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2); // Light divider
+        margin: 1.5rem 0;
       }
 
+      // About items
       .about-item {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin-top: 1rem;
+        margin-bottom: 1.5rem;
 
         i {
           font-size: 2rem;
-          color: $secondary-color;
+          color: $secondary-color; // Yellow for icons
+          margin-right: 1rem;
         }
 
         h4 {
           font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+
+      // Read More link
+      .about-read-more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: $secondary-color; // Highlighted text color
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+
+        transition: color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+          color: $white;
+          border-color: $white;
         }
       }
     }
