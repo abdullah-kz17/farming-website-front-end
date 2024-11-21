@@ -74,34 +74,24 @@
             </a>
             <nav class="nav">
               <!-- Home Dropdown -->
-              <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open = !open" class="nav-link">
-                  <i class="bi bi-house"></i> Home
-                  <i class="bi bi-caret-down"></i>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                  Home
+                  <i class="bi bi-caret-down-fill"></i>
                 </a>
-                <div
-                  x-show="open"
-                  x-transition
-                  @click.away="open = false"
-                  class="dropdown-menu"
-                >
+                <div class="dropdown-menu">
                   <a href="#">Homepage 1</a>
                   <a href="#">Homepage 2</a>
                 </div>
               </div>
 
               <!-- Pages Dropdown -->
-              <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open = !open" class="nav-link">
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
                   Pages
-                  <i class="bi bi-caret-down"></i>
+                  <i class="bi bi-caret-down-fill"></i>
                 </a>
-                <div
-                  x-show="open"
-                  x-transition
-                  @click.away="open = false"
-                  class="dropdown-menu"
-                >
+                <div class="dropdown-menu">
                   <a href="#">About</a>
                   <a href="#">404</a>
                   <a href="#">Privacy Policy</a>
@@ -110,23 +100,19 @@
               </div>
 
               <!-- Shop Dropdown -->
-              <div x-data="{ open: false }" class="nav-item">
-                <a href="#" @click.prevent="open = !open" class="nav-link">
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
                   Shop
-                  <i class="bi bi-caret-down"></i>
+                  <i class="bi bi-caret-down-fill"></i>
                 </a>
-                <div
-                  x-show="open"
-                  x-transition
-                  @click.away="open = false"
-                  class="dropdown-menu"
-                >
+                <div class="dropdown-menu">
                   <a href="#">Products</a>
                   <a href="#">Cart</a>
                   <a href="#">Checkout</a>
                   <a href="#">My Account</a>
                 </div>
               </div>
+
               <a href="#" class="nav-item">Services</a>
               <a href="#" class="nav-item">Blogs</a>
               <a href="#" class="nav-item">Contact</a>
@@ -136,13 +122,21 @@
           <div class="nav-right">
             <ul>
               <li>
+                <a href="#" class="btn">
+                  <span>
+                    Get In Touch
+                    <i class="bi bi-caret-right-fill"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
                 <i
                   class="bi bi-search icon-with-badge"
                   style="
                     border-radius: 50%;
                     padding: 1rem;
                     background-color: #e0e0e0;
-                    border: 2px solid #e0e0e0;
+                    border: 2px solid #6c6c6c;
                   "
                 ></i>
               </li>
@@ -153,7 +147,7 @@
                     border-radius: 50%;
                     padding: 1rem;
                     background-color: #e0e0e0;
-                    border: 2px solid #e0e0e0;
+                    border: 2px solid #6c6c6c;
                   "
                 >
                   <span class="cart-badge">3</span>
@@ -166,7 +160,7 @@
                     border-radius: 50%;
                     padding: 1rem;
                     background-color: #e0e0e0;
-                    border: 2px solid #e0e0e0;
+                    border: 2px solid #6c6c6c;
                   "
                 ></i>
               </li>
@@ -179,23 +173,15 @@
       <div class="hero">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
+            <!-- First Slide -->
             <div class="swiper-slide hero-slide">
-              <div
-                class="container"
-                style="
-                  background-image: url('./assets/images/h1-slide2.webp');
-                  background-size: cover;
-                  background-position: center;
-                  height: 100%;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+              <div class="hero-container">
+                <img
+                  src="./assets/images/h1-slide2.webp"
+                  alt="Hero Image 1"
+                  class="hero-background"
+                />
+                <div class="hero-content">
                   <span class="hero-text"
                     >Better Agriculture for Better Future</span
                   >
@@ -207,30 +193,22 @@
                     euphoria of recent decades has been that everything depends
                     on innovation.
                   </p>
-                  <a href="#" class="btn btn-primary"
-                    >See Our Services <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <a href="#" class="btn btn-primary">
+                    See Our Services <i class="bi bi-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
-            <!-- Additional slides -->
+
+            <!-- Second Slide -->
             <div class="swiper-slide hero-slide">
-              <div
-                class="container"
-                style="
-                  background-image: url('./assets/images/h1-slide2.webp');
-                  background-size: cover;
-                  background-position: center;
-                  height: 100%;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
+              <div class="hero-container">
+                <img
+                  src="./assets/images/h1-slide2.webp"
+                  alt="Hero Image 2"
+                  class="hero-background"
+                />
+                <div class="hero-content">
                   <h1 class="hero-title">Innovative Farming Techniques</h1>
                   <p class="hero-subtitle">
                     Empowering farmers with modern tools for a sustainable
@@ -240,12 +218,14 @@
               </div>
             </div>
           </div>
+          <!-- Swiper Navigation Buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
 
+    <!-- Services Section -->
     <section class="services-section">
       <img src="./assets/images/footer-grass.webp" alt="" class="grass-image" />
       <div class="container">
@@ -265,7 +245,6 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
               saepe impedit corporis eum ut delectus?
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
 
@@ -285,7 +264,6 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
               saepe impedit corporis eum ut delectus?
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
 
@@ -305,7 +283,6 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
               saepe impedit corporis eum ut delectus?
             </p>
-            <a href="#">Read More</a>
           </div>
         </div>
       </div>
@@ -887,22 +864,17 @@
     <script>
       // Initialize Swiper for the Hero section
       var heroSwiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
+        slidesPerView: 1, // One slide at a time
+        spaceBetween: 0, // No extra space between slides
+        loop: true, // Loop through slides infinitely
         navigation: {
-          nextEl: ".mySwiper .swiper-button-next",
-          prevEl: ".mySwiper .swiper-button-prev",
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
-        loop: true,
         autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
+          delay: 5000, // 5 seconds delay
+          disableOnInteraction: false, // Continue autoplay after user interaction
         },
-        // Optional pagination
-        // pagination: {
-        //   el: ".mySwiper .swiper-pagination",
-        //   clickable: true,
-        // },
       });
 
       // Initialize Swiper for the Latest Projects section

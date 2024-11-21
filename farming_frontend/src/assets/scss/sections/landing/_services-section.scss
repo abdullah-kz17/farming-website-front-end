@@ -2,19 +2,20 @@
 
 .services-section {
   position: relative;
-  background: linear-gradient(to bottom, $secondary-color 70%, $gray-light 30%);
+  background: linear-gradient(to bottom, $secondary-color 50%, $gray-light 40%);
+  padding-top: 5rem;
 
   .grass-image {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -1rem;
     left: 0;
-    z-index: -1;
+    z-index: 99;
   }
 
   .container {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -23,11 +24,11 @@
     .service-card {
       position: relative;
       width: 300px;
+      height: 250px; // Consistent height
       border-radius: $border-radius;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      padding: 10px;
 
       &:hover {
         transform: scale(1.05);
@@ -44,13 +45,14 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
+        width: 90%;
+        margin-left: 1rem;
         background: $white;
         color: $primary-color;
         text-align: center;
+        margin-bottom: 10px;
         padding: 1rem 2rem;
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
+        border-radius: $border-radius;
 
         h1 {
           font-size: 1.2rem;
@@ -59,13 +61,11 @@
 
       .image-hover-overlay {
         position: absolute;
-        top: -100%;
+        top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
-        background: $white;
-        border-radius: $border-radius;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        background: rgba($white, 0.9); // Semi-transparent background
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -73,11 +73,11 @@
         text-align: center;
         padding: 1.5rem;
         transition: all 0.4s ease;
+        border-radius: $border-radius;
 
         i {
           font-size: 2rem;
           color: $primary-color;
-          margin-bottom: 1rem;
         }
 
         h1 {
@@ -91,32 +91,24 @@
           color: $grey;
           margin-bottom: 1rem;
         }
-
-        a {
-          display: inline-block;
-          text-decoration: none;
-          font-weight: bold;
-          color: $white;
-          background: $secondary-color;
-          padding: 0.5rem 1rem;
-          border-radius: $border-radius;
-          transition: background 0.3s ease;
-
-          &:hover {
-            background: darken($secondary-color, 10%);
-          }
-        }
       }
 
       &:hover {
         .image-hover-overlay {
-          top: 10%;
+          opacity: 1; // Show the overlay on hover
+          visibility: visible; // Ensure it is visible
         }
 
         .image-overlay {
-          transform: translateY(100%);
+          transform: translateY(120%); // Hide the overlay on hover
           transition: transform 0.3s ease;
         }
+      }
+
+      // Initially hide the hover overlay
+      .image-hover-overlay {
+        opacity: 0;
+        visibility: hidden;
       }
     }
   }
