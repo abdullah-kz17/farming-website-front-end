@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farm Fresh Shop</title>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="shop-container" x-data="shopData()">
+      <aside class="sidebar">
+        <div class="filter-section">
+          <h3>Categories</h3>
+          <ul>
+            <template x-for="category in categories" :key="category.id">
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    x-model="selectedCategories"
+                    :value="category.id"
+                  />
+                  <span
+                    x-text="category.name + ' (' + category.count + ')'"
+                  ></span>
+                </label>
+              </li>
+            </template>
+          </ul>
+        </div>
+
+        <div class="filter-section">
+          <h3>Price Range</h3>
+          <div class="price-range">
+            <input type="range" x-model="priceRange.min" :min="0" :max="100" />
+            <input type="range" x-model="priceRange.max" :min="0" :max="100" />
+            <div class="price-values">
+              <span x-text="'$' + priceRange.min"></span>
+              <span x-text="'$' + priceRange.max"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Colors</h3>
+          <div class="color-filters">
+            <template x-for="color in colors" :key="color.id">
+              <div
+                class="color-option"
+                :style="'background-color: ' + color.code"
+                :class="{ active: selectedColors.includes(color.id) }"
+                @click="toggleColor(color.id)"
+              ></div>
+            </template>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Popular Products</h3>
+          <div class="popular-products">
+            <template x-for="product in popularProducts" :key="product.id">
+              <div class="popular-product">
+                <img :src="product.image" :alt="product.name" />
+                <div class="product-info">
+                  <h4 x-text="product.name"></h4>
+                  <p x-text="'$' + product.price"></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <button class="apply-filters" @click="applyFilters">
+          Apply Filters
+        </button>
+      </aside>
+
+      <main class="products-section">
+        <div class="products-header">
+          <div class="view-toggle">
+            <button
+              :class="{ active: viewType === 'grid' }"
+              @click="viewType = 'grid'"
+            >
+              <svg><!-- Grid Icon --></svg>
+            </button>
+            <button
+              :class="{ active: viewType === 'list' }"
+              @click="viewType = 'list'"
+            >
+              <svg><!-- List Icon --></svg>
+            </button>
+          </div>
+
+          <div class="sort-options">
+            <select x-model="sortBy">
+              <option value="latest">Latest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid" :class="viewType">
+          <template x-for="product in filteredProducts" :key="product.id">
+            <div class="product-card">
+              <span
+                class="badge"
+                x-show="product.badge"
+                x-text="product.badge"
+              ></span>
+              <div class="product-image">
+                <img :src="product.image" :alt="product.name" />
+              </div>
+              <div class="product-info">
+                <h3 x-text="product.name"></h3>
+                <p class="price" x-text="'$' + product.price"></p>
+                <div class="product-actions">
+                  <button @click="addToCart(product)" class="add-to-cart">
+                    Add to Cart
+                  </button>
+                  <button @click="viewProduct(product)" class="view-details">
+                    View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function shopData() {
+        return {
+          viewType: "grid",
+          sortBy: "latest",
+          selectedCategories: [],
+          selectedColors: [],
+          priceRange: {
+            min: 0,
+            max: 100,
+          },
+
+          // Sample Data
+          categories: [
+            { id: 1, name: "Clean Fruit", count: 8 },
+            { id: 2, name: "Detox Drinks", count: 1 },
+            { id: 3, name: "Jam And Jelly", count: 1 },
+            { id: 4, name: "Premium Nuts", count: 1 },
+            { id: 5, name: "Superfood", count: 6 },
+            { id: 6, name: "Vegetables", count: 2 },
+          ],
+
+          colors: [
+            { id: 1, name: "Red", code: "#ff0000" },
+            { id: 2, name: "Green", code: "#00ff00" },
+            { id: 3, name: "Blue", code: "#0000ff" },
+            { id: 4, name: "Yellow", code: "#ffff00" },
+          ],
+
+          products: [
+            {
+              id: 1,
+              name: "Organic Apples",
+              price: 12.99,
+              image: "/api/placeholder/300/300",
+              category: 1,
+              color: 1,
+              badge: "Sale",
+            },
+            {
+              id: 2,
+              name: "Fresh Oranges",
+              price: 8.99,
+              image: "/api/placeholder/300/300",
+              category: 1,
+              color: 2,
+            },
+            // Add more products...
+          ],
+
+          popularProducts: [
+            {
+              id: 1,
+              name: "Best Seller Item",
+              price: 29.99,
+              image: "/api/placeholder/100/100",
+            },
+            // Add more popular products...
+          ],
+
+          get filteredProducts() {
+            let filtered = [...this.products];
+
+            // Apply category filter
+            if (this.selectedCategories.length) {
+              filtered = filtered.filter((product) =>
+                this.selectedCategories.includes(product.category)
+              );
+            }
+
+            // Apply color filter
+            if (this.selectedColors.length) {
+              filtered = filtered.filter((product) =>
+                this.selectedColors.includes(product.color)
+              );
+            }
+
+            // Apply price filter
+            filtered = filtered.filter(
+              (product) =>
+                product.price >= this.priceRange.min &&
+                product.price <= this.priceRange.max
+            );
+
+            // Apply sorting
+            switch (this.sortBy) {
+              case "price-low":
+                filtered.sort((a, b) => a.price - b.price);
+                break;
+              case "price-high":
+                filtered.sort((a, b) => b.price - a.price);
+                break;
+              case "name":
+                filtered.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+              default:
+                // Latest sorting (using id as proxy for date)
+                filtered.sort((a, b) => b.id - a.id);
+            }
+
+            return filtered;
+          },
+
+          toggleColor(colorId) {
+            const index = this.selectedColors.indexOf(colorId);
+            if (index === -1) {
+              this.selectedColors.push(colorId);
+            } else {
+              this.selectedColors.splice(index, 1);
+            }
+          },
+
+          applyFilters() {
+            // Additional filter logic if needed
+            console.log("Filters applied");
+          },
+
+          addToCart(product) {
+            console.log("Added to cart:", product);
+          },
+
+          viewProduct(product) {
+            console.log("Viewing product:", product);
+          },
+        };
+      }
+    </script>
+  </body>
+</html>

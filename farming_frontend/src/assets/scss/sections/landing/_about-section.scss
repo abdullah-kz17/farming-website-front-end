@@ -2,6 +2,7 @@
 
 .about-section {
   padding: 4rem 2rem;
+  background-color: $gray-light; // Light background for better contrast
 
   .container {
     max-width: 1200px;
@@ -10,33 +11,67 @@
 
   .about-section-row {
     display: flex;
-    justify-content: space-between;
-
+    flex-wrap: wrap; // Allow wrapping for smaller screens
     gap: 2rem;
 
     .column {
       flex: 1;
     }
 
-    .column:first-child {
+    .about-content-column {
       flex: 7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        flex: 100%; // Full width on smaller screens
+      }
     }
 
-    .column:last-child {
+    .about-details-column {
       flex: 3;
+
+      @media (max-width: 768px) {
+        flex: 100%; // Full width on smaller screens
+      }
     }
   }
 
   .about-content {
-    h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      margin-bottom: 1rem;
+    .sub-title {
+      margin-left: 1.5rem;
+      display: inline-block;
       color: $primary-color;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
     }
 
     h1 {
-      font-size: 3.4rem;
+      font-size: 3rem;
       margin-bottom: 1.5rem;
     }
 
@@ -47,7 +82,7 @@
     .btn {
       text-decoration: none;
       display: inline-block;
-      padding: 0.2rem 1rem;
+      padding: 0.5rem 1.5rem;
       border-radius: 25px;
       background-color: $primary-color;
       color: $white;
@@ -74,10 +109,15 @@
 
   .about-image {
     margin-top: 20px;
+
     img {
       max-width: 100%;
       height: auto;
       border-radius: $border-radius;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 0; // Remove margin on smaller screens
     }
   }
 
@@ -188,5 +228,38 @@
         }
       }
     }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  .about-section .about-section-row {
+    flex-direction: column; // Stack columns on smaller screens
+  }
+
+  .about-section .about-content {
+    margin-bottom: 2rem; // Add space between sections on smaller screens
+  }
+
+  .about-section .trust-section {
+    margin-bottom: 1rem; // Reduce margin on smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section .about-content h1 {
+    font-size: 2.5rem; // Adjust font size for smaller screens
+  }
+
+  .about-section .trust-section .trust-content h2 {
+    font-size: 2.5rem; // Adjust font size for smaller screens
+  }
+
+  .about-section .about-details .about-us .about-list li {
+    font-size: 0.9rem; // Adjust font size for smaller screens
+  }
+
+  .about-section .about-details .about-us .about-item h4 {
+    font-size: 0.9rem; // Adjust font size for smaller screens
   }
 }

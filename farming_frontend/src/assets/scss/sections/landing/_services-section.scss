@@ -15,7 +15,8 @@
 
   .container {
     display: flex;
-    gap: 4rem;
+    flex-wrap: wrap; // Allow wrapping for smaller screens
+    gap: 2rem; // Adjust gap for responsiveness
     justify-content: center;
     align-items: center;
     position: relative;
@@ -23,7 +24,7 @@
 
     .service-card {
       position: relative;
-      width: 300px;
+      width: calc(33.33% - 2rem); // Use calc for consistent spacing
       height: 250px; // Consistent height
       border-radius: $border-radius;
       overflow: hidden;
@@ -74,6 +75,8 @@
         padding: 1.5rem;
         transition: all 0.4s ease;
         border-radius: $border-radius;
+        opacity: 0; // Initially hide the overlay
+        visibility: hidden; // Ensure it is hidden
 
         i {
           font-size: 2rem;
@@ -104,12 +107,38 @@
           transition: transform 0.3s ease;
         }
       }
-
-      // Initially hide the hover overlay
-      .image-hover-overlay {
-        opacity: 0;
-        visibility: hidden;
-      }
     }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 1024px) {
+  .services-section .container .service-card {
+    width: calc(50% - 2rem); // Adjust width for smaller screens
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section .container .service-card {
+    width: 100%; // Full width on mobile
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section .container {
+    gap: 1rem; // Reduce gap on very small screens
+  }
+
+  .services-section .container .service-card {
+    height: auto; // Adjust height for better content display
+  }
+
+  .services-section .container .service-card img {
+    height: 200px; // Adjust image height
+  }
+
+  .services-section .container .service-card .image-overlay,
+  .services-section .container .service-card .image-hover-overlay {
+    padding: 0.5rem; // Reduce padding for better fit
   }
 }

@@ -1,8 +1,15 @@
 @import "../../variables/global-variables";
 
 .statistics-section {
+  background-color: rgb(213, 223, 231);
   padding: 4rem 2rem;
   text-align: center;
+  background-color: $gray-light;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   .intro-text {
     max-width: 800px;
@@ -11,20 +18,64 @@
     color: $dark;
     line-height: 1.8;
 
-    span {
-      text-decoration: underline;
-      font-weight: bold;
+    .heading {
+      display: inline-block;
       color: $primary-color;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
     }
   }
 
   .stats-wrapper {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      gap: 0.5rem;
+    }
 
     .stat-item {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
       text-align: center;
+      flex: 1;
+      max-width: 220px;
+      padding: 1.5rem 0rem;
+      border-radius: $border-radius;
+      border: 1px solid #ccc;
+      background-color: rgb(174, 178, 183);
+
+      @media (max-width: 768px) {
+        min-width: 100%;
+      }
 
       .icon-circle {
         width: 80px;
@@ -37,6 +88,11 @@
         align-items: center;
         margin: 0 auto 1rem;
         font-size: 2rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       h3 {
@@ -52,5 +108,34 @@
         font-weight: 500;
       }
     }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 992px) {
+  .statistics-section .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .statistics-section .stats-wrapper .stat-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .statistics-section .stats-wrapper .stat-item p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics-section .intro-text {
+    font-size: 1rem;
+  }
+
+  .statistics-section .stats-wrapper .stat-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .statistics-section .stats-wrapper .stat-item p {
+    font-size: 0.8rem;
   }
 }

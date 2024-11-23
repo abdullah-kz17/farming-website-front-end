@@ -1,8 +1,11 @@
-@import "../../variables/global-variables";
-
 .our-commitment {
-  padding: 4rem 2rem;
-  background-color: $gray-light;
+  padding: 6rem 1.5rem;
+  background-color: #f8f9fa;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem;
+  }
 
   .container {
     max-width: 1200px;
@@ -11,83 +14,217 @@
 
   .row {
     display: flex;
-    justify-content: space-between;
+    gap: 4rem;
     align-items: center;
-    gap: 2rem;
+
+    @media (max-width: 992px) {
+      flex-direction: column-reverse;
+      gap: 3rem;
+    }
   }
 
   .col-left {
     flex: 1;
-    max-width: 50%;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
   }
 
   .col-right {
     flex: 1;
-    max-width: 50%;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
   }
 
   .content {
-    h2 {
-      font-size: 1.5rem;
-      font-weight: normal;
-      color: $primary-color;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      color: $grey;
-      margin-bottom: 1.5rem;
-    }
-
-    .icons-row {
-      display: flex;
-      justify-content: space-between;
+    .section-header {
       margin-bottom: 2rem;
 
-      .icon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .sub-heading {
+        margin-left: 1.5rem;
+        display: inline-block;
+        color: $primary-color;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        padding: 0 1rem;
 
-        i {
-          font-size: 2.5rem;
-          color: $secondary-color;
-          margin-bottom: 1rem;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 20px;
+          height: 2px;
+          background-color: $primary-color;
         }
 
-        h4 {
-          font-size: 1.2rem;
-          color: $primary-color;
+        &::before {
+          right: 100%;
+        }
+
+        &::after {
+          left: 100%;
+        }
+      }
+
+      h1 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #1a1a1a;
+
+        @media (max-width: 768px) {
+          font-size: 2rem;
         }
       }
     }
 
-    .btn {
-      display: inline-block;
+    p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #666;
+      margin-bottom: 3rem;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+
+      .icon-box {
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+
+          .icon-wrapper {
+            background-color: #2b7a0b;
+
+            i {
+              color: white;
+            }
+          }
+        }
+
+        .icon-wrapper {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto 1rem;
+          border-radius: 50%;
+          background-color: #e9ecef;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s ease;
+
+          i {
+            font-size: 2rem;
+            color: #2b7a0b;
+            transition: color 0.3s ease;
+          }
+        }
+
+        h4 {
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: #666;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: #2b7a0b;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 4px;
       text-decoration: none;
-      color: $white;
-      background-color: $secondary-color;
-      padding: 0.75rem 1.5rem;
-      border-radius: $border-radius;
-      font-weight: bold;
-      text-align: center;
-      transition: background-color 0.3s ease;
+      font-weight: 500;
+      transition: all 0.3s ease;
 
       &:hover {
-        background-color: darken($secondary-color, 10%);
+        background-color: darken(#2b7a0b, 5%);
+        gap: 1rem;
+      }
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover i {
+        transform: translateX(5px);
       }
     }
   }
 
-  .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: $border-radius;
+  .image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(43, 122, 11, 0.1), transparent);
+      pointer-events: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Animation Keyframes
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Product Detail</title>
+  </head>
+  <body>
+    <div class="product-detail-page">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb">
+        <a href="/">Home</a> &gt; <a href="/shop">Shop</a> &gt;
+        <span>Product Name</span>
+      </nav>
+
+      <!-- Product Detail Section -->
+      <div class="product-detail-container">
+        <!-- Image Gallery -->
+        <div class="product-gallery">
+          <div class="main-image">
+            <img
+              id="main-image"
+              src="./assets/images/product-1-300x300.webp"
+              alt="Product Image"
+            />
+          </div>
+          <div class="thumbnail-images">
+            <img
+              src="./assets/images/product-10-300x300.webp"
+              alt="Product Image 1"
+              onclick="changeImage(this)"
+            />
+            <img
+              src="./assets/images/product-10-300x300.webp"
+              alt="Product Image 2"
+              onclick="changeImage(this)"
+            />
+            <img
+              src="./assets/images/product-10-300x300.webp"
+              alt="Product Image 3"
+              onclick="changeImage(this)"
+            />
+            <img
+              src="./assets/images/product-10-300x300.webp"
+              alt="Product Image 4"
+              onclick="changeImage(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-info">
+          <h1>Product Name</h1>
+          <p class="price">$49.99</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            malesuada libero nec massa malesuada, a vehicula neque mollis.
+            Vivamus luctus odio sed ligula tincidunt varius.
+          </p>
+
+          <!-- Product Options -->
+          <div class="product-options">
+            <div class="option">
+              <label for="size">Size:</label>
+              <select id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <div class="option">
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" min="1" value="1" />
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy-now">Buy Now</button>
+          </div>
+
+          <!-- Additional Info -->
+          <ul class="additional-info">
+            <li>Category: <a href="#">Clothing</a></li>
+            <li>Tags: <a href="#">Summer</a>, <a href="#">Casual</a></li>
+            <li>Stock: <span>In Stock</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function changeImage(thumbnail) {
+        document.getElementById("main-image").src = thumbnail.src;
+      }
+    </script>
+  </body>
+</html>

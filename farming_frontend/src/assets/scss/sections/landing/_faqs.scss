@@ -21,6 +21,10 @@
     flex: 1;
     max-width: 55%;
 
+    @media (max-width: 768px) {
+      max-width: 100%; // Full width on smaller screens
+    }
+
     h2 {
       font-size: 2rem;
       margin-bottom: 2rem;
@@ -81,16 +85,48 @@
   .col-right {
     flex: 1;
     max-width: 40%;
-    text-align: center;
+
+    @media (max-width: 768px) {
+      max-width: 100%; // Full width on smaller screens
+      margin-top: 2rem; // Add some margin for better spacing
+    }
 
     .image {
       img {
-        margin-top: 2rem;
         max-width: 100%;
-        height: 100%;
+        height: auto;
         border-radius: $border-radius-lg;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
       }
     }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 992px) {
+  .faqs .col-left h2 {
+    font-size: 1.8rem; // Adjust font size for smaller screens
+  }
+
+  .faqs .faq-list .faq-item .faq-question h3 {
+    font-size: 1.1rem; // Adjust font size for smaller screens
+  }
+
+  .faqs .faq-list .faq-item .faq-answer {
+    font-size: 0.9rem; // Adjust font size for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .faqs .col-left h2 {
+    font-size: 1.6rem; // Further adjust font size for very small screens
+  }
+
+  .faqs .faq-list .faq-item .faq-question h3 {
+    font-size: 1rem; // Further adjust font size for very small screens
+  }
+
+  .faqs .faq-list .faq-item .faq-answer {
+    font-size: 0.8rem; // Further adjust font size for very small screens
   }
 }

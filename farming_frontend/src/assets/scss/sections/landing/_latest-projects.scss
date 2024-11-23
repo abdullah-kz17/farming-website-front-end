@@ -1,119 +1,214 @@
-@import "../../variables/global-variables";
 .latest-projects {
-  background-color: #123619; // Dark green background
-  padding: 4rem 2rem;
+  background-color: $primary-color;
+  padding: 6rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/pattern-bg.png") repeat;
+    opacity: 0.05;
+    pointer-events: none;
+  }
 
   .container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+
+    .subtitle {
+      display: inline-block;
+      color: $secondary-color;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 1px;
+        background-color: $secondary-color;
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
+    }
 
     h2 {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 1rem;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     p {
-      font-size: 1rem;
       color: rgba(255, 255, 255, 0.8);
+      font-size: 1.125rem;
+      line-height: 1.75;
       max-width: 600px;
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      max-width: 500px;
       margin: 0 auto;
     }
   }
 
-  .swiper-container {
-    .swiper-wrapper {
-      display: flex;
-      gap: 2rem;
+  .project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+
+      .project-image img {
+        transform: scale(1.1);
+      }
+
+      .card-overlay {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+
+        .overlay-content {
+          transform: translateY(0); /* Move overlay content into view */
+          opacity: 1 !important; /* Make overlay content visible */
+        }
+      }
     }
 
-    .swiper-slide {
+    .project-image {
       position: relative;
-      border-radius: 10px;
+      padding-bottom: 75%; // 4:3 aspect ratio
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
 
-      &:hover {
-        transform: scale(1.05); // Slight zoom on hover
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
       }
 
-      .project-image {
-        position: relative;
+      .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to top,
+          rgba(15, 44, 31, 0.95),
+          rgba(15, 44, 31, 0.7)
+        );
+        opacity: 0; /* Initially hidden */
+        pointer-events: none; /* Prevent interactions when hidden */
+        transition: opacity 0.3s ease, pointer-events 0.3s ease; /* Smooth transition */
+        padding: 2rem;
+        display: flex;
+        align-items: flex-end;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
+        .overlay-content {
+          transform: translateY(5px); /* Start slightly out of view */
+          opacity: 0; /* Initially hidden */
+          transition: all 0.3s ease; /* Smooth transition */
+          transition-delay: 0.1s; /* Add slight delay for smoother effect */
 
-        &:hover img {
-          transform: scale(1.1); // Zoom in on image when hovered
-        }
-
-        .card-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.6); // Dark overlay
-          color: #fff;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 1rem;
-          transition: background 0.3s ease;
-
-          h3.card-title {
-            font-size: 1.5rem;
+          .category {
+            display: inline-block;
+            background-color: $secondary-color;
+            color: $primary-color;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
             margin-bottom: 1rem;
-            opacity: 1; // Always visible
-            transition: transform 0.3s ease, opacity 0.3s ease;
           }
 
-          .card-hidden-content {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.4s ease, transform 0.4s ease;
+          h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.3;
           }
 
-          &:hover {
-            background: rgba(0, 0, 0, 0.8); // Slightly darker on hover
+          p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          }
 
-            h3.card-title {
-              transform: translateY(-20px); // Move heading up
-              opacity: 1; // Ensure it's still visible
+          .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $secondary-color;
+            font-weight: 500;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+
+            i {
+              transition: transform 0.3s ease;
             }
 
-            .card-hidden-content {
-              opacity: 1; // Show hidden content
-              transform: translateY(0); // Move it into place
+            &:hover {
+              gap: 0.75rem;
+
+              i {
+                transform: translateX(3px);
+              }
             }
           }
         }
-      }
-    }
-  }
-
-  .swiper-pagination {
-    margin-top: 2rem;
-
-    .swiper-pagination-bullet {
-      background: #ffc107;
-      opacity: 1;
-
-      &-active {
-        background: #fff;
       }
     }
   }

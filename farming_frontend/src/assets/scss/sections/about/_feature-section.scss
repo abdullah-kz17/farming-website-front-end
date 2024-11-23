@@ -2,22 +2,56 @@
 
 .features-section {
   margin-inline: 2rem;
-  background-color: #5a3a17; // Match the brown background
+  background-color: $gray-light; // Adjust background color
   padding: 2rem;
   border-radius: 15px;
   width: 100%; // Adjust width to fit within the image
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $dark;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: $grey;
+      line-height: 1.6;
+    }
+  }
+
   .feature-swiper {
     .swiper-wrapper {
       display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
 
       .swiper-slide {
         flex-shrink: 0;
         width: calc((100% / 3) - 1rem); // 3 cards visible, adjust for gaps
         margin-right: 1rem;
 
+        @media (max-width: 768px) {
+          width: calc((100% / 2) - 1rem); // 2 cards visible on smaller screens
+        }
+
+        @media (max-width: 480px) {
+          width: 100%; // Full width on very small screens
+          margin-right: 0;
+        }
+
         .feature-card {
-          background-color: #5a3a17; // Card color same as background
+          background-color: $white; // Card color
           border-radius: 10px;
           padding: 1.5rem;
           text-align: left;
@@ -34,14 +68,14 @@
             }
 
             h4 {
-              color: #ffffff; // White text color
+              color: $dark; // Dark text color
               font-size: 1.25rem;
               font-weight: bold;
               margin: 0;
             }
 
             p {
-              color: rgba(255, 255, 255, 0.8); // Subtle text color
+              color: $grey; // Subtle text color
               font-size: 1rem;
               line-height: 1.5;
               margin: 0;
@@ -50,5 +84,42 @@
         }
       }
     }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 992px) {
+  .features-section .section-title {
+    font-size: 1.8rem; // Adjust font size for smaller screens
+  }
+
+  .features-section .section-subtitle {
+    font-size: 0.9rem; // Adjust font size for smaller screens
+  }
+
+  .features-section .feature-card h4 {
+    font-size: 1.1rem; // Adjust font size for smaller screens
+  }
+
+  .features-section .feature-card p {
+    font-size: 0.9rem; // Adjust font size for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section .section-title {
+    font-size: 1.6rem; // Further adjust font size for very small screens
+  }
+
+  .features-section .section-subtitle {
+    font-size: 0.8rem; // Further adjust font size for very small screens
+  }
+
+  .features-section .feature-card h4 {
+    font-size: 1rem; // Further adjust font size for very small screens
+  }
+
+  .features-section .feature-card p {
+    font-size: 0.8rem; // Further adjust font size for very small screens
   }
 }

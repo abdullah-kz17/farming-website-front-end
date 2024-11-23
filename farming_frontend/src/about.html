@@ -20,149 +20,119 @@
   </head>
 
   <body>
-    <div class="top-bar">
-      <div class="container">
-        <div class="contact">
-          <div class="top-bar-heading">
-            <p>
-              Welcome to Donal farm <span>&#183;</span> Agriculture and Organic
-              Farms
-            </p>
-          </div>
-          <div class="contact-details">
-            <a href="tel:+19876543210" class="contact-item">
-              <i class="bi bi-telephone-fill"></i> +1 987 654 3210
-            </a>
-            <a href="mailto:donalfarms@gmail.com" class="contact-item">
-              <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
-            </a>
-            <div class="social-links">
-              <a href="#" class="social-item"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="social-item"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="social-item"
-                ><i class="bi bi-pinterest"></i
-              ></a>
-              <a href="#" class="social-item"
-                ><i class="bi bi-instagram"></i
-              ></a>
+       <section class="heros-section">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="contact">
+            <div class="top-bar-heading">
+              <p>
+                Welcome to Donal Farm <span>•</span> Agriculture and Organic
+                Farms
+              </p>
+            </div>
+            <div class="contact-details">
+              <a href="tel:+19876543210" class="contact-item">
+                <i class="bi bi-telephone-fill"></i> +1 987 654 3210
+              </a>
+              <a href="mailto:donalfarms@gmail.com" class="contact-item">
+                <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
+              </a>
+              <div class="social-links">
+                <a href="#" class="social-item"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-pinterest"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="nav-left">
-          <a href="/" class="logo">
-            <i
-              class="bi bi-leaf"
-              style="
-                border-radius: 50%;
-                padding: 0.5rem;
-                background-color: #e0e0e0;
-              "
-            ></i>
-            DonalFarm
-          </a>
-          <nav class="nav">
-            <!-- Home Dropdown -->
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle">
-                Home
-                <i class="bi bi-caret-down-fill"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a href="#">Homepage 1</a>
-                <a href="#">Homepage 2</a>
-              </div>
-            </div>
 
-            <!-- Pages Dropdown -->
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle">
-                Pages
-                <i class="bi bi-caret-down-fill"></i>
+      <!-- Header -->
+      <header class="header" id="header">
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="nav-left">
+              <a href="/" class="logo">
+                <i class="bi bi-leaf"></i> DonalFarm
               </a>
-              <div class="dropdown-menu">
-                <a href="#">About</a>
-                <a href="#">404</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">FAQs</a>
-              </div>
-            </div>
-
-            <!-- Shop Dropdown -->
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle">
-                Shop
-                <i class="bi bi-caret-down-fill"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a href="#">Products</a>
-                <a href="#">Cart</a>
-                <a href="#">Checkout</a>
-                <a href="#">My Account</a>
-              </div>
-            </div>
-
-            <a href="#" class="nav-item">Services</a>
-            <a href="#" class="nav-item">Blogs</a>
-            <a href="#" class="nav-item">Contact</a>
-          </nav>
-        </div>
-
-        <div class="nav-right">
-          <ul>
-            <li>
-              <a href="#" class="btn">
-                <span>
-                  Get In Touch
-                  <i class="bi bi-caret-right-fill"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <i
-                class="bi bi-search icon-with-badge"
-                style="
-                  border-radius: 50%;
-                  padding: 1rem;
-                  background-color: #e0e0e0;
-                  border: 2px solid #6c6c6c;
-                "
-              ></i>
-            </li>
-            <li>
-              <i
-                class="bi bi-cart icon-with-badge"
-                style="
-                  border-radius: 50%;
-                  padding: 1rem;
-                  background-color: #e0e0e0;
-                  border: 2px solid #6c6c6c;
-                "
+              <button
+                class="mobile-nav-toggle"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
               >
-                <span class="cart-badge">3</span>
-              </i>
-            </li>
-            <li>
-              <i
-                class="bi bi-0-square-fill icon-with-badge"
-                style="
-                  border-radius: 50%;
-                  padding: 1rem;
-                  background-color: #e0e0e0;
-                  border: 2px solid #6c6c6c;
-                "
-              ></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+                <i class="bi bi-list"></i>
+                <span class="visually-hidden">Menu</span>
+              </button>
+            </div>
 
-    <section class="hero-section contact-hero">
+            <nav class="nav" id="primary-navigation">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link"
+                    >Home</i
+                  ></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link"
+                    >Pages <i class="bi bi-caret-down-fill"></i
+                  ></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="404.html">404</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="shop.html" class="nav-link"
+                    >Shop <i class="bi bi-caret-down-fill"></i
+                  ></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="products">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="login.html">My Account</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="blogs.html" class="nav-link">Blogs</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="nav-right">
+              <a href="#" class="btn btn-primary">Get In Touch</a>
+              <div class="nav-icons">
+                <button  class="icon-btn"><i class="bi bi-search"></i></button>
+                <button class="icon-btn">
+                  <i class="bi bi-cart"></i>
+                  <span class="cart-badge">3</span>
+                </button> 
+                <button  class="icon-btn"><i class="bi bi-person"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+        <section class="hero-section contact-hero">
       <div class="hero-container">
         <div class="hero-image-wrapper">
           <img
@@ -185,168 +155,211 @@
         </div>
       </div>
     </section>
+    </section>
 
-    <section class="statistics-section">
-      <div class="container">
-        <!-- Intro Text -->
-        <div class="intro-text">
-          <p>
-            We are confident that we are the leading farm in providing
-            agricultural products that ensure <span>food hygiene</span> and
-            safety!
-          </p>
+  <section class="statistics-section">
+    <div class="container">
+    <!-- Intro Text -->
+    <div class="intro-text">
+      <span class="heading">Our Statistics</span>
+      <p>
+        We are confident that we are the leading farm in providing
+        agricultural products that ensure <span>food hygiene</span> and
+        safety!
+      </p>
+    </div>
+
+    <!-- Stats Wrapper -->
+    <div class="stats-wrapper">
+      <!-- Single Stat -->
+      <div class="stat-item">
+        <div class="icon-circle">
+          <i class="bi bi-piggy-bank"></i>
         </div>
+        <h3>1,386+</h3>
+        <p>Agricultural Products</p>
+      </div>
 
-        <!-- Stats Wrapper -->
-        <div class="stats-wrapper">
-          <!-- Single Stat -->
-          <div class="stat-item">
-            <div class="icon-circle">
-              <i class="bi bi-piggy-bank"></i>
+      <div class="stat-item">
+        <div class="icon-circle">
+          <i class="bi bi-emoji-smile"></i>
+        </div>
+        <h3>12,980+</h3>
+        <p>Trust By Clients</p>
+      </div>
+
+      <div class="stat-item">
+        <div class="icon-circle">
+          <i class="bi bi-calendar-check"></i>
+        </div>
+        <h3>10+ Years</h3>
+        <p>Of Experience</p>
+      </div>
+
+      <div class="stat-item">
+        <div class="icon-circle">
+          <i class="bi bi-award"></i>
+        </div>
+        <h3>20+ Awards</h3>
+        <p>For Excellence</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+   <section class="agriculture-skill-section">
+  <div class="container">
+    <div class="row">
+      <!-- Image with Play Button -->
+      <div class="col image-container">
+        <div class="image-wrapper">
+          <img src="./assets/images/blog-post-7-300x300.webp" alt="Farmer Image" />
+          <a href="#" class="play-button">
+            <i class="bi bi-play-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="col content-container">
+        <span class="section-tagline">Our Agriculture Skill</span>
+        <h2 class="section-title">We Believe In Bringing Customers The Best Products</h2>
+        <p class="section-description">
+          Mauris quam tellus, pellentesque ut faucibus pretium, aliquet vitae est. Nullam non lorem metus. Nulla pretium dui a diam faucibus. Vehicula efficitur enim maximus. Proin sollicitudin erat eu auctor egestas.
+        </p>
+
+        <!-- Progress Bars -->
+        <div class="progress-bar-group">
+          <!-- Organic Solutions -->
+          <div class="progress-bar-item">
+            <div class="label">
+              <span>Organic Solutions</span>
+              <span>75%</span>
             </div>
-            <h3>1,386+</h3>
-            <p>Agricultural Products</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
           </div>
 
-          <div class="stat-item">
-            <div class="icon-circle">
-              <i class="bi bi-emoji-smile"></i>
+          <!-- Quality Agriculture -->
+          <div class="progress-bar-item">
+            <div class="label">
+              <span>Quality Agriculture</span>
+              <span>95%</span>
             </div>
-            <h3>12,980+</h3>
-            <p>Trust By Clients</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <!-- Sustainable Practices -->
+          <div class="progress-bar-item">
+            <div class="label">
+              <span>Sustainable Practices</span>
+              <span>90%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <!-- Customer Satisfaction -->
+          <div class="progress-bar-item">
+            <div class="label">
+              <span>Customer Satisfaction</span>
+              <span>98%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 98%"></div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="agriculture-skill-section">
-      <div class="container">
-        <div class="row">
-          <!-- Image with Play Button -->
-          <div class="col image-container">
-            <div class="image-wrapper">
-              <img
-                src="./assets/images/blog-post-7-300x300.webp"
-                alt="Farmer Image"
-              />
-              <a href="#" class="play-button">
-                <i class="bi bi-play-fill"></i>
-              </a>
-            </div>
-          </div>
+ <!-- <section class="features-section">
+  <div class="container">
 
-          <!-- Content Section -->
-          <div class="col content-container">
-            <span class="section-tagline">Our Agriculture Skill</span>
-            <h2 class="section-title">
-              We Believe In Bringing Customers The Best Products
-            </h2>
-            <p class="section-description">
-              Mauris quam tellus, pellentesque ut faucibus pretium, aliquet
-              vitae est. Nullam non lorem metus. Nulla pretium dui a diam
-              faucibus. vehicula efficitur enim maximus. Proin sollicitudin erat
-              eu auctor egestas.
+    <div class="section-header mb-8 text-center">
+      <h2 class="section-title">Our Key Features</h2>
+      <p class="section-subtitle">Discover what makes our farm stand out.</p>
+    </div>
+
+
+    <div class="swiper feature-swiper">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide feature-card">
+          <div class="card-content">
+            <i class="bi bi-check-circle-fill icon"></i>
+            <h4>100% Organic Products</h4>
+            <p>
+              Ultrices sagittis orci a scelerisque purus semper eget duis at.
+              Sollicitudin nibh sit amet commodo nulla.
             </p>
+          </div>
+        </div>
 
-            <!-- Progress Bars -->
-            <div class="progress-bar-group">
-              <!-- Organic Solutions -->
-              <div class="progress-bar-item">
-                <div class="label">
-                  <span>Organic Solutions</span>
-                  <span>75%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 75%"></div>
-                </div>
-              </div>
+      
+        <div class="swiper-slide feature-card">
+          <div class="card-content">
+            <i class="bi bi-lightbulb icon"></i>
+            <h4>Innovative Farming Techniques</h4>
+            <p>
+              We use modern and innovative farming techniques to maximize yield and reduce waste.
+            </p>
+          </div>
+        </div>
 
-              <!-- Quality Agriculture -->
-              <div class="progress-bar-item">
-                <div class="label">
-                  <span>Quality Agriculture</span>
-                  <span>95%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 95%"></div>
-                </div>
-              </div>
-            </div>
+     
+        <div class="swiper-slide feature-card">
+          <div class="card-content">
+            <i class="bi bi-people icon"></i>
+            <h4>Community Support</h4>
+            <p>
+              We work closely with local communities to promote sustainable farming practices and support local economies.
+            </p>
+          </div>
+        </div>
+
+      
+        <div class="swiper-slide feature-card">
+          <div class="card-content">
+            <i class="bi bi-shield-check icon"></i>
+            <h4>Quality Assurance</h4>
+            <p>
+              We maintain the highest standards of quality in every step of our farming and production process.
+            </p>
+          </div>
+        </div>
+
+      
+        <div class="swiper-slide feature-card">
+          <div class="card-content">
+            <i class="bi bi-calendar-check icon"></i>
+            <h4>10+ Years of Experience</h4>
+            <p>
+              With over a decade of experience, we have honed our skills to provide the best agricultural products.
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="swiper-slide feature-card">
+          <div class="card-content">
+            <i class="bi bi-award icon"></i>
+            <h4>Award-Winning Products</h4>
+            <p>
+              Our products have been recognized with numerous awards for excellence in quality and sustainability.
+            </p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="features-section">
-      <div class="swiper feature-swiper">
-        <div class="swiper-wrapper">
-          <!-- Card 1 -->
-          <div class="swiper-slide feature-card">
-            <div class="card-content">
-              <i class="bi bi-check-circle-fill icon"></i>
-              <h4>100% Organic Products</h4>
-              <p>
-                Ultrices sagittis orci a scelerisque purus semper eget duis at.
-                Sollicitudin nibh sit amet commodo nulla.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide feature-card">
-            <div class="card-content">
-              <i class="bi bi-check-circle-fill icon"></i>
-              <h4>100% Organic Products</h4>
-              <p>
-                Ultrices sagittis orci a scelerisque purus semper eget duis at.
-                Sollicitudin nibh sit amet commodo nulla.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide feature-card">
-            <div class="card-content">
-              <i class="bi bi-check-circle-fill icon"></i>
-              <h4>100% Organic Products</h4>
-              <p>
-                Ultrices sagittis orci a scelerisque purus semper eget duis at.
-                Sollicitudin nibh sit amet commodo nulla.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide feature-card">
-            <div class="card-content">
-              <i class="bi bi-check-circle-fill icon"></i>
-              <h4>100% Organic Products</h4>
-              <p>
-                Ultrices sagittis orci a scelerisque purus semper eget duis at.
-                Sollicitudin nibh sit amet commodo nulla.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide feature-card">
-            <div class="card-content">
-              <i class="bi bi-check-circle-fill icon"></i>
-              <h4>100% Organic Products</h4>
-              <p>
-                Ultrices sagittis orci a scelerisque purus semper eget duis at.
-                Sollicitudin nibh sit amet commodo nulla.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide feature-card">
-            <div class="card-content">
-              <i class="bi bi-check-circle-fill icon"></i>
-              <h4>100% Organic Products</h4>
-              <p>
-                Ultrices sagittis orci a scelerisque purus semper eget duis at.
-                Sollicitudin nibh sit amet commodo nulla.
-              </p>
-            </div>
-          </div>
-
-          <!-- Additional cards -->
-          <!-- ... -->
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section> -->
 
     <section class="mission-vision">
       <div class="container">

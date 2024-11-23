@@ -1,0 +1,276 @@
+// Variables
+$primary-color: #2ecc71;
+$secondary-color: #27ae60;
+$text-color: #333333;
+$light-gray: #f5f5f5;
+$border-color: #e0e0e0;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button($bg-color: $primary-color, $text-color: white) {
+  padding: 0.8rem 1.5rem;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Base Styles
+.shop-container {
+  @include flex();
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+// Sidebar Styles
+.sidebar {
+  flex: 0 0 250px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px $shadow-color;
+
+  .filter-section {
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        label {
+          @include flex(row, flex-start, center);
+          gap: 0.5rem;
+          cursor: pointer;
+
+          input[type="checkbox"] {
+            accent-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .price-range {
+    input[type="range"] {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+
+    .price-values {
+      @include flex(row, space-between, center);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .color-filters {
+    @include flex(row, flex-start, center);
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .color-option {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: $transition;
+      border: 2px solid transparent;
+
+      &.active {
+        border-color: $primary-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .popular-products {
+    .popular-product {
+      @include flex(row, flex-start, center);
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+
+      .product-info {
+        h4 {
+          font-size: 0.9rem;
+          margin-bottom: 0.2rem;
+        }
+
+        p {
+          color: $primary-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .apply-filters {
+    @include button();
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+// Products Section Styles
+.products-section {
+  flex: 1;
+
+  .products-header {
+    @include flex(row, space-between, center);
+    margin-bottom: 2rem;
+
+    .view-toggle {
+      @include flex(row, flex-start, center);
+      gap: 0.5rem;
+
+      button {
+        @include button($light-gray, $text-color);
+        padding: 0.5rem;
+
+        &.active {
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+    }
+
+    .sort-options {
+      select {
+        padding: 0.5rem 1rem;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        outline: none;
+
+        &:focus {
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .products-grid {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    &.grid {
+      .product-card {
+        flex: 0 0 calc(33.333% - 1rem);
+      }
+    }
+
+    &.list {
+      flex-direction: column;
+
+      .product-card {
+        @include flex(row);
+        width: 100%;
+
+        .product-image {
+          flex: 0 0 200px;
+        }
+
+        .product-info {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px $shadow-color;
+    overflow: hidden;
+    position: relative;
+
+    .badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: $primary-color;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .product-image {
+      position: relative;
+      padding-top: 100%; // For a square aspect ratio
+      background: $light-gray;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .product-info {
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.1rem;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+      }
+
+      .price {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+
+      .product-actions {
+        @include flex(row, space-between, center);
+        gap: 1rem;
+
+        .add-to-cart,
+        .view-details {
+          @include button($secondary-color);
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+
+          &:hover {
+            background-color: darken($secondary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}

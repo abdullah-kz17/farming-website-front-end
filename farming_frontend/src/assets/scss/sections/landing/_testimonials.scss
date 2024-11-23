@@ -10,11 +10,50 @@
     text-align: center;
   }
 
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: $primary-color;
-    margin-bottom: 2rem;
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .sub-title {
+      display: inline-block;
+      color: $primary-color;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 1px;
+        background-color: $primary-color;
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $grey;
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
 
   .testimonial-swiper {
@@ -102,10 +141,66 @@
       width: 10px;
       height: 10px;
 
-      &-active {
+      &.swiper-pagination-bullet-active {
         background: $secondary-color;
         transform: scale(1.2);
       }
     }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $primary-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  .testimonials .testimonial-swiper .swiper-wrapper {
+    gap: 1rem; // Reduce gap for smaller screens
+  }
+
+  .testimonials .testimonial-card {
+    padding: 1.5rem; // Reduce padding for smaller screens
+  }
+
+  .testimonials .testimonial-content .testimonial-text {
+    font-size: 0.9rem; // Reduce font size for smaller screens
+  }
+
+  .testimonials .client-info .client-name {
+    font-size: 1.1rem; // Reduce font size for smaller screens
+  }
+
+  .testimonials .client-info .client-role {
+    font-size: 0.8rem; // Reduce font size for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials .testimonial-swiper .swiper-wrapper {
+    gap: 0.5rem; // Further reduce gap for very small screens
+  }
+
+  .testimonials .testimonial-card {
+    max-width: 100%; // Full width on very small screens
+    padding: 1rem; // Further reduce padding for very small screens
+  }
+
+  .testimonials .testimonial-content .testimonial-text {
+    font-size: 0.8rem; // Further reduce font size for very small screens
+  }
+
+  .testimonials .client-info .client-name {
+    font-size: 1rem; // Further reduce font size for very small screens
+  }
+
+  .testimonials .client-info .client-role {
+    font-size: 0.7rem; // Further reduce font size for very small screens
   }
 }

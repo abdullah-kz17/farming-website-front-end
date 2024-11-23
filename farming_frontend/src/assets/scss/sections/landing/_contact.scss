@@ -12,11 +12,20 @@
     .row {
       display: flex;
       width: 100%;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
     }
 
     .contact-info {
       flex: 1;
       max-width: 40%;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
 
       img {
         width: 100%;
@@ -25,7 +34,7 @@
       }
 
       .info-box {
-        background-color: $secondary-color;
+        background-color: $white;
         padding: 1.5rem;
         border-radius: $border-radius;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -57,11 +66,15 @@
     .contact-form {
       flex: 1;
       max-width: 55%;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+
       background-color: $primary-color;
       color: $white;
       padding: 2rem;
       border-radius: $border-radius;
-      position: relative;
 
       .form-header {
         text-align: left;
@@ -87,7 +100,11 @@
         .form-row {
           display: flex;
           gap: 1rem;
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
+
+          @media (max-width: 480px) {
+            flex-direction: column;
+          }
 
           input,
           select {
@@ -150,6 +167,51 @@
             i {
               font-size: 1.2rem;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .clients {
+    padding-inline: 8rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        a {
+          display: block; // Ensure the link is a block element
+          img {
+            width: 100px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: $border-radius;
+            margin-right: 4rem; // Add margin if needed
+            filter: grayscale(0.8) brightness(0.8); // Apply grayscale and brightness filters
+            transition: filter 0.3s ease; // Smooth transition
+
+            &:hover {
+              filter: none;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap; // Not necessary since ul already wraps
+      }
+
+      @media (max-width: 480px) {
+        ul {
+          flex-direction: column; // Stack logos vertically on very small screens
+          li {
+            margin-bottom: 1rem;
           }
         }
       }
