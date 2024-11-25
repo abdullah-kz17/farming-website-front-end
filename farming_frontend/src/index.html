@@ -78,9 +78,7 @@
             <nav class="nav" id="primary-navigation">
               <ul class="nav-list">
                 <li class="nav-item">
-                  <a href="index.html" class="nav-link"
-                    >Home</i
-                  ></a>
+                  <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link"
@@ -119,12 +117,12 @@
             <div class="nav-right">
               <a href="#" class="btn btn-primary">Get In Touch</a>
               <div class="nav-icons">
-                <button  class="icon-btn"><i class="bi bi-search"></i></button>
+                <button class="icon-btn"><i class="bi bi-search"></i></button>
                 <button class="icon-btn">
                   <i class="bi bi-cart"></i>
                   <span class="cart-badge">3</span>
-                </button> 
-                <button  class="icon-btn"><i class="bi bi-person"></i></button>
+                </button>
+                <button class="icon-btn"><i class="bi bi-person"></i></button>
               </div>
             </div>
           </div>
@@ -710,91 +708,34 @@
           <div class="col-left">
             <h2>Frequently Asked Questions</h2>
             <div x-data="{ openFaq: null }" class="faq-list">
-              <!-- FAQ 1 -->
-              <div class="faq-item">
-                <div
-                  @click="openFaq === 1 ? openFaq = null : openFaq = 1"
-                  class="faq-question"
-                >
-                  <h3>What is sustainable farming?</h3>
-                  <span x-text="openFaq === 1 ? '-' : '+'"></span>
+              <!-- FAQ Items -->
+              <template
+                x-for="(faq, index) in [
+              { question: 'What is sustainable farming?', answer: 'Sustainable farming ensures long-term agricultural productivity while minimizing environmental impact.' },
+              { question: 'How does Donal Farm practice eco-friendly farming?', answer: 'We use organic methods, crop rotation, and advanced technologies to ensure sustainability and reduce environmental impact.' },
+              { question: 'Do you offer farm tours?', answer: 'Yes, we organize guided tours to showcase our sustainable farming practices and facilities.' },
+              { question: 'What crops do you grow on your farm?', answer: 'We grow a variety of crops, including fruits, vegetables, and grains, all using eco-friendly practices.' },
+              { question: 'How can I purchase products from your farm?', answer: 'You can purchase our fresh produce directly through our website or visit our farm\'s local store.' }
+            ]"
+                :key="index"
+              >
+                <div class="faq-item">
+                  <div
+                    @click="openFaq === index ? openFaq = null : openFaq = index"
+                    class="faq-question"
+                  >
+                    <h3 x-text="faq.question"></h3>
+                    <span x-text="openFaq === index ? '-' : '+'"></span>
+                  </div>
+                  <div
+                    x-show="openFaq === index"
+                    x-transition
+                    class="faq-answer"
+                  >
+                    <p x-text="faq.answer"></p>
+                  </div>
                 </div>
-                <div x-show="openFaq === 1" x-transition class="faq-answer">
-                  <p>
-                    Sustainable farming ensures long-term agricultural
-                    productivity while minimizing environmental impact.
-                  </p>
-                </div>
-              </div>
-
-              <!-- FAQ 2 -->
-              <div class="faq-item">
-                <div
-                  @click="openFaq === 2 ? openFaq = null : openFaq = 2"
-                  class="faq-question"
-                >
-                  <h3>How does Donal Farm practice eco-friendly farming?</h3>
-                  <span x-text="openFaq === 2 ? '-' : '+'"></span>
-                </div>
-                <div x-show="openFaq === 2" x-transition class="faq-answer">
-                  <p>
-                    We use organic methods, crop rotation, and advanced
-                    technologies to ensure sustainability and reduce
-                    environmental impact.
-                  </p>
-                </div>
-              </div>
-
-              <!-- FAQ 3 -->
-              <div class="faq-item">
-                <div
-                  @click="openFaq === 3 ? openFaq = null : openFaq = 3"
-                  class="faq-question"
-                >
-                  <h3>Do you offer farm tours?</h3>
-                  <span x-text="openFaq === 3 ? '-' : '+'"></span>
-                </div>
-                <div x-show="openFaq === 3" x-transition class="faq-answer">
-                  <p>
-                    Yes, we organize guided tours to showcase our sustainable
-                    farming practices and facilities.
-                  </p>
-                </div>
-              </div>
-
-              <!-- FAQ 4 -->
-              <div class="faq-item">
-                <div
-                  @click="openFaq === 4 ? openFaq = null : openFaq = 4"
-                  class="faq-question"
-                >
-                  <h3>What crops do you grow on your farm?</h3>
-                  <span x-text="openFaq === 4 ? '-' : '+'"></span>
-                </div>
-                <div x-show="openFaq === 4" x-transition class="faq-answer">
-                  <p>
-                    We grow a variety of crops, including fruits, vegetables,
-                    and grains, all using eco-friendly practices.
-                  </p>
-                </div>
-              </div>
-
-              <!-- FAQ 5 -->
-              <div class="faq-item">
-                <div
-                  @click="openFaq === 5 ? openFaq = null : openFaq = 5"
-                  class="faq-question"
-                >
-                  <h3>How can I purchase products from your farm?</h3>
-                  <span x-text="openFaq === 5 ? '-' : '+'"></span>
-                </div>
-                <div x-show="openFaq === 5" x-transition class="faq-answer">
-                  <p>
-                    You can purchase our fresh produce directly through our
-                    website or visit our farm's local store.
-                  </p>
-                </div>
-              </div>
+              </template>
             </div>
           </div>
 
@@ -883,106 +824,132 @@
       </div>
     </section>
 
-   <section class="contact-us">
-  <div class="container">
-    <div class="row">
-      <!-- Left Column: Contact Info -->
-      <div class="contact-info">
-        <img src="./assets/images/ev7-img.webp" alt="Farmer" />
-        <div class="info-box">
-          <div class="info-item">
-            <i class="bi bi-geo-alt"></i>
-            <div>
-              <h4>Farm Address</h4>
-              <p>
-                Prinsengracht 250, 1016 PM<br />
-                Amsterdam, Netherlands
-              </p>
+    <section class="contact-us">
+      <div class="container">
+        <div class="row">
+          <!-- Left Column: Contact Info -->
+          <div class="contact-info">
+            <img src="./assets/images/ev7-img.webp" alt="Farmer" />
+            <div class="info-box">
+              <div class="info-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <h4>Farm Address</h4>
+                  <p>
+                    Prinsengracht 250, 1016 PM<br />
+                    Amsterdam, Netherlands
+                  </p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <h4>Contact Us</h4>
+                  <p>donalfarms@gmail.com<br />Call Us 24/7: +1 987 654 3210</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-clock"></i>
+                <div>
+                  <h4>Working Hours</h4>
+                  <p>
+                    Mon - Fri: 8.00am - 6.00pm<br />
+                    Sat: 9.00am - 5.00pm<br />
+                    Holidays: Closed
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="info-item">
-            <i class="bi bi-envelope"></i>
-            <div>
-              <h4>Contact Us</h4>
-              <p>donalfarms@gmail.com<br />Call Us 24/7: +1 987 654 3210</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="bi bi-clock"></i>
-            <div>
-              <h4>Working Hours</h4>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-form">
+            <div class="form-header">
+              <h4>Let's Cooperate Together</h4>
+              <h2>Contact Us Today!</h2>
               <p>
-                Mon - Fri: 8.00am - 6.00pm<br />
-                Sat: 9.00am - 5.00pm<br />
-                Holidays: Closed
+                We will reply within 24 hours via email, thank you for
+                contacting us.
               </p>
             </div>
+            <form>
+              <div class="form-row">
+                <input type="text" placeholder="Name*" required />
+                <input type="email" placeholder="Email*" required />
+              </div>
+              <div class="form-row">
+                <input type="tel" placeholder="Phone Number*" required />
+                <select>
+                  <option value="">You need support?</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="services">Services</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <textarea placeholder="Message..." rows="4"></textarea>
+              <div class="form-footer">
+                <label>
+                  <input type="checkbox" required />
+                  Agree to our terms and conditions
+                </label>
+                <button type="submit">
+                  Send Message <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Contact Form -->
-      <div class="contact-form">
-        <div class="form-header">
-          <h4>Let's Cooperate Together</h4>
-          <h2>Contact Us Today!</h2>
-          <p>
-            We will reply within 24 hours via email, thank you for contacting us.
-          </p>
-        </div>
-        <form>
-          <div class="form-row">
-            <input type="text" placeholder="Name*" required />
-            <input type="email" placeholder="Email*" required />
-          </div>
-          <div class="form-row">
-            <input type="tel" placeholder="Phone Number*" required />
-            <select>
-              <option value="">You need support?</option>
-              <option value="general">General Inquiry</option>
-              <option value="services">Services</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <textarea placeholder="Message..." rows="4"></textarea>
-          <div class="form-footer">
-            <label>
-              <input type="checkbox" required />
-              Agree to our terms and conditions
-            </label>
-            <button type="submit">
-              Send Message <i class="bi bi-arrow-right"></i>
-            </button>
-          </div>
-        </form>
+      <!-- Clients Section -->
+      <div class="clients">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/images/client1.webp" alt="client-1"
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/images/client2.webp" alt="client-1"
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/images/client3.webp" alt="client-1"
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/images/client4.webp" alt="client-1"
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/images/client5.webp" alt="client-1"
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/images/client6.webp" alt="client-1"
+            /></a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
-
-  <!-- Clients Section -->
-  <div class="clients">
-    <ul>
-      <li><a href="#">  <img src="./assets/images/client1.webp" alt="client-1"></a></li>
-    </ul>
-    <ul>
-      <li><a href="#">  <img src="./assets/images/client2.webp" alt="client-1"></a></li>
-    </ul>
-    <ul>
-      <li><a href="#">  <img src="./assets/images/client3.webp" alt="client-1"></a></li>
-    </ul>
-    <ul>
-      <li><a href="#">  <img src="./assets/images/client4.webp" alt="client-1"></a></li>
-    </ul>
-    <ul>
-      <li><a href="#">  <img src="./assets/images/client5.webp" alt="client-1"></a></li>
-    </ul>
-    <ul>
-      <li><a href="#">  <img src="./assets/images/client6.webp" alt="client-1"></a></li>
-    </ul>
-  </div>
-</section>
+    </section>
 
     <footer class="site-footer">
+      <!-- <div class="footer-grass-image"></div> -->
       <div class="container">
         <!-- Top Section -->
         <div class="footer-top">

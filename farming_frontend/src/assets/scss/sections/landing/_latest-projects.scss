@@ -1,3 +1,4 @@
+@import "../../variables/global-variables";
 .latest-projects {
   background-color: $primary-color;
   padding: 6rem 1.5rem;
@@ -116,8 +117,8 @@
         background: rgba(0, 0, 0, 0.5) !important;
 
         .overlay-content {
-          transform: translateY(0); /* Move overlay content into view */
-          opacity: 1 !important; /* Make overlay content visible */
+          transform: translateY(0);
+          opacity: 1 !important;
         }
       }
     }

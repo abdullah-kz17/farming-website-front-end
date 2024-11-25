@@ -8,6 +8,10 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -86,13 +90,13 @@
               :class="{ active: viewType === 'grid' }"
               @click="viewType = 'grid'"
             >
-              <svg><!-- Grid Icon --></svg>
+              <i class="bi bi-grid"></i>
             </button>
             <button
               :class="{ active: viewType === 'list' }"
               @click="viewType = 'list'"
             >
-              <svg><!-- List Icon --></svg>
+              <i class="bi bi-list"></i>
             </button>
           </div>
 
@@ -169,7 +173,7 @@
               id: 1,
               name: "Organic Apples",
               price: 12.99,
-              image: "/api/placeholder/300/300",
+              image: "./assets/images/product-15-300x300.webp",
               category: 1,
               color: 1,
               badge: "Sale",
@@ -178,11 +182,117 @@
               id: 2,
               name: "Fresh Oranges",
               price: 8.99,
-              image: "/api/placeholder/300/300",
+              image: "./assets/images/product-1-300x300.webp",
               category: 1,
               color: 2,
             },
-            // Add more products...
+            {
+              id: 3,
+              name: "Red Grapes",
+              price: 10.49,
+              image: "./assets/images/product-2-300x300.webp",
+              category: 1,
+              color: 3,
+            },
+            {
+              id: 4,
+              name: "Bananas",
+              price: 6.99,
+              image: "./assets/images/product-3-300x300.webp",
+              category: 1,
+              color: 4,
+            },
+            {
+              id: 5,
+              name: "Avocado",
+              price: 9.99,
+              image: "./assets/images/product-4-300x300.webp",
+              category: 1,
+              color: 5,
+              badge: "New",
+            },
+            {
+              id: 6,
+              name: "Strawberries",
+              price: 13.99,
+              image: "./assets/images/product-5-300x300.webp",
+              category: 1,
+              color: 6,
+            },
+            {
+              id: 7,
+              name: "Blueberries",
+              price: 15.49,
+              image: "./assets/images/product-6-300x300.webp",
+              category: 1,
+              color: 7,
+              badge: "Featured",
+            },
+            {
+              id: 8,
+              name: "Fresh Mangoes",
+              price: 11.99,
+              image: "./assets/images/product-7-300x300.webp",
+              category: 1,
+              color: 8,
+            },
+            {
+              id: 9,
+              name: "Kiwi",
+              price: 7.49,
+              image: "./assets/images/product-8-300x300.webp",
+              category: 1,
+              color: 9,
+            },
+            {
+              id: 10,
+              name: "Coconut",
+              price: 5.99,
+              image: "./assets/images/product-9-300x300.webp",
+              category: 1,
+              color: 10,
+            },
+            {
+              id: 11,
+              name: "Watermelon",
+              price: 14.99,
+              image: "./assets/images/product-10-300x300.webp",
+              category: 1,
+              color: 11,
+            },
+            {
+              id: 12,
+              name: "Peaches",
+              price: 10.99,
+              image: "./assets/images/product-11-300x300.webp",
+              category: 1,
+              color: 12,
+            },
+            {
+              id: 13,
+              name: "Pineapple",
+              price: 8.99,
+              image: "./assets/images/product-12-300x300.webp",
+              category: 1,
+              color: 13,
+            },
+            {
+              id: 14,
+              name: "Plums",
+              price: 9.49,
+              image: "./assets/images/product-13-300x300.webp",
+              category: 1,
+              color: 14,
+              badge: "Limited",
+            },
+            {
+              id: 15,
+              name: "Cherries",
+              price: 16.99,
+              image: "./assets/images/product-14-300x300.webp",
+              category: 1,
+              color: 15,
+            },
           ],
 
           popularProducts: [
@@ -190,7 +300,40 @@
               id: 1,
               name: "Best Seller Item",
               price: 29.99,
-              image: "/api/placeholder/100/100",
+              image: "./assets/images/product-1-300x300.webp",
+            },
+            {
+              id: 11,
+              name: "Watermelon",
+              price: 14.99,
+              image: "./assets/images/product-10-300x300.webp",
+              category: 1,
+              color: 11,
+            },
+            {
+              id: 12,
+              name: "Peaches",
+              price: 10.99,
+              image: "./assets/images/product-11-300x300.webp",
+              category: 1,
+              color: 12,
+            },
+            {
+              id: 13,
+              name: "Pineapple",
+              price: 8.99,
+              image: "./assets/images/product-12-300x300.webp",
+              category: 1,
+              color: 13,
+            },
+            {
+              id: 14,
+              name: "Plums",
+              price: 9.49,
+              image: "./assets/images/product-13-300x300.webp",
+              category: 1,
+              color: 14,
+              badge: "Limited",
             },
             // Add more popular products...
           ],

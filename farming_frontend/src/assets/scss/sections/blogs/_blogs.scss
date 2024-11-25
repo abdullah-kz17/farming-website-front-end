@@ -1,0 +1,244 @@
+// Header Styles
+.header {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-bottom: $spacing-lg;
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary-color, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+    padding: $spacing-md;
+
+    h1 {
+      color: $secondary-color;
+      font-size: $font-size-lg;
+      font-family: $font-family-secondary;
+      font-weight: $font-weight-bolder;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: $font-size-base;
+      color: $white;
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+// Main Content Styles
+.main-content {
+  padding: $spacing-lg 0;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .blog-posts-section {
+    flex: 6;
+    padding: $spacing-md;
+
+    h2 {
+      text-align: center;
+      margin-bottom: $spacing-md;
+    }
+
+    .blog-post {
+      padding: $spacing-md;
+      border-radius: $border-radius-md;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      margin-bottom: $spacing-lg;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: $border-radius-md;
+      }
+
+      h3 {
+        font-size: $font-size-md;
+        margin-top: $spacing-sm;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        font-size: $font-size-base;
+        margin-bottom: $spacing-md;
+      }
+
+      .read-more {
+        color: $primary-color;
+        text-decoration: none;
+        transition: color $transition-speed-fast;
+
+        &:hover {
+          color: $secondary-color;
+        }
+
+        i {
+          margin-left: $spacing-xs;
+        }
+      }
+    }
+  }
+
+  .sidebar-section {
+    flex: 2;
+    padding: $spacing-md;
+
+    .sidebar {
+      .sidebar-widget {
+        background-color: $white;
+        padding: $spacing-md;
+        margin-bottom: $spacing-md;
+        border: 1px solid #ddd;
+        border-radius: $border-radius-md;
+
+        h3 {
+          font-size: $font-size-md;
+          margin-top: 0;
+          margin-bottom: $spacing-sm;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin-bottom: $spacing-sm;
+
+            a {
+              text-decoration: none;
+              color: $grey;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+
+            span {
+              font-size: $font-size-sm;
+              color: #999;
+            }
+          }
+        }
+
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+
+          .tag {
+            background-color: $gray-light;
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $border-radius-sm;
+            margin: $spacing-xs;
+            text-decoration: none;
+            color: $grey;
+
+            &:hover {
+              background-color: $primary-color;
+              color: $white;
+            }
+          }
+        }
+
+        form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          input[type="email"] {
+            padding: $spacing-sm;
+            border: none;
+            border-radius: $border-radius-sm 0 0 $border-radius-sm;
+            width: 70%;
+          }
+
+          button[type="submit"] {
+            padding: $spacing-sm;
+            border: none;
+            border-radius: 0 $border-radius-sm $border-radius-sm 0;
+            background-color: $primary-color;
+            color: $white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Layout
+@media screen and (max-width: $breakpoint-desktop) {
+  .main-content .row {
+    flex-direction: column;
+  }
+
+  .main-content .blog-posts-section,
+  .main-content .sidebar-section {
+    flex: 1;
+    width: 100%;
+    padding: $spacing-md 0;
+  }
+}
+
+// Call to Action Styles
+.call-to-action {
+  background-color: $gray-light;
+  padding: $spacing-lg 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: $spacing-md;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: $white;
+    background-color: $primary-color;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+// Footer Styles
+.footer {
+  background-color: $dark;
+  color: $white;
+  padding: $spacing-md 0;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+  }
+}

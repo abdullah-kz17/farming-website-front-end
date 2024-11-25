@@ -1,6 +1,5 @@
 // Variables
-$primary-color: #2ecc71;
-$secondary-color: #27ae60;
+@import "../../variables/global-variables";
 $text-color: #333333;
 $light-gray: #f5f5f5;
 $border-color: #e0e0e0;
@@ -181,11 +180,13 @@ $transition: all 0.3s ease;
   .products-grid {
     @include flex();
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
 
     &.grid {
       .product-card {
-        flex: 0 0 calc(33.333% - 1rem);
+        padding: 1rem;
+        max-width: 350px;
+        max-height: 325px;
       }
     }
 
@@ -195,9 +196,13 @@ $transition: all 0.3s ease;
       .product-card {
         @include flex(row);
         width: 100%;
+        max-height: 200px;
+        padding: 1rem;
 
         .product-image {
-          flex: 0 0 200px;
+          width: 300px;
+          //   object-fit: contain;
+          height: 150px;
         }
 
         .product-info {

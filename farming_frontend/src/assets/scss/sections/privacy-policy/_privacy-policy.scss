@@ -1,0 +1,115 @@
+@import "../../variables/global-variables";
+body {
+  margin: 0;
+  padding: 0;
+
+  background: $white;
+}
+
+.privacy-policy {
+  border-radius: $border-radius-lg;
+  width: 100%;
+
+  .header {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($primary-color, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $white;
+      padding: 1rem;
+
+      h1 {
+        color: $secondary-color;
+        font-size: 2.5rem;
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-bolder;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        max-width: 700px;
+        font-size: 1rem;
+        color: $white;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .content {
+    padding: 5rem 4rem 2rem 4rem;
+    article {
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 1.8rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 1.5rem;
+
+        &::before {
+          content: "";
+          width: 6px;
+          height: 24px;
+          background: $secondary-color;
+          position: absolute;
+          left: 0;
+          top: 4px;
+          border-radius: $border-radius;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $grey;
+      }
+
+      ul,
+      ol {
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+        li {
+          color: $dark;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  address {
+    font-style: normal;
+    line-height: 1.6;
+    color: $dark;
+    margin-top: 1rem;
+
+    strong {
+      color: $primary-color;
+    }
+  }
+}
