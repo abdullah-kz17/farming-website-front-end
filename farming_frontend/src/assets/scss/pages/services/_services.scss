@@ -1,224 +1,427 @@
-// Header Styles
-.header {
-  position: relative;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  margin-bottom: $spacing-lg;
-
-  &-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($primary-color, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: $white;
-    padding: $spacing-md;
-
-    h1 {
-      color: $secondary-color;
-      font-size: $font-size-lg;
-      font-family: $font-family-secondary;
-      font-weight: $font-weight-bolder;
-      margin-bottom: $spacing-md;
-    }
-
-    p {
-      max-width: 700px;
-      font-size: $font-size-base;
-      color: $white;
-      margin-bottom: $spacing-lg;
-    }
-  }
+// Global Styles
+body {
+  font-family: $font-family-primary;
+  background-color: $gray-light;
+  color: $dark;
+  line-height: 1.6;
 }
 
-// Main Content Styles
-.main-content {
-  padding: $spacing-lg 0;
+.services-container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-  h2 {
-    text-align: center;
-    margin-bottom: $spacing-md;
+// Header Styles
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-family: $font-family-secondary;
+    color: $primary-color;
+    @include responsive-text(2rem, 3rem);
+    margin-bottom: 1rem;
   }
 
   p {
-    text-align: center;
-    margin-bottom: $spacing-md;
-  }
-
-  .services-section {
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .service-card {
-      margin-bottom: $spacing-lg;
-      padding: $spacing-md;
-      border: 1px solid #ddd;
-      border-radius: $border-radius-md;
-
-      .service-icon {
-        font-size: 2rem;
-        color: $primary-color;
-        margin-bottom: $spacing-sm;
-      }
-
-      h3 {
-        font-size: $font-size-md;
-        margin-top: 0;
-        margin-bottom: $spacing-sm;
-      }
-
-      p {
-        font-size: $font-size-base;
-        margin-bottom: $spacing-md;
-      }
-
-      .read-more {
-        color: $primary-color;
-        text-decoration: none;
-        transition: color $transition-speed-fast;
-
-        &:hover {
-          color: $secondary-color;
-        }
-
-        i {
-          margin-left: $spacing-xs;
-        }
-      }
-    }
-  }
-
-  .call-to-action {
-    background-color: $gray-light;
-    padding: $spacing-lg 0;
-    text-align: center;
-
-    h2 {
-      margin-bottom: $spacing-md;
-    }
-
-    p {
-      margin-bottom: $spacing-md;
-    }
-
-    a {
-      display: inline-block;
-      text-decoration: none;
-      color: $white;
-      background-color: $primary-color;
-      padding: $spacing-md $spacing-lg;
-      border-radius: $border-radius-md;
-
-      &:hover {
-        background-color: $secondary-color;
-      }
-    }
+    color: $grey;
+    @include responsive-text(1rem, 1.25rem);
   }
 }
 
-// Testimonials Section
-.testimonials-section {
-  padding: $spacing-lg 0;
-  background-color: $gray-light;
+// Services Grid
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  .btn-learn-more {
+    @include hover-effect($secondary-color);
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+
+// Service Details
+.service-details {
+  background-color: $white;
+  padding: 4rem 0;
+  text-align: center;
 
   h2 {
-    text-align: center;
-    margin-bottom: $spacing-md;
+    color: $primary-color;
+    margin-bottom: 2rem;
   }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  .detail-card {
+    padding: 1.5rem;
+    background-color: $gray-light;
+    border-radius: $border-radius-lg;
+    margin-bottom: 1.5rem;
 
-  .testimonial-card {
-    margin-bottom: $spacing-lg;
-    padding: $spacing-md;
-    border: 1px solid #ddd;
-    border-radius: $border-radius-md;
-
-    p {
-      font-size: $font-size-base;
-      margin-bottom: $spacing-md;
+    i {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
     }
 
     h4 {
-      font-size: $font-size-md;
-      margin-top: 0;
-      margin-bottom: $spacing-sm;
-    }
-
-    span {
-      font-size: $font-size-sm;
-      color: #999;
+      color: $primary-color;
+      margin-bottom: 1rem;
     }
   }
 }
 
-// Responsive Layout
-@media screen and (max-width: $breakpoint-desktop) {
-  .main-content .row {
-    flex-direction: column;
-  }
-
-  .main-content .service-card,
-  .testimonials-section .testimonial-card {
-    width: 100%;
-    margin-bottom: $spacing-lg;
-  }
-}
-
-// Call to Action Styles
-.call-to-action {
+// Sustainability Commitment Section
+.sustainability-commitment {
+  padding: 4rem 2rem;
   background-color: $gray-light;
-  padding: $spacing-lg 0;
 
   h2 {
-    text-align: center;
-    margin-bottom: $spacing-md;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
   }
 
-  p {
-    text-align: center;
-    margin-bottom: $spacing-md;
+  .sustainability-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+
+    li {
+      margin-bottom: 1rem;
+
+      i {
+        color: $primary-color;
+        margin-right: 1rem;
+      }
+    }
   }
 
-  a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: $white;
+  .btn-sustainability {
+    display: inline-block;
     background-color: $primary-color;
-    padding: $spacing-md;
-    border-radius: $border-radius-md;
+    color: $white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: $border-radius-pill;
+  }
+}
+
+// Training Section
+.training-section {
+  background-color: $white;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 3rem;
+  }
+
+  .training-card {
+    background-color: $gray-light;
+    padding: 2rem;
+    border-radius: $border-radius-lg;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
 
     &:hover {
-      background-color: $secondary-color;
+      transform: translateY(-10px);
+    }
+
+    i {
+      font-size: 3rem;
+      color: $primary-color;
+      margin-bottom: 1.5rem;
+    }
+
+    h4 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Continuing from the previous SCSS...
+
+.contact-consultation {
+  background-color: $white;
+  padding: 4rem 2rem;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .consultation-form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid $grey;
+      border-radius: $border-radius-lg;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      margin-bottom: $spacing-md;
+      background-color: $primary-color;
+      color: $white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: $border-radius-pill;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .contact-details {
+    background-color: $gray-light;
+    padding: 2rem;
+    border-radius: $border-radius-lg;
+
+    h4 {
+      color: $primary-color;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+
+      i {
+        margin-right: 1rem;
+        color: $primary-color;
+      }
     }
   }
 }
 
 // Footer Styles
-.footer {
+footer {
+  background-color: $primary-color;
+  color: $white;
+  padding: 4rem 2rem;
+
+  h5 {
+    color: $white;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba($white, 0.2);
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 1rem;
+
+    .hero-content {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .services-grid,
+  .advanced-technologies,
+  .sustainability-commitment,
+  .training-section,
+  .testimonials-section,
+  .contact-consultation,
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .services-grid {
+    .services-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-consultation {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  footer {
+    .col-md-4 {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// Additional Utility Classes
+.text-primary {
+  color: $primary-color !important;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+// Contact CTA
+.contact-cta {
+  background-color: $primary-color;
+  color: $white;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: $border-radius-lg;
+
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      color: $white;
+      margin-bottom: 1rem;
+    }
+
+    .btn-contact {
+      @include hover-effect($secondary-color);
+      display: inline-block;
+      background-color: $secondary-color;
+      color: $primary-color;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: $border-radius-pill;
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+// Footer
+footer {
   background-color: $dark;
   color: $white;
-  padding: $spacing-md 0;
   text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
 
-  p {
-    margin-bottom: 0;
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }

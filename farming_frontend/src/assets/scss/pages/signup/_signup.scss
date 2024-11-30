@@ -1,14 +1,11 @@
-$background-image: url("../../../../assets/images/fancy-img1.webp");
-
 .signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    $background-image;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
-  padding: 2rem;
+  padding: 1.5rem;
 
   .container {
     width: 100%;
@@ -25,18 +22,18 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
   .signup-card {
     background-color: $white;
     border-radius: $border-radius-pill;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem;
+    box-shadow: $box-shadow-light;
+    padding: 2.5rem 1.5rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 360px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform $transition-speed-medium ease;
 
     &::after {
       content: "";
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(0, 0, 0, 0.1);
       position: absolute;
       top: 0;
       left: 0;
@@ -50,34 +47,34 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
       z-index: 2;
 
       h2 {
-        margin-bottom: 1.6rem;
+        margin-bottom: $spacing-sm;
       }
 
       .signup-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: $primary-color;
-        margin-bottom: 1rem;
+        margin-bottom: $spacing-xs;
         font-weight: bold;
         text-transform: capitalize;
       }
 
       .signup-description {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: $grey;
-        margin-bottom: 2rem;
-        line-height: 1.5;
+        margin-bottom: $spacing-md;
+        line-height: 1.4;
       }
 
       .input-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: $spacing-sm;
 
         input {
           width: 100%;
-          padding: 1rem;
-          font-size: 1rem;
+          padding: 0.8rem;
+          font-size: 0.95rem;
           border-radius: $border-radius-pill;
           border: 1px solid $grey;
-          transition: border-color 0.3s ease;
+          transition: border-color $transition-speed-medium ease;
           background-color: $gray-light;
 
           &:focus {
@@ -90,19 +87,18 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
       .signup-actions {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: $spacing-xs;
 
         .signup-btn {
           background-color: $primary-color;
           color: $white;
-          font-size: 1.2rem;
-          padding: 1rem;
+          font-size: 1.1rem;
+          padding: 0.9rem;
           border-radius: $border-radius-pill;
-          margin-top: 0.6rem;
           border: none;
           cursor: pointer;
-          transition: background-color 0.3s ease;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          transition: background-color $transition-speed-medium ease;
+          box-shadow: $box-shadow-light;
 
           &:hover {
             background-color: darken($primary-color, 10%);
@@ -111,9 +107,9 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
 
         .forgot-password {
           color: $primary-color;
-          font-size: 1rem;
+          font-size: 0.9rem;
           text-decoration: none;
-          transition: color 0.3s ease;
+          transition: color $transition-speed-medium ease;
 
           &:hover {
             color: darken($primary-color, 10%);
@@ -122,15 +118,15 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
       }
 
       .register-link {
-        margin-top: 1rem;
-        font-size: 1rem;
+        margin-top: $spacing-sm;
+        font-size: 0.9rem;
         color: $grey;
 
         a {
           color: $primary-color;
           font-weight: bold;
           text-decoration: none;
-          transition: color 0.3s ease;
+          transition: color $transition-speed-medium ease;
 
           &:hover {
             color: darken($primary-color, 10%);
@@ -140,10 +136,10 @@ $background-image: url("../../../../assets/images/fancy-img1.webp");
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-tablet) {
     .signup-card {
       width: 90%;
-      padding: 2rem;
+      padding: $spacing-md;
     }
   }
 }

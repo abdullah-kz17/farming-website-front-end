@@ -4145,9 +4145,8 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
-  background-size: cover;
-  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding: 1.5rem;
 }
 .login-page .container {
   width: 100%;
@@ -4171,11 +4170,11 @@
 .login-page .login-card {
   background-color: #ffffff;
   border-radius: 1.6rem;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 3rem 2rem;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1.5rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -4186,7 +4185,7 @@
 }
 .login-page .login-card::after {
   content: "";
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -4199,28 +4198,28 @@
   z-index: 2;
 }
 .login-page .login-card .login-card-body h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .login-page .login-card .login-card-body .login-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #0d401c;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
   text-transform: capitalize;
 }
 .login-page .login-card .login-card-body .login-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #5a5a5a;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 .login-page .login-card .login-card-body .input-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .login-page .login-card .login-card-body .input-group input {
   width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 0.8rem;
+  font-size: 0.95rem;
   border-radius: 1.6rem;
   border: 1px solid #5a5a5a;
   -webkit-transition: border-color 0.3s ease;
@@ -4239,28 +4238,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .login-page .login-card .login-card-body .login-actions .login-btn {
   background-color: #0d401c;
   color: #ffffff;
-  font-size: 1.2rem;
-  padding: 1rem;
+  font-size: 1.1rem;
+  padding: 0.9rem;
   border-radius: 1.6rem;
-  margin-top: 0.6rem;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .login-page .login-card .login-card-body .login-actions .login-btn:hover {
   background-color: #041609;
 }
 .login-page .login-card .login-card-body .login-actions .forgot-password {
   color: #0d401c;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -4270,7 +4268,7 @@
 }
 .login-page .login-card .login-card-body .register-link {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #5a5a5a;
 }
 .login-page .login-card .login-card-body .register-link a {
@@ -4286,7 +4284,7 @@
 @media (max-width: 768px) {
   .login-page .login-card {
     width: 90%;
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 
@@ -4301,9 +4299,9 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .signup-page .container {
   width: 100%;
@@ -4327,11 +4325,11 @@
 .signup-page .signup-card {
   background-color: #ffffff;
   border-radius: 1.6rem;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 3rem 2rem;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1.5rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -4342,7 +4340,7 @@
 }
 .signup-page .signup-card::after {
   content: "";
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -4355,28 +4353,28 @@
   z-index: 2;
 }
 .signup-page .signup-card .signup-card-body h2 {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 .signup-page .signup-card .signup-card-body .signup-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #0d401c;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
   text-transform: capitalize;
 }
 .signup-page .signup-card .signup-card-body .signup-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #5a5a5a;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 .signup-page .signup-card .signup-card-body .input-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .signup-page .signup-card .signup-card-body .input-group input {
   width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 0.8rem;
+  font-size: 0.95rem;
   border-radius: 1.6rem;
   border: 1px solid #5a5a5a;
   -webkit-transition: border-color 0.3s ease;
@@ -4395,28 +4393,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .signup-page .signup-card .signup-card-body .signup-actions .signup-btn {
   background-color: #0d401c;
   color: #ffffff;
-  font-size: 1.2rem;
-  padding: 1rem;
+  font-size: 1.1rem;
+  padding: 0.9rem;
   border-radius: 1.6rem;
-  margin-top: 0.6rem;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .signup-page .signup-card .signup-card-body .signup-actions .signup-btn:hover {
   background-color: #041609;
 }
 .signup-page .signup-card .signup-card-body .signup-actions .forgot-password {
   color: #0d401c;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -4426,7 +4423,7 @@
 }
 .signup-page .signup-card .signup-card-body .register-link {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #5a5a5a;
 }
 .signup-page .signup-card .signup-card-body .register-link a {
@@ -4442,13 +4439,12 @@
 @media (max-width: 768px) {
   .signup-page .signup-card {
     width: 90%;
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 
 .forgot-password-page,
 .reset-password-page {
-  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4459,19 +4455,16 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/fancy-img1.webp");
-  background-size: cover;
-  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding: 1rem;
 }
 .forgot-password-page .container,
 .reset-password-page .container {
   width: 100%;
   max-width: 350px;
 }
-.forgot-password-page .forgot-password-wrapper,
-.forgot-password-page .reset-password-wrapper,
-.reset-password-page .forgot-password-wrapper,
-.reset-password-page .reset-password-wrapper {
+.forgot-password-page .wrapper,
+.reset-password-page .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4486,10 +4479,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.forgot-password-page .forgot-password-card,
-.forgot-password-page .reset-password-card,
-.reset-password-page .forgot-password-card,
-.reset-password-page .reset-password-card {
+.forgot-password-page .card,
+.reset-password-page .card {
   background-color: #ffffff;
   border-radius: 1.6rem;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -4505,10 +4496,8 @@
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.forgot-password-page .forgot-password-card::after,
-.forgot-password-page .reset-password-card::after,
-.reset-password-page .forgot-password-card::after,
-.reset-password-page .reset-password-card::after {
+.forgot-password-page .card::after,
+.reset-password-page .card::after {
   content: "";
   background: rgba(0, 0, 0, 0.15);
   position: absolute;
@@ -4519,77 +4508,31 @@
   border-radius: 1.5rem;
   z-index: -1;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body,
-.forgot-password-page .forgot-password-card .reset-password-card-body,
-.forgot-password-page .reset-password-card .forgot-password-card-body,
-.forgot-password-page .reset-password-card .reset-password-card-body,
-.reset-password-page .forgot-password-card .forgot-password-card-body,
-.reset-password-page .forgot-password-card .reset-password-card-body,
-.reset-password-page .reset-password-card .forgot-password-card-body,
-.reset-password-page .reset-password-card .reset-password-card-body {
+.forgot-password-page .card .card-body,
+.reset-password-page .card .card-body {
   z-index: 2;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-title,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-title,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-title,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-title,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-title,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-title,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-title,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-title,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-title,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-title,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-title,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-title,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-title,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-title,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-title,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-title {
+.forgot-password-page .card .card-body .title,
+.reset-password-page .card .card-body .title {
   font-size: 2.5rem;
   color: #0d401c;
   margin-bottom: 1rem;
   font-weight: bold;
   text-transform: capitalize;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-description,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-description,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-description,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-description,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-description,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-description,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-description,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-description,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-description,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-description,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-description,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-description,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-description,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-description,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-description,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-description {
+.forgot-password-page .card .card-body .description,
+.reset-password-page .card .card-body .description {
   font-size: 1.1rem;
   color: #5a5a5a;
   margin-bottom: 2rem;
   line-height: 1.5;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group,
-.forgot-password-page .forgot-password-card .reset-password-card-body .input-group,
-.forgot-password-page .reset-password-card .forgot-password-card-body .input-group,
-.forgot-password-page .reset-password-card .reset-password-card-body .input-group,
-.reset-password-page .forgot-password-card .forgot-password-card-body .input-group,
-.reset-password-page .forgot-password-card .reset-password-card-body .input-group,
-.reset-password-page .reset-password-card .forgot-password-card-body .input-group,
-.reset-password-page .reset-password-card .reset-password-card-body .input-group {
+.forgot-password-page .card .card-body .input-group,
+.reset-password-page .card .card-body .input-group {
   margin-bottom: 1.5rem;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group input,
-.forgot-password-page .forgot-password-card .reset-password-card-body .input-group input,
-.forgot-password-page .reset-password-card .forgot-password-card-body .input-group input,
-.forgot-password-page .reset-password-card .reset-password-card-body .input-group input,
-.reset-password-page .forgot-password-card .forgot-password-card-body .input-group input,
-.reset-password-page .forgot-password-card .reset-password-card-body .input-group input,
-.reset-password-page .reset-password-card .forgot-password-card-body .input-group input,
-.reset-password-page .reset-password-card .reset-password-card-body .input-group input {
+.forgot-password-page .card .card-body .input-group input,
+.reset-password-page .card .card-body .input-group input {
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
@@ -4599,33 +4542,13 @@
   transition: border-color 0.3s ease;
   background-color: #f7f7f7;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .input-group input:focus,
-.forgot-password-page .forgot-password-card .reset-password-card-body .input-group input:focus,
-.forgot-password-page .reset-password-card .forgot-password-card-body .input-group input:focus,
-.forgot-password-page .reset-password-card .reset-password-card-body .input-group input:focus,
-.reset-password-page .forgot-password-card .forgot-password-card-body .input-group input:focus,
-.reset-password-page .forgot-password-card .reset-password-card-body .input-group input:focus,
-.reset-password-page .reset-password-card .forgot-password-card-body .input-group input:focus,
-.reset-password-page .reset-password-card .reset-password-card-body .input-group input:focus {
+.forgot-password-page .card .card-body .input-group input:focus,
+.reset-password-page .card .card-body .input-group input:focus {
   border-color: #0d401c;
   outline: none;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions {
+.forgot-password-page .card .card-body .actions,
+.reset-password-page .card .card-body .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4635,44 +4558,13 @@
           flex-direction: column;
   gap: 1rem;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn {
+.forgot-password-page .card .card-body .actions .btn,
+.reset-password-page .card .card-body .actions .btn {
   background-color: #0d401c;
   color: #ffffff;
   font-size: 1.2rem;
   padding: 1rem;
   border-radius: 1.6rem;
-  margin-top: 0.6rem;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
@@ -4680,81 +4572,31 @@
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.forgot-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.forgot-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.forgot-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.forgot-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.reset-password-page .forgot-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.reset-password-page .forgot-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.reset-password-page .reset-password-card .forgot-password-card-body .reset-password-actions .reset-password-btn:hover,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .forgot-password-btn:hover,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-actions .reset-password-btn:hover,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .forgot-password-btn:hover,
-.reset-password-page .reset-password-card .reset-password-card-body .reset-password-actions .reset-password-btn:hover {
+.forgot-password-page .card .card-body .actions .btn:hover,
+.reset-password-page .card .card-body .actions .btn:hover {
   background-color: #041609;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link {
+.forgot-password-page .card .card-body .link,
+.reset-password-page .card .card-body .link {
   margin-top: 1rem;
   font-size: 1rem;
   color: #5a5a5a;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link a,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link a {
+.forgot-password-page .card .card-body .link a,
+.reset-password-page .card .card-body .link a {
   color: #0d401c;
   font-weight: bold;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.forgot-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a:hover,
-.forgot-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a:hover,
-.forgot-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a:hover,
-.forgot-password-page .reset-password-card .reset-password-card-body .forgot-password-link a:hover,
-.reset-password-page .forgot-password-card .forgot-password-card-body .forgot-password-link a:hover,
-.reset-password-page .forgot-password-card .reset-password-card-body .forgot-password-link a:hover,
-.reset-password-page .reset-password-card .forgot-password-card-body .forgot-password-link a:hover,
-.reset-password-page .reset-password-card .reset-password-card-body .forgot-password-link a:hover {
+.forgot-password-page .card .card-body .link a:hover,
+.reset-password-page .card .card-body .link a:hover {
   color: #041609;
 }
 @media (max-width: 768px) {
-  .forgot-password-page .forgot-password-card,
-  .forgot-password-page .reset-password-card,
-  .reset-password-page .forgot-password-card,
-  .reset-password-page .reset-password-card {
+  .forgot-password-page .card,
+  .reset-password-page .card {
     width: 90%;
     padding: 2rem;
   }
@@ -5136,19 +4978,19 @@
   padding: 0.6rem 1.2rem;
   border-radius: 1.6rem;
   text-decoration: none;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 .registration-success .success-card .success-btn:hover {
   background-color: #041609;
 }
-
 @media (max-width: 768px) {
-  .success-card {
+  .registration-success .success-card {
     width: 90%;
     padding: 2rem;
   }
 }
+
 .shop-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5171,8 +5013,8 @@
 
 .sidebar {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 250px;
-          flex: 0 0 250px;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
@@ -5315,9 +5157,9 @@
 }
 
 .products-section {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
 }
 .products-section .products-header {
   display: -webkit-box;
@@ -6037,22 +5879,42 @@ body {
   margin-left: 0.5rem;
 }
 
-.header {
-  position: relative;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  margin-bottom: 2rem;
+:root {
+  --color-primary: #0d401c;
+  --color-secondary: #ffc107;
+  --color-background: #f4f4f4;
+  --color-text-dark: #333;
+  --color-text-light: #666;
+  --font-primary: "Arial", sans-serif;
+  --transition-speed: 0.3s;
+  --border-radius: 8px;
 }
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(13, 64, 28, 0.7);
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  color: var(--color-text-dark);
+}
+
+.help-details-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.help-details-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1.2rem 2rem;
+}
+.help-details-header .header-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6060,237 +5922,496 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 15px;
+}
+.help-details-header .breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+}
+.help-details-header .breadcrumb-item {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.help-details-header .breadcrumb-item.active {
+  color: white;
+}
+.help-details-header .breadcrumb-divider {
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.help-details-header .header-title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 30px 1fr;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  padding: 30px 0;
+}
+@media (max-width: 768px) {
+  .content-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  background-color: white;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.sidebar-navigation h3 {
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+.sidebar-navigation ul {
+  list-style-type: none;
+}
+.sidebar-navigation ul li {
+  margin-bottom: 10px;
+}
+.sidebar-navigation ul li a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  -webkit-transition: all var(--transition-speed) ease-in-out;
+  transition: all var(--transition-speed) ease-in-out;
+}
+.sidebar-navigation ul li a:hover {
+  color: var(--color-primary);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.main-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+.main-content .query-details {
+  padding: 1rem;
+}
+.main-content .query-details section {
+  margin-bottom: 30px;
+}
+.main-content .query-details section h2 {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.main-content .query-details .step-guide {
+  padding: 1rem;
+}
+.main-content .query-details .step-guide .step {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.main-content .query-details .step-guide .step-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+.main-content .query-details .step-guide .step-header .step-number {
+  background-color: var(--color-primary);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 1.5rem;
+  margin-right: 15px;
 }
-.header-overlay h1 {
-  color: #ffc107;
-  font-size: 2rem;
-  font-family: "Dancing Script", serif;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
+.main-content .query-details .step-guide .step-header h3 {
+  margin: 0;
+  color: var(--color-primary);
 }
-.header-overlay p {
-  max-width: 700px;
-  font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
+.main-content .query-details .step-guide .step .substeps {
+  padding-left: 45px;
 }
-
-.main-content {
-  padding: 2rem 0;
+.main-content .query-details .step-guide .step .substeps li {
+  margin-bottom: 10px;
 }
-.main-content .row {
+.main-content .query-details .troubleshooting {
+  padding: 1rem;
+}
+.main-content .query-details .troubleshooting .faq-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+.main-content .query-details .troubleshooting .faq-item .faq-question {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-primary);
 }
-.main-content .blog-posts-section {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
-  padding: 1.5rem;
+.main-content .query-details .troubleshooting .faq-item .faq-question .toggle-icon {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.main-content .blog-posts-section h2 {
+.main-content .query-details .troubleshooting .faq-item .faq-question .toggle-icon.expanded {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.main-content .query-details .troubleshooting .faq-item .faq-answer {
+  margin-top: 10px;
+  color: var(--color-text-light);
+}
+.main-content .query-details .contact-support {
+  padding: 1rem;
+}
+.main-content .query-details .contact-support .support-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.main-content .query-details .contact-support .support-actions .support-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all var(--transition-speed) ease-in-out;
+  transition: all var(--transition-speed) ease-in-out;
+}
+.main-content .query-details .contact-support .support-actions .support-button.live-chat {
+  background-color: var(--color-primary);
+}
+.main-content .query-details .contact-support .support-actions .support-button.email-support {
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+}
+.main-content .query-details .contact-support .support-actions .support-button:hover {
+  opacity: 0.9;
+}
+
+.help-details-footer {
+  background-color: var(--color-primary);
+  color: white;
   text-align: center;
-  margin-bottom: 1.5rem;
+  padding: 15px 0;
 }
-.main-content .blog-posts-section .blog-post {
-  padding: 1.5rem;
-  border-radius: 1rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  margin-bottom: 2rem;
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
 }
-.main-content .blog-posts-section .blog-post img {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem;
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
 }
-.main-content .blog-posts-section .blog-post h3 {
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.main-content .blog-posts-section .blog-post p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.main-content .blog-posts-section .blog-post .read-more {
-  color: #0d401c;
+
+a {
   text-decoration: none;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  color: #0d401c;
+  font-weight: 600;
 }
-.main-content .blog-posts-section .blog-post .read-more:hover {
+a:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+a:hover:hover {
   color: #ffc107;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0.9;
 }
-.main-content .blog-posts-section .blog-post .read-more i {
-  margin-left: 0.5rem;
+
+.heros-section .main-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  text-align: center;
 }
-.main-content .sidebar-section {
+.heros-section .main-header .header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+.heros-section .main-header .header-overlay .text-center {
+  z-index: 2;
+}
+.heros-section .main-header .header-overlay .text-center h1 {
+  font-family: "Dancing Script", serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #ffc107;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+.heros-section .main-header .header-overlay .text-center p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #f7f7f7;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .heros-section .main-header {
+    height: 50vh;
+  }
+  .heros-section .main-header .header-overlay {
+    padding: 1.5rem;
+  }
+  .heros-section .main-header .header-overlay .text-center h1 {
+    font-size: 2.5rem;
+  }
+  .heros-section .main-header .header-overlay .text-center p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .heros-section .main-header {
+    height: 40vh;
+  }
+  .heros-section .main-header .header-overlay {
+    padding: 1rem;
+  }
+  .heros-section .main-header .header-overlay .text-center h1 {
+    font-size: 2rem;
+  }
+  .heros-section .main-header .header-overlay .text-center p {
+    font-size: 0.9rem;
+  }
+}
+
+.blogs-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+.blogs-page .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: row;
+      -ms-flex-align: row;
+          align-items: row;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.blogs-page .content .sidebar {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  background: #ffffff;
   padding: 1.5rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.main-content .sidebar-section .sidebar .sidebar-widget {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-}
-.main-content .sidebar-section .sidebar .sidebar-widget h3 {
+.blogs-page .content .sidebar h2 {
   font-size: 1.25rem;
-  margin-top: 0;
+  color: #0d401c;
   margin-bottom: 1rem;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget ul {
+.blogs-page .content .sidebar .search-bar {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.blogs-page .content .sidebar .search-bar input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+}
+.blogs-page .content .sidebar .search-bar i {
+  position: absolute;
+  right: 1rem;
+  top: 75%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.blogs-page .content .sidebar .recent-posts ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget ul li {
+.blogs-page .content .sidebar .recent-posts ul li {
   margin-bottom: 1rem;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget ul li a {
-  text-decoration: none;
-  color: #5a5a5a;
+.blogs-page .content .sidebar .recent-posts ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: row;
+      -ms-flex-align: row;
+          align-items: row;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget ul li a:hover {
-  color: #0d401c;
+.blogs-page .content .sidebar .recent-posts ul li a i {
+  margin-right: 0.5rem;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget ul li span {
-  font-size: 0.875rem;
-  color: #999;
-}
-.main-content .sidebar-section .sidebar .sidebar-widget .tags {
+.blogs-page .content .sidebar .tags .tag-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 0.5rem;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget .tags .tag {
-  background-color: #f7f7f7;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  margin: 0.5rem;
-  text-decoration: none;
-  color: #5a5a5a;
-}
-.main-content .sidebar-section .sidebar .sidebar-widget .tags .tag:hover {
-  background-color: #0d401c;
+.blogs-page .content .sidebar .tags .tag-list span {
+  background: #0d401c;
   color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 1.6rem;
+  font-size: 0.875rem;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget form {
+.blogs-page .content .blog-content {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+.blogs-page .content .blog-content .featured-blogs h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.blogs-page .content .blog-content .featured-blogs .blog-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: row;
+      -ms-flex-align: row;
+          align-items: row;
+  gap: 2rem;
 }
-.main-content .sidebar-section .sidebar .sidebar-widget form input[type=email] {
-  padding: 1rem;
-  border: none;
-  border-radius: 10px 0 0 10px;
-  width: 70%;
-}
-.main-content .sidebar-section .sidebar .sidebar-widget form button[type=submit] {
-  padding: 1rem;
-  border: none;
-  border-radius: 0 10px 10px 0;
-  background-color: #0d401c;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 992px) {
-  .main-content .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .main-content .blog-posts-section,
-  .main-content .sidebar-section {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    width: 100%;
-    padding: 1.5rem 0;
-  }
-}
-.call-to-action {
-  background-color: #f7f7f7;
-  padding: 2rem 0;
-}
-.call-to-action h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.call-to-action p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.call-to-action a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #0d401c;
+.blogs-page .content .blog-content .featured-blogs .blog-grid .blog-card {
+  width: 48%;
+  background: #ffffff;
   padding: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.call-to-action a:hover {
-  background-color: #ffc107;
-}
-
-.footer {
-  background-color: black;
-  color: #ffffff;
-  padding: 1.5rem 0;
-  text-align: center;
-}
-.footer p {
-  margin-bottom: 0;
-}
-
-.header {
-  position: relative;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.blogs-page .content .blog-content .featured-blogs .blog-grid .blog-card img {
   width: 100%;
-  height: 100%;
-  background-color: rgba(13, 64, 28, 0.7);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.blogs-page .content .blog-content .featured-blogs .blog-grid .blog-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.blogs-page .content .blog-content .featured-blogs .blog-grid .blog-card a {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.blogs-page .content .blog-content .categories,
+.blogs-page .content .blog-content .recent-blogs,
+.blogs-page .content .blog-content .newsletter {
+  margin-top: 2rem;
+}
+.blogs-page .content .blog-content .categories h2,
+.blogs-page .content .blog-content .recent-blogs h2,
+.blogs-page .content .blog-content .newsletter h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.blogs-page .content .blog-content .categories .category-list a,
+.blogs-page .content .blog-content .recent-blogs .category-list a,
+.blogs-page .content .blog-content .newsletter .category-list a {
+  display: inline-block;
+  background: #ffc107;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.blogs-page .content .blog-content .blog-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6298,188 +6419,471 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 1.5rem;
+  gap: 1rem;
 }
-.header-overlay h1 {
-  color: #ffc107;
-  font-size: 2rem;
-  font-family: "Dancing Script", serif;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-}
-.header-overlay p {
-  max-width: 700px;
-  font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
-}
-
-.main-content {
-  padding: 2rem 0;
-}
-.main-content h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.main-content p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.main-content .services-section .row {
+.blogs-page .content .blog-content .blog-list .blog-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 1rem;
 }
-.main-content .services-section .service-card {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
+.blogs-page .content .blog-content .blog-list .blog-item img {
+  border-radius: 10px;
 }
-.main-content .services-section .service-card .service-icon {
-  font-size: 2rem;
-  color: #0d401c;
-  margin-bottom: 1rem;
-}
-.main-content .services-section .service-card h3 {
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-.main-content .services-section .service-card p {
+.blogs-page .content .blog-content .blog-list .blog-item div h3 {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
-.main-content .services-section .service-card .read-more {
-  color: #0d401c;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-.main-content .services-section .service-card .read-more:hover {
-  color: #ffc107;
-}
-.main-content .services-section .service-card .read-more i {
-  margin-left: 0.5rem;
-}
-.main-content .call-to-action {
-  background-color: #f7f7f7;
-  padding: 2rem 0;
-  text-align: center;
-}
-.main-content .call-to-action h2 {
-  margin-bottom: 1.5rem;
-}
-.main-content .call-to-action p {
-  margin-bottom: 1.5rem;
-}
-.main-content .call-to-action a {
-  display: inline-block;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #0d401c;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-}
-.main-content .call-to-action a:hover {
-  background-color: #ffc107;
-}
-
-.testimonials-section {
-  padding: 2rem 0;
-  background-color: #f7f7f7;
-}
-.testimonials-section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.testimonials-section .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.testimonials-section .testimonial-card {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-}
-.testimonials-section .testimonial-card p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.testimonials-section .testimonial-card h4 {
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-.testimonials-section .testimonial-card span {
+.blogs-page .content .blog-content .blog-list .blog-item div p {
   font-size: 0.875rem;
-  color: #999;
+}
+.blogs-page .content .blog-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.blogs-page .content .blog-content form input {
+  margin-top: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+}
+.blogs-page .content .blog-content form .newsletter-btn {
+  margin-top: 1rem;
+  height: 50px;
+  background: #0d401c;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.blogs-page .content .blog-content form .newsletter-btn:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.blogs-page .content .blog-content form .newsletter-btn:hover:hover {
+  color: #ffc107;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-@media screen and (max-width: 992px) {
-  .main-content .row {
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f7f7;
+  color: black;
+  line-height: 1.6;
+}
+
+.services-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.services-header h1 {
+  font-family: "Dancing Script", serif;
+  color: #0d401c;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .services-header h1 {
+    font-size: 3rem;
+  }
+}
+.services-header p {
+  color: #5a5a5a;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .services-header p {
+    font-size: 1.25rem;
+  }
+}
+
+.services-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.service-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.service-card .service-icon {
+  font-size: 3rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+.service-card .btn-learn-more {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #0d401c;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.service-card .btn-learn-more:hover {
+  color: #ffc107;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.service-details {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+.service-details h2 {
+  color: #0d401c;
+  margin-bottom: 2rem;
+}
+.service-details .detail-card {
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.service-details .detail-card i {
+  font-size: 2.5rem;
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+.service-details .detail-card h4 {
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+
+.sustainability-commitment {
+  padding: 4rem 2rem;
+  background-color: #f7f7f7;
+}
+.sustainability-commitment h2 {
+  color: #0d401c;
+  margin-bottom: 1.5rem;
+}
+.sustainability-commitment .sustainability-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.sustainability-commitment .sustainability-list li {
+  margin-bottom: 1rem;
+}
+.sustainability-commitment .sustainability-list li i {
+  color: #0d401c;
+  margin-right: 1rem;
+}
+.sustainability-commitment .btn-sustainability {
+  display: inline-block;
+  background-color: #0d401c;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 1.6rem;
+}
+
+.training-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.training-section h2 {
+  color: #0d401c;
+  margin-bottom: 3rem;
+}
+.training-section .training-card {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.training-section .training-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.training-section .training-card i {
+  font-size: 3rem;
+  color: #0d401c;
+  margin-bottom: 1.5rem;
+}
+.training-section .training-card h4 {
+  color: #0d401c;
+  margin-bottom: 1rem;
+}
+
+.contact-consultation {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+.contact-consultation h2 {
+  color: #0d401c;
+  margin-bottom: 1.5rem;
+}
+.contact-consultation .consultation-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact-consultation .consultation-form input,
+.contact-consultation .consultation-form textarea {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #5a5a5a;
+  border-radius: 1.5rem;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+.contact-consultation .consultation-form input:focus,
+.contact-consultation .consultation-form textarea:focus {
+  outline: none;
+  border-color: #0d401c;
+}
+.contact-consultation .consultation-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact-consultation .consultation-form .btn-submit {
+  margin-bottom: 1.5rem;
+  background-color: #0d401c;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.contact-consultation .consultation-form .btn-submit:hover {
+  background-color: #041609;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+.contact-consultation .contact-details {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+.contact-consultation .contact-details h4 {
+  color: #0d401c;
+  margin-bottom: 1.5rem;
+}
+.contact-consultation .contact-details p {
+  margin-bottom: 1rem;
+}
+.contact-consultation .contact-details p i {
+  margin-right: 1rem;
+  color: #0d401c;
+}
+
+footer {
+  background-color: #0d401c;
+  color: #ffffff;
+  padding: 4rem 2rem;
+}
+footer h5 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 0.75rem;
+}
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+footer ul li a:hover {
+  opacity: 1;
+}
+footer .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+footer .social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+footer .social-icons a:hover {
+  color: #ffc107;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 1rem;
+  }
+  .hero-section .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-section .hero-content p {
+    font-size: 1rem;
+  }
+  .services-grid,
+  .advanced-technologies,
+  .sustainability-commitment,
+  .training-section,
+  .testimonials-section,
+  .contact-consultation,
+  footer {
+    padding: 2rem 1rem;
+  }
+  .services-grid .services-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .contact-consultation .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main-content .service-card,
-  .testimonials-section .testimonial-card {
-    width: 100%;
+  footer .col-md-4 {
     margin-bottom: 2rem;
+    text-align: center;
+  }
+  footer .col-md-4 .social-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
-.call-to-action {
-  background-color: #f7f7f7;
-  padding: 2rem 0;
-}
-.call-to-action h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.call-to-action p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.call-to-action a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #0d401c;
-  padding: 1.5rem;
-  border-radius: 1rem;
-}
-.call-to-action a:hover {
-  background-color: #ffc107;
+.text-primary {
+  color: #0d401c !important;
 }
 
-.footer {
+.bg-primary {
+  background-color: #0d401c !important;
+}
+
+.btn-primary {
+  background-color: #0d401c;
+  border-color: #0d401c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  -webkit-animation: fadeIn 0.7s ease forwards;
+          animation: fadeIn 0.7s ease forwards;
+}
+
+.contact-cta {
+  background-color: #0d401c;
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+}
+.contact-cta .cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-cta .cta-content h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.contact-cta .cta-content .btn-contact {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  background-color: #ffc107;
+  color: #0d401c;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 1.6rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+.contact-cta .cta-content .btn-contact:hover {
+  color: #ffc107;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+footer {
   background-color: black;
   color: #ffffff;
-  padding: 1.5rem 0;
   text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
-.footer p {
-  margin-bottom: 0;
+
+@media (max-width: 768px) {
+  .services-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }

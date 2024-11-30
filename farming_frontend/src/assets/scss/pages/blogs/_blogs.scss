@@ -1,244 +1,301 @@
-// Header Styles
-.header {
-  position: relative;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  margin-bottom: $spacing-lg;
+// General Styles
+body {
+  font-family: $font-family-primary;
+  color: $dark;
+  margin: 0;
+  padding: 0;
+  background: $gray-light;
+}
 
-  &-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($primary-color, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: $white;
-    padding: $spacing-md;
+a {
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: $font-weight-bold;
 
-    h1 {
-      color: $secondary-color;
-      font-size: $font-size-lg;
-      font-family: $font-family-secondary;
-      font-weight: $font-weight-bolder;
-      margin-bottom: $spacing-md;
-    }
-
-    p {
-      max-width: 700px;
-      font-size: $font-size-base;
-      color: $white;
-      margin-bottom: $spacing-lg;
-    }
+  &:hover {
+    @include hover-effect($secondary-color);
   }
 }
 
-// Main Content Styles
-.main-content {
-  padding: $spacing-lg 0;
-
-  .row {
+.heros-section {
+  .main-header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 60vh; // Adjust the height as needed
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    text-align: center;
 
-  .blog-posts-section {
-    flex: 6;
-    padding: $spacing-md;
+    // Overlay effect
+    .header-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); // Semi-transparent black overlay
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: $spacing-lg;
 
-    h2 {
-      text-align: center;
-      margin-bottom: $spacing-md;
+      // Centered Text Content
+      .text-center {
+        z-index: 2; // Make sure the text appears above the overlay
+
+        h1 {
+          font-family: $font-family-secondary; // Dancing Script
+          font-size: 3rem;
+          margin-bottom: $spacing-md;
+          color: $secondary-color; // Highlighted color for the title
+          text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); // Text shadow for depth
+        }
+
+        p {
+          font-family: $font-family-primary; // Poppins
+          font-size: 1.2rem;
+          font-weight: $font-weight-normal;
+          max-width: 600px;
+          margin: 0 auto;
+          color: $gray-light;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); // Subtle text shadow
+        }
+      }
     }
 
-    .blog-post {
-      padding: $spacing-md;
-      border-radius: $border-radius-md;
-      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-      margin-bottom: $spacing-lg;
+    // Make it responsive
+    @media (max-width: $breakpoint-tablet) {
+      height: 50vh; // Reduce height on smaller screens
 
-      img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: $border-radius-md;
+      .header-overlay {
+        padding: $spacing-md;
+
+        .text-center {
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
       }
+    }
 
-      h3 {
+    @media (max-width: $breakpoint-mobile) {
+      height: 40vh; // Reduce height further on mobile
+
+      .header-overlay {
+        padding: $spacing-sm;
+
+        .text-center {
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+// Blogs Page
+.blogs-page {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: $spacing-xl;
+
+  .content {
+    @include flex(flex-start, flex-start, row);
+    margin-top: $spacing-xl;
+    gap: $spacing-lg;
+
+    // Sidebar
+    .sidebar {
+      flex: 2;
+      background: $white;
+      padding: $spacing-md;
+      border-radius: $border-radius-lg;
+      box-shadow: $box-shadow-light;
+
+      h2 {
         font-size: $font-size-md;
-        margin-top: $spacing-sm;
+        color: $primary-color;
         margin-bottom: $spacing-sm;
       }
 
-      p {
-        font-size: $font-size-base;
-        margin-bottom: $spacing-md;
-      }
+      .search-bar {
+        margin-bottom: $spacing-sm;
+        position: relative;
 
-      .read-more {
-        color: $primary-color;
-        text-decoration: none;
-        transition: color $transition-speed-fast;
-
-        &:hover {
-          color: $secondary-color;
+        input {
+          width: 100%;
+          padding: $spacing-sm;
+          border-radius: $border-radius;
+          border: 1px solid $grey;
         }
 
         i {
-          margin-left: $spacing-xs;
+          position: absolute;
+          right: $spacing-sm;
+          top: 75%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .recent-posts ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: $spacing-sm;
+
+          a {
+            @include flex(flex-start, center, row);
+
+            i {
+              margin-right: $spacing-xs;
+            }
+          }
+        }
+      }
+
+      .tags .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+
+        span {
+          background: $primary-color;
+          color: $white;
+          padding: $spacing-xs $spacing-sm;
+          border-radius: $border-radius-pill;
+          font-size: $font-size-sm;
         }
       }
     }
-  }
 
-  .sidebar-section {
-    flex: 2;
-    padding: $spacing-md;
+    // Blog Content
+    .blog-content {
+      flex: 6;
+      // Featured Blogs
+      .featured-blogs {
+        h2 {
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-lg;
+        }
 
-    .sidebar {
-      .sidebar-widget {
-        background-color: $white;
-        padding: $spacing-md;
-        margin-bottom: $spacing-md;
-        border: 1px solid #ddd;
-        border-radius: $border-radius-md;
+        .blog-grid {
+          @include flex(flex-start, flex-start, row);
+          gap: $spacing-lg;
 
-        h3 {
+          .blog-card {
+            width: 48%;
+            background: $white;
+            padding: $spacing-md;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow-light;
+
+            img {
+              width: 100%;
+              border-radius: $border-radius;
+              margin-bottom: $spacing-sm;
+            }
+
+            h3 {
+              margin-bottom: $spacing-sm;
+              font-size: $font-size-md;
+            }
+
+            a {
+              font-size: $font-size-sm;
+              font-weight: $font-weight-bold;
+            }
+          }
+        }
+      }
+
+      .categories,
+      .recent-blogs,
+      .newsletter {
+        margin-top: $spacing-lg;
+
+        h2 {
           font-size: $font-size-md;
-          margin-top: 0;
           margin-bottom: $spacing-sm;
         }
 
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
+        .category-list a {
+          display: inline-block;
+          background: $secondary-color;
+          color: $dark;
+          padding: $spacing-xs $spacing-sm;
+          border-radius: $border-radius;
+          font-size: $font-size-sm;
+          margin-right: $spacing-sm;
+          margin-bottom: $spacing-sm;
+        }
+      }
 
-          li {
-            margin-bottom: $spacing-sm;
+      .blog-list {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
 
-            a {
-              text-decoration: none;
-              color: $grey;
+        .blog-item {
+          display: flex;
+          gap: $spacing-sm;
 
-              &:hover {
-                color: $primary-color;
-              }
+          img {
+            border-radius: $border-radius;
+          }
+
+          div {
+            h3 {
+              font-size: $font-size-base;
+              margin-bottom: $spacing-xs;
             }
 
-            span {
+            p {
               font-size: $font-size-sm;
-              color: #999;
             }
           }
         }
+      }
 
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
+      form {
+        display: flex;
+        gap: $spacing-sm;
 
-          .tag {
-            background-color: $gray-light;
-            padding: $spacing-xs $spacing-sm;
-            border-radius: $border-radius-sm;
-            margin: $spacing-xs;
-            text-decoration: none;
-            color: $grey;
-
-            &:hover {
-              background-color: $primary-color;
-              color: $white;
-            }
-          }
+        input {
+          margin-top: $spacing-sm;
+          flex: 1;
+          padding: $spacing-sm;
+          border-radius: $border-radius;
+          border: 1px solid $grey;
         }
 
-        form {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .newsletter-btn {
+          margin-top: 1rem;
+          height: 50px;
+          background: $primary-color;
+          color: $white;
+          padding: $spacing-sm $spacing-md;
+          border: none;
+          border-radius: $border-radius;
+          cursor: pointer;
 
-          input[type="email"] {
-            padding: $spacing-sm;
-            border: none;
-            border-radius: $border-radius-sm 0 0 $border-radius-sm;
-            width: 70%;
-          }
-
-          button[type="submit"] {
-            padding: $spacing-sm;
-            border: none;
-            border-radius: 0 $border-radius-sm $border-radius-sm 0;
-            background-color: $primary-color;
-            color: $white;
-            cursor: pointer;
+          &:hover {
+            @include hover-effect($secondary-color);
           }
         }
       }
     }
-  }
-}
-
-// Responsive Layout
-@media screen and (max-width: $breakpoint-desktop) {
-  .main-content .row {
-    flex-direction: column;
-  }
-
-  .main-content .blog-posts-section,
-  .main-content .sidebar-section {
-    flex: 1;
-    width: 100%;
-    padding: $spacing-md 0;
-  }
-}
-
-// Call to Action Styles
-.call-to-action {
-  background-color: $gray-light;
-  padding: $spacing-lg 0;
-
-  h2 {
-    text-align: center;
-    margin-bottom: $spacing-md;
-  }
-
-  p {
-    text-align: center;
-    margin-bottom: $spacing-md;
-  }
-
-  a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: $white;
-    background-color: $primary-color;
-    padding: $spacing-md;
-    border-radius: $border-radius-md;
-
-    &:hover {
-      background-color: $secondary-color;
-    }
-  }
-}
-
-// Footer Styles
-.footer {
-  background-color: $dark;
-  color: $white;
-  padding: $spacing-md 0;
-  text-align: center;
-
-  p {
-    margin-bottom: 0;
   }
 }

@@ -53,18 +53,18 @@
       padding: 0.6rem 1.2rem;
       border-radius: $border-radius-pill;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: background-color $transition-speed-medium;
 
       &:hover {
         background-color: darken($primary-color, 10%);
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .success-card {
-    width: 90%;
-    padding: 2rem;
+  @media (max-width: $breakpoint-tablet) {
+    .success-card {
+      width: 90%;
+      padding: 2rem;
+    }
   }
 }
