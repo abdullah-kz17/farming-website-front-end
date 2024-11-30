@@ -1,0 +1,33 @@
+// Mixins
+@mixin flex($justify: flex-start, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin responsive-text($mobile-size, $desktop-size) {
+  font-size: $mobile-size;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $desktop-size;
+  }
+}
+
+@mixin hover-effect($color: $primary-color) {
+  transition: all $transition-speed-medium ease;
+
+  &:hover {
+    color: $color;
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+}
+
+@mixin responsive-padding($mobile-padding, $desktop-padding) {
+  padding: $mobile-padding;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $desktop-padding;
+  }
+}

@@ -1,0 +1,78 @@
+.commitment-section {
+  padding: $spacing-xl;
+  text-align: center;
+
+  .commitment-heading {
+    margin-bottom: $spacing-lg;
+
+    h1 {
+      font-family: $font-family-secondary;
+      font-size: 3rem;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      font-family: $font-family-primary;
+      font-size: $font-size-md;
+      color: $grey;
+    }
+  }
+
+  .swiper-container {
+    margin: $spacing-lg 0;
+
+    .swiper-wrapper {
+      @include flex(center, center);
+    }
+
+    .swiper-slide {
+      width: 150px;
+      text-align: center;
+
+      .icon-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-xs;
+
+        i {
+          font-size: 2rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-family: $font-family-primary;
+          font-size: $font-size-sm;
+          color: $dark;
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: $secondary-color;
+    }
+  }
+
+  .btn-primary {
+    background: $primary-color;
+    color: $white;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius-pill;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+
+    i {
+      font-size: $font-size-base;
+    }
+  }
+}

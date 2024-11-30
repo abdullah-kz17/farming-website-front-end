@@ -19,101 +19,325 @@
     ></script>
   </head>
   <body>
-    <section class="help-center">
-      <!-- Header Section -->
-      <header
-        class="header"
-        style="
-          background-image: url(./assets/images/h1-slide3.webp);
-          object-fit: cover;
-        "
-      >
-        <div class="header-overlay">
-          <div class="text-center">
-            <h1>Welcome to Our Help Center</h1>
-            <p>Find answers to your questions or contact us for support.</p>
+    <div class="heros-section">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="contact">
+            <div class="top-bar-heading">
+              <p>
+                Welcome to Donal Farm <span>•</span> Agriculture and Organic
+                Farms
+              </p>
+            </div>
+            <div class="contact-details">
+              <a href="tel:+19876543210" class="contact-item">
+                <i class="bi bi-telephone-fill"></i> +1 987 654 3210
+              </a>
+              <a href="mailto:donalfarms@gmail.com" class="contact-item">
+                <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
+              </a>
+              <div class="social-links">
+                <a href="#" class="social-item"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-pinterest"></i
+                ></a>
+                <a href="#" class="social-item"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Search Bar -->
-          <div class="search-bar">
-            <input type="text" placeholder="Search for topics..." />
-            <button><i class="bi bi-search"></i></button>
+      <!-- Header -->
+      <header class="hero-header" id="hero-header">
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="nav-left">
+              <a href="/" class="logo">
+                <i class="bi bi-leaf"></i> DonalFarm
+              </a>
+              <button
+                class="mobile-nav-toggle"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+              >
+                <i class="bi bi-list"></i>
+                <span class="visually-hidden">Menu</span>
+              </button>
+            </div>
+
+            <nav class="nav" id="primary-navigation">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link"
+                    >Pages <i class="bi bi-caret-down-fill"></i
+                  ></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="404.html">404</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="shop.html" class="nav-link"
+                    >Shop <i class="bi bi-caret-down-fill"></i
+                  ></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="products">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="login.html">My Account</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="blogs.html" class="nav-link">Blogs</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="nav-right">
+              <a href="#" class="btn btn-primary">Get In Touch</a>
+              <div class="nav-icons">
+                <button class="icon-btn"><i class="bi bi-search"></i></button>
+                <button class="icon-btn">
+                  <i class="bi bi-cart"></i>
+                  <span class="cart-badge">3</span>
+                </button>
+                <button class="icon-btn"><i class="bi bi-person"></i></button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-      <div class="help-center-container">
-        <!-- Categories -->
-        <div class="categories">
-          <h2>Explore Topics</h2>
-          <div class="category-grid">
-            <!-- Category Items -->
-            <div class="category-item">
-              <i class="bi bi-question-circle"></i>
-              <h3>FAQs</h3>
-              <p>Find answers to commonly asked questions.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-bag-check"></i>
-              <h3>Orders</h3>
-              <p>Track your orders or learn about our policies.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-shield-check"></i>
-              <h3>Safety Practices</h3>
-              <p>Understand our sustainable farming practices.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-headset"></i>
-              <h3>Customer Support</h3>
-              <p>Contact us for any inquiries or assistance.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-truck"></i>
-              <h3>Shipping</h3>
-              <p>Learn about our shipping options and delivery times.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-wallet2"></i>
-              <h3>Payment</h3>
-              <p>Explore payment methods and related policies.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-card-checklist"></i>
-              <h3>Products</h3>
-              <p>Discover the variety of products we offer.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-recycle"></i>
-              <h3>Sustainability</h3>
-              <p>Find out how we prioritize eco-friendly solutions.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-calendar-event"></i>
-              <h3>Events</h3>
-              <p>Join our workshops, farm tours, and other events.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Locations</h3>
-              <p>Discover our farms and pick-up points near you.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-people"></i>
-              <h3>Community</h3>
-              <p>Learn about our community programs and initiatives.</p>
-            </div>
-            <div class="category-item">
-              <i class="bi bi-info-circle"></i>
-              <h3>About Us</h3>
-              <p>Read about our mission, vision, and farming journey.</p>
+    </div>
+    <section class="help-center">
+      <div class="container">
+        <section class="heros-section">
+          <!-- Top Bar -->
+          <div class="top-bar">
+            <div class="container">
+              <div class="contact">
+                <div class="top-bar-heading">
+                  <p>
+                    Welcome to Donal Farm <span>•</span> Agriculture and Organic
+                    Farms
+                  </p>
+                </div>
+                <div class="contact-details">
+                  <a href="tel:+19876543210" class="contact-item">
+                    <i class="bi bi-telephone-fill"></i> +1 987 654 3210
+                  </a>
+                  <a href="mailto:donalfarms@gmail.com" class="contact-item">
+                    <i class="bi bi-envelope-fill"></i> donalfarms@gmail.com
+                  </a>
+                  <div class="social-links">
+                    <a href="#" class="social-item"
+                      ><i class="bi bi-twitter"></i
+                    ></a>
+                    <a href="#" class="social-item"
+                      ><i class="bi bi-facebook"></i
+                    ></a>
+                    <a href="#" class="social-item"
+                      ><i class="bi bi-pinterest"></i
+                    ></a>
+                    <a href="#" class="social-item"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- FAQs -->
-        <div
-          class="faqs"
-          x-data="{ faqList: [
+          <!-- Header -->
+          <header class="hero-header" id="hero-header">
+            <div class="container">
+              <div class="nav-wrapper">
+                <div class="nav-left">
+                  <a href="/" class="logo">
+                    <i class="bi bi-leaf"></i> DonalFarm
+                  </a>
+                  <button
+                    class="mobile-nav-toggle"
+                    aria-controls="primary-navigation"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-list"></i>
+                    <span class="visually-hidden">Menu</span>
+                  </button>
+                </div>
+
+                <nav class="nav" id="primary-navigation">
+                  <ul class="nav-list">
+                    <li class="nav-item">
+                      <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link"
+                        >Pages <i class="bi bi-caret-down-fill"></i
+                      ></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="404.html">404</a></li>
+                        <li>
+                          <a href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="shop.html" class="nav-link"
+                        >Shop <i class="bi bi-caret-down-fill"></i
+                      ></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="products">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="login.html">My Account</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="blogs.html" class="nav-link">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="nav-right">
+                  <a href="#" class="btn btn-primary">Get In Touch</a>
+                  <div class="nav-icons">
+                    <button class="icon-btn">
+                      <i class="bi bi-search"></i>
+                    </button>
+                    <button class="icon-btn">
+                      <i class="bi bi-cart"></i>
+                      <span class="cart-badge">3</span>
+                    </button>
+                    <button class="icon-btn">
+                      <i class="bi bi-person"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div
+            class="header"
+            style="
+              background-image: url(./assets/images/h1-slide3.webp);
+              object-fit: cover;
+            "
+          >
+            <div class="header-overlay">
+              <div class="text-center">
+                <h1>Welcome to Our Help Center</h1>
+                <p>Find answers to your questions or contact us for support.</p>
+              </div>
+
+              <!-- Search Bar -->
+              <div class="search-bar">
+                <input type="text" placeholder="Search for topics..." />
+                <button><i class="bi bi-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="help-center-container">
+          <!-- Categories -->
+          <div class="categories">
+            <h2>Explore Topics</h2>
+            <div class="category-grid">
+              <!-- Category Items -->
+              <div class="category-item">
+                <i class="bi bi-question-circle"></i>
+                <h3>FAQs</h3>
+                <p>Find answers to commonly asked questions.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-bag-check"></i>
+                <h3>Orders</h3>
+                <p>Track your orders or learn about our policies.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-shield-check"></i>
+                <h3>Safety Practices</h3>
+                <p>Understand our sustainable farming practices.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-headset"></i>
+                <h3>Customer Support</h3>
+                <p>Contact us for any inquiries or assistance.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-truck"></i>
+                <h3>Shipping</h3>
+                <p>Learn about our shipping options and delivery times.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-wallet2"></i>
+                <h3>Payment</h3>
+                <p>Explore payment methods and related policies.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-card-checklist"></i>
+                <h3>Products</h3>
+                <p>Discover the variety of products we offer.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-recycle"></i>
+                <h3>Sustainability</h3>
+                <p>Find out how we prioritize eco-friendly solutions.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-calendar-event"></i>
+                <h3>Events</h3>
+                <p>Join our workshops, farm tours, and other events.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Locations</h3>
+                <p>Discover our farms and pick-up points near you.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-people"></i>
+                <h3>Community</h3>
+                <p>Learn about our community programs and initiatives.</p>
+              </div>
+              <div class="category-item">
+                <i class="bi bi-info-circle"></i>
+                <h3>About Us</h3>
+                <p>Read about our mission, vision, and farming journey.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div
+            class="faqs"
+            x-data="{ faqList: [
     { 
       question: 'What is sustainable farming?',
       answer: 'Sustainable farming ensures long-term agricultural productivity while minimizing environmental impact.' 
@@ -143,39 +367,95 @@
       answer: 'Spring and early summer are ideal for visiting our farm to experience the blooming crops and lush environment.' 
     }
   ] }"
-        >
-          <h2>Frequently Asked Questions</h2>
-          <template x-for="(faq, index) in faqList" :key="index">
-            <div class="faq-item" x-data="{ isOpen: false }">
-              <div @click="isOpen = !isOpen" class="faq-question">
-                <h4 x-text="faq.question"></h4>
-                <i
-                  :class="isOpen ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"
-                ></i>
+          >
+            <h2>Frequently Asked Questions</h2>
+            <template x-for="(faq, index) in faqList" :key="index">
+              <div class="faq-item" x-data="{ isOpen: false }">
+                <div @click="isOpen = !isOpen" class="faq-question">
+                  <h4 x-text="faq.question"></h4>
+                  <i
+                    :class="isOpen ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"
+                  ></i>
+                </div>
+                <div x-show="isOpen" x-transition class="faq-answer">
+                  <p x-text="faq.answer"></p>
+                </div>
               </div>
-              <div x-show="isOpen" x-transition class="faq-answer">
-                <p x-text="faq.answer"></p>
-              </div>
-            </div>
-          </template>
-        </div>
+            </template>
+          </div>
 
-        <!-- Contact Section -->
-        <div class="contact">
-          <h2>Need More Help?</h2>
-          <p>Contact us and our team will respond within 24 hours.</p>
-          <form>
-            <div class="form-row">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-            </div>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">
-              Send Message <i class="bi bi-send"></i>
-            </button>
-          </form>
+          <!-- Contact Section -->
+          <div class="contact">
+            <h2>Need More Help?</h2>
+            <p>Contact us and our team will respond within 24 hours.</p>
+            <form>
+              <div class="form-row">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <textarea placeholder="Your Message" rows="4" required></textarea>
+              <button type="submit">
+                Send Message <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+    <footer class="site-footer">
+      <!-- <div class="footer-grass-image"></div> -->
+      <div class="container">
+        <!-- Top Section -->
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+              Donal Farm is committed to sustainable and eco-friendly farming.
+              We deliver the highest quality produce directly from our farm to
+              your table.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="bi bi-geo-alt"></i> Prinsengracht 250, Amsterdam, NL
+              </li>
+              <li><i class="bi bi-envelope"></i> Donalfarms@gmail.com</li>
+              <li><i class="bi bi-telephone"></i> +1 987 654 3210</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Subscribe</h3>
+            <p>Stay updated with our latest news and products.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Your Email" />
+              <button type="submit"><i class="bi bi-envelope"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Donal Farm. All Rights Reserved.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

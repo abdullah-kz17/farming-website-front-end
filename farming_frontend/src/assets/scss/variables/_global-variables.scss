@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 // Variables
+$container-width: 1280px;
+$primary-color: #0d401c;
+$secondary-color: #ffc107;
+$white: #ffffff;
+$grey: #5a5a5a;
+$gray-light: #f7f7f7;
+$border-radius: 10px;
+$border-radius-lg: 1rem;
+$border-radius-pill: 1.6rem;
+$dark: black;
+$font-family-primary: "Poppins", sans-serif;
+$font-family-secondary: "Dancing Script", serif;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+$transition-speed-medium: 0.3s;
+$box-shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$container-width: 1280px;
 $primary-color: #0d401c;
 $secondary-color: #ffc107;
 $white: #ffffff;
@@ -13,6 +41,8 @@ $font-family: "Dancing Script", cursive;
 $font-weight-bolder: bolder;
 $font-weight-bold: bold;
 $border-radius-lg: 1.5rem;
+$black: black;
+$transition: ease-in;
 
 // Spacing Variables
 $spacing-xs: 0.5rem;
