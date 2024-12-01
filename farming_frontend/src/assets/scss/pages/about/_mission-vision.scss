@@ -1,23 +1,22 @@
 @import "../../variables/global-variables";
 
 .mission-vision {
-  padding: 4rem 2rem;
+  padding: $spacing-xl $spacing-md;
   background-color: rgb(210, 210, 210);
 
   .container {
-    max-width: 1200px;
+    max-width: $container-width;
     margin: 0 auto;
     text-align: center;
   }
 
   .row {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    @include flex(center, center);
+    gap: $spacing-md;
     flex-wrap: wrap;
 
     .col {
-      flex: 1 1 calc(50% - 2rem);
+      flex: 1 1 calc(50% - $spacing-sm);
       display: flex;
       justify-content: center;
       align-items: stretch;
@@ -25,21 +24,22 @@
       .card {
         background-color: $white;
         border-radius: $border-radius-lg;
-        padding: 2rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: $spacing-md;
+        box-shadow: $box-shadow-light;
+        transition: transform $transition-speed-medium,
+          box-shadow $transition-speed-medium;
         max-width: 550px;
         text-align: center;
 
         &:hover {
           transform: translateY(-10px);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: $box-shadow-medium;
         }
 
         .icon {
           font-size: 3rem;
           color: $primary-color;
-          margin-bottom: 1.5rem;
+          margin-bottom: $spacing-md;
 
           i {
             font-size: inherit;
@@ -47,14 +47,14 @@
         }
 
         h3 {
-          font-size: 1.8rem;
-          margin-bottom: 1rem;
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-sm;
           color: $primary-color;
-          font-weight: bold;
+          font-weight: $font-weight-bold;
         }
 
         p {
-          font-size: 1rem;
+          font-size: $font-size-base;
           color: $grey;
           line-height: 1.6;
         }

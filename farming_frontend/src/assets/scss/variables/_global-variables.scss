@@ -9,12 +9,9 @@ $secondary-color: #ffc107;
 $white: #ffffff;
 $grey: #5a5a5a;
 $gray-light: #f7f7f7;
-$border-radius: 10px;
-$border-radius-lg: 1rem;
 $border-radius-pill: 1.6rem;
+$border-radius: 10px;
 $dark: black;
-$font-family-primary: "Poppins", sans-serif;
-$font-family-secondary: "Dancing Script", serif;
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 1rem;
@@ -22,25 +19,8 @@ $spacing-md: 1.5rem;
 $spacing-lg: 2rem;
 $spacing-xl: 3rem;
 
-$transition-speed-medium: 0.3s;
-$box-shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-$breakpoint-mobile: 576px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 992px;
 $container-width: 1280px;
-$primary-color: #0d401c;
-$secondary-color: #ffc107;
-$white: #ffffff;
-$grey: #5a5a5a;
-$gray-light: #f7f7f7;
-$border-radius: 10px;
-$border-radius-lg: 1rem;
-$border-radius-pill: 1.6rem;
-$dark: black;
-$font-family: "Dancing Script", cursive;
-$font-weight-bolder: bolder;
-$font-weight-bold: bold;
+
 $border-radius-lg: 1.5rem;
 $black: black;
 $transition: ease-in;
@@ -61,6 +41,7 @@ $border-radius-lg: 1.5rem;
 $font-family-primary: "Poppins", sans-serif;
 $font-family-secondary: "Dancing Script", serif;
 
+$font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-base: 1rem;
 $font-size-md: 1.25rem;

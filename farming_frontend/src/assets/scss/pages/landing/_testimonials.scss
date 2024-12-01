@@ -1,29 +1,27 @@
-@import "../../variables/global-variables";
-
 .testimonials {
   background: $gray-light;
-  padding: 4rem 2rem;
+  padding: $spacing-xl;
 
   .container {
-    max-width: 1280px;
+    max-width: $container-width;
     margin: 0 auto;
     text-align: center;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: $spacing-lg;
 
     .sub-title {
       display: inline-block;
       color: $primary-color;
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-sm;
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
-      padding: 0 1rem;
+      padding: 0 $spacing-sm;
 
       &::before,
       &::after {
@@ -45,11 +43,11 @@
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: $font-size-lg;
     }
 
     p {
-      font-size: 1rem;
+      font-size: $font-size-base;
       color: $grey;
       max-width: 800px;
       margin: 0 auto;
@@ -59,33 +57,34 @@
   .testimonial-swiper {
     .swiper-wrapper {
       display: flex;
-      gap: 2rem;
+      flex-wrap: nowrap;
+      gap: $spacing-lg;
+
+      @media (max-width: $breakpoint-tablet) {
+        gap: $spacing-md;
+      }
     }
 
     .swiper-slide {
-      display: flex;
-      justify-content: center;
+      flex: 0 0 auto;
+      width: auto;
     }
 
     .testimonial-card {
       background: $white;
       border-radius: $border-radius-lg;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: $box-shadow-light;
       overflow: hidden;
       text-align: center;
       max-width: 300px;
-      padding: 2rem;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05); // Slight zoom effect
-      }
+      padding: $spacing-lg;
+      transition: transform $transition-speed-medium;
 
       .client-avatar {
         width: 80px;
         height: 80px;
-        margin: 0 auto 1rem;
-        border-radius: 50%; // Makes the avatar circular
+        margin: 0 auto $spacing-sm;
+        border-radius: 50%;
         overflow: hidden;
         border: 2px solid $primary-color;
 
@@ -98,33 +97,33 @@
 
       .testimonial-content {
         .testimonial-text {
-          font-size: 1rem;
+          font-size: $font-size-base;
           color: $grey;
-          margin-bottom: 1.5rem;
+          margin-bottom: $spacing-md;
           font-style: italic;
         }
 
         .client-info {
           .client-name {
-            font-size: 1.2rem;
+            font-size: $font-size-md;
             font-weight: bold;
             color: $primary-color;
           }
 
           .client-role {
-            font-size: 0.9rem;
+            font-size: $font-size-sm;
             color: $grey;
-            margin-bottom: 0.5rem;
+            margin-bottom: $spacing-xs;
           }
 
           .rating {
             display: flex;
             justify-content: center;
-            gap: 0.2rem;
+            gap: $spacing-xs;
 
             i {
               color: $secondary-color;
-              font-size: 1rem;
+              font-size: $font-size-md;
             }
           }
         }
@@ -133,7 +132,7 @@
   }
 
   .swiper-pagination {
-    margin-top: 2rem;
+    margin-top: $spacing-lg;
 
     .swiper-pagination-bullet {
       background: $primary-color;
@@ -151,56 +150,55 @@
   .swiper-button-prev,
   .swiper-button-next {
     color: $primary-color;
-    transition: color 0.3s ease;
+    transition: color $transition-speed-medium;
 
     &:hover {
       color: $secondary-color;
     }
   }
-}
 
-// Media Queries for responsiveness
-@media (max-width: 768px) {
-  .testimonials .testimonial-swiper .swiper-wrapper {
-    gap: 1rem; // Reduce gap for smaller screens
+  @media (max-width: $breakpoint-tablet) {
+    .section-header {
+      margin-bottom: $spacing-md;
+    }
+
+    .testimonial-card {
+      padding: $spacing-md;
+    }
+
+    .testimonial-content {
+      .testimonial-text {
+        font-size: $font-size-sm;
+      }
+
+      .client-name {
+        font-size: $font-size-sm;
+      }
+
+      .client-role {
+        font-size: $font-size-xs;
+      }
+    }
   }
 
-  .testimonials .testimonial-card {
-    padding: 1.5rem; // Reduce padding for smaller screens
-  }
+  @media (max-width: $breakpoint-mobile) {
+    .testimonial-card {
+      max-width: 100%;
+      padding: $spacing-sm;
+    }
 
-  .testimonials .testimonial-content .testimonial-text {
-    font-size: 0.9rem; // Reduce font size for smaller screens
-  }
+    .testimonial-content {
+      .testimonial-text {
+        font-size: $font-size-xs;
+      }
 
-  .testimonials .client-info .client-name {
-    font-size: 1.1rem; // Reduce font size for smaller screens
-  }
+      .client-name {
+        font-size: $font-size-sm;
+      }
 
-  .testimonials .client-info .client-role {
-    font-size: 0.8rem; // Reduce font size for smaller screens
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonials .testimonial-swiper .swiper-wrapper {
-    gap: 0.5rem; // Further reduce gap for very small screens
-  }
-
-  .testimonials .testimonial-card {
-    max-width: 100%; // Full width on very small screens
-    padding: 1rem; // Further reduce padding for very small screens
-  }
-
-  .testimonials .testimonial-content .testimonial-text {
-    font-size: 0.8rem; // Further reduce font size for very small screens
-  }
-
-  .testimonials .client-info .client-name {
-    font-size: 1rem; // Further reduce font size for very small screens
-  }
-
-  .testimonials .client-info .client-role {
-    font-size: 0.7rem; // Further reduce font size for very small screens
+      .client-role {
+        font-size: $font-size-xs;
+      }
+    }
   }
 }

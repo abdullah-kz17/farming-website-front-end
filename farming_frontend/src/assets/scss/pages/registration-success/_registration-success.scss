@@ -19,8 +19,8 @@
   .success-card {
     background-color: $white;
     border-radius: $border-radius-lg;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 3rem;
+    box-shadow: $box-shadow-medium;
+    padding: $spacing-lg;
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -30,27 +30,27 @@
     .success-icon {
       font-size: 3rem;
       color: $primary-color;
-      margin-bottom: 1rem;
+      margin-bottom: $spacing-sm;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: $font-size-lg;
       color: $primary-color;
-      margin-bottom: 1rem;
+      margin-bottom: $spacing-sm;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: $font-size-md;
       color: $grey;
-      margin-bottom: 2rem;
+      margin-bottom: $spacing-lg;
     }
 
     .success-btn {
       display: inline-block;
       background-color: $primary-color;
       color: $white;
-      font-size: 1.1rem;
-      padding: 0.6rem 1.2rem;
+      font-size: $font-size-md;
+      padding: $spacing-xs $spacing-md;
       border-radius: $border-radius-pill;
       text-decoration: none;
       transition: background-color $transition-speed-medium;
@@ -64,7 +64,7 @@
   @media (max-width: $breakpoint-tablet) {
     .success-card {
       width: 90%;
-      padding: 2rem;
+      padding: $spacing-md;
     }
   }
 }

@@ -1,20 +1,17 @@
-@import "../../variables/global-variables";
-
 .statistics-section {
-  background-color: rgb(213, 223, 231);
-  padding: 4rem 2rem;
-  text-align: center;
   background-color: $gray-light;
+  padding: $spacing-xl $spacing-md;
+  text-align: center;
 
   .container {
-    max-width: 1200px;
+    max-width: $container-width;
     margin: 0 auto;
   }
 
   .intro-text {
     max-width: 800px;
-    margin: 0 auto 2rem;
-    font-size: 1.2rem;
+    margin: 0 auto $spacing-lg;
+    font-size: $font-size-md;
     color: $dark;
     line-height: 1.8;
 
@@ -22,12 +19,12 @@
       display: inline-block;
       color: $primary-color;
       font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-sm;
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
-      padding: 0 1rem;
+      padding: 0 $spacing-sm;
 
       &::before,
       &::after {
@@ -50,30 +47,29 @@
   }
 
   .stats-wrapper {
-    display: flex;
-    justify-content: center;
+    @include flex(center, center);
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: $spacing-lg;
 
-    @media (max-width: 768px) {
-      gap: 1rem;
+    @media (max-width: $breakpoint-tablet) {
+      gap: $spacing-md;
     }
 
-    @media (max-width: 480px) {
-      gap: 0.5rem;
+    @media (max-width: $breakpoint-mobile) {
+      gap: $spacing-xs;
     }
 
     .stat-item {
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: $box-shadow-light;
       text-align: center;
       flex: 1;
       max-width: 220px;
-      padding: 1.5rem 0rem;
+      padding: $spacing-md;
       border-radius: $border-radius;
       border: 1px solid #ccc;
       background-color: rgb(174, 178, 183);
 
-      @media (max-width: 768px) {
+      @media (max-width: $breakpoint-tablet) {
         min-width: 100%;
       }
 
@@ -86,9 +82,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto 1rem;
+        margin: 0 auto $spacing-md;
         font-size: 2rem;
-        transition: transform 0.3s ease;
+        transition: transform $transition-speed-medium;
 
         &:hover {
           transform: scale(1.1);
@@ -99,43 +95,35 @@
         font-size: 2rem;
         color: $secondary-color;
         font-weight: bold;
-        margin-bottom: 0.5rem;
+        margin-bottom: $spacing-xs;
       }
 
       p {
-        font-size: 1rem;
+        font-size: $font-size-base;
         color: $dark;
-        font-weight: 500;
+        font-weight: $font-weight-normal;
       }
     }
   }
 }
 
 // Media Queries for responsiveness
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-desktop) {
   .statistics-section .intro-text {
-    font-size: 1.1rem;
+    font-size: responsive-text(1rem, 1.1rem);
   }
 
   .statistics-section .stats-wrapper .stat-item h3 {
-    font-size: 1.8rem;
+    font-size: responsive-text(1.6rem, 2rem);
   }
 
   .statistics-section .stats-wrapper .stat-item p {
-    font-size: 0.9rem;
+    font-size: responsive-text(0.8rem, 0.9rem);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-mobile) {
   .statistics-section .intro-text {
-    font-size: 1rem;
-  }
-
-  .statistics-section .stats-wrapper .stat-item h3 {
-    font-size: 1.6rem;
-  }
-
-  .statistics-section .stats-wrapper .stat-item p {
-    font-size: 0.8rem;
+    font-size: responsive-text(0.9rem, 1rem);
   }
 }

@@ -1,21 +1,18 @@
-@import "../../variables/global-variables";
-
 .agriculture-skill-section {
-  padding: 3rem 2rem;
+  padding: $spacing-lg $spacing-md;
   background-color: rgb(224, 224, 224);
 
   .container {
-    max-width: 1200px;
+    max-width: $container-width;
     margin: 0 auto;
   }
 
   .row {
-    display: flex;
+    @include flex(space-between, center);
     flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
+    gap: $spacing-lg;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
     }
   }
@@ -24,7 +21,7 @@
     flex: 1;
     max-width: 50%;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-tablet) {
       max-width: 100%;
     }
 
@@ -55,8 +52,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
+        box-shadow: $box-shadow-light;
+        transition: transform $transition-speed-medium;
 
         &:hover {
           transform: scale(1.1);
@@ -69,22 +66,22 @@
     flex: 1;
     max-width: 50%;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-tablet) {
       max-width: 100%;
-      margin-top: 2rem;
+      margin-top: $spacing-lg;
     }
 
     .section-tagline {
-      margin-left: 1.5rem;
+      margin-left: $spacing-md;
       display: inline-block;
       color: $primary-color;
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-sm;
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
-      padding: 0 1rem;
+      padding: 0 $spacing-sm;
 
       &::before,
       &::after {
@@ -106,30 +103,29 @@
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: $font-size-lg;
       font-weight: bold;
-      margin-bottom: 1rem;
+      margin-bottom: $spacing-md;
       color: $dark;
     }
 
     .section-description {
-      font-size: 1rem;
+      font-size: $font-size-base;
       color: $grey;
-      margin-bottom: 2rem;
+      margin-bottom: $spacing-xl;
       line-height: 1.6;
     }
 
     .progress-bar-group {
       .progress-bar-item {
-        margin-bottom: 1rem;
+        margin-bottom: $spacing-sm;
 
         .label {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 0.5rem;
-          font-size: 1rem;
+          @include flex(space-between, center);
+          margin-bottom: $spacing-xs;
+          font-size: $font-size-base;
           color: $dark;
-          font-weight: 500;
+          font-weight: $font-weight-normal;
         }
 
         .progress-bar {
@@ -140,7 +136,7 @@
 
           .progress {
             height: 100%;
-            background: linear-gradient(
+            background-image: linear-gradient(
               to right,
               $primary-color,
               $secondary-color
@@ -153,38 +149,28 @@
 }
 
 // Media Queries for responsiveness
-@media (max-width: 992px) {
-  .agriculture-skill-section .content-container .section-title {
-    font-size: 1.8rem; // Adjust font size for smaller screens
-  }
-
-  .agriculture-skill-section .content-container .section-description {
-    font-size: 0.9rem; // Adjust font size for smaller screens
-  }
-
+@media (max-width: $breakpoint-desktop) {
+  // Adjustments for smaller screens
+  .agriculture-skill-section .content-container .section-title,
+  .agriculture-skill-section .content-container .section-description,
   .agriculture-skill-section
     .content-container
     .progress-bar-group
     .progress-bar-item
     .label {
-    font-size: 0.9rem; // Adjust font size for smaller screens
+    font-size: responsive-text(0.9rem, 1.8rem);
   }
 }
 
-@media (max-width: 480px) {
-  .agriculture-skill-section .content-container .section-title {
-    font-size: 1.6rem; // Further adjust font size for very small screens
-  }
-
-  .agriculture-skill-section .content-container .section-description {
-    font-size: 0.8rem; // Further adjust font size for very small screens
-  }
-
+@media (max-width: $breakpoint-mobile) {
+  // Further adjustments for very small screens
+  .agriculture-skill-section .content-container .section-title,
+  .agriculture-skill-section .content-container .section-description,
   .agriculture-skill-section
     .content-container
     .progress-bar-group
     .progress-bar-item
     .label {
-    font-size: 0.8rem; // Further adjust font size for very small screens
+    font-size: responsive-text(0.8rem, 1.6rem);
   }
 }
