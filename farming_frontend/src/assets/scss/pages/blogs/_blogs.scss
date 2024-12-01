@@ -157,7 +157,7 @@ a {
           margin-bottom: $spacing-sm;
 
           a {
-            @include flex(flex-start, center, row);
+            @include flex(flex-start, start, row);
 
             i {
               margin-right: $spacing-xs;
@@ -184,6 +184,7 @@ a {
     // Blog Content
     .blog-content {
       flex: 6;
+
       // Featured Blogs
       .featured-blogs {
         h2 {
@@ -194,9 +195,10 @@ a {
         .blog-grid {
           @include flex(flex-start, flex-start, row);
           gap: $spacing-lg;
+          flex-wrap: wrap;
 
           .blog-card {
-            width: 48%;
+            width: calc(50% - $spacing-md);
             background: $white;
             padding: $spacing-md;
             border-radius: $border-radius;
@@ -271,6 +273,7 @@ a {
 
       form {
         display: flex;
+        flex-direction: column;
         gap: $spacing-sm;
 
         input {
@@ -282,7 +285,6 @@ a {
         }
 
         .newsletter-btn {
-          margin-top: 1rem;
           height: 50px;
           background: $primary-color;
           color: $white;
@@ -294,6 +296,94 @@ a {
           &:hover {
             @include hover-effect($secondary-color);
           }
+        }
+      }
+    }
+  }
+
+  // Responsive Adjustments
+  @media (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+
+    .sidebar {
+      order: 2;
+    }
+
+    .blog-content {
+      order: 1;
+
+      .featured-blogs .blog-grid {
+        .blog-card {
+          width: calc(100% - $spacing-md);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: $spacing-md;
+
+    .sidebar {
+      flex: none;
+      width: 100%;
+      padding: $spacing-sm;
+    }
+
+    .blog-content {
+      .featured-blogs {
+        h2 {
+          font-size: $font-size-md;
+        }
+      }
+
+      .blog-grid .blog-card {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      gap: $spacing-sm;
+    }
+
+    .sidebar {
+      padding: $spacing-xs;
+    }
+
+    .blog-content {
+      padding: $spacing-xs;
+
+      .featured-blogs h2 {
+        font-size: $font-size-sm;
+      }
+
+      .blog-grid {
+        gap: $spacing-sm;
+
+        .blog-card {
+          padding: $spacing-sm;
+        }
+      }
+
+      .blog-list .blog-item {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      form {
+        input {
+          font-size: $font-size-sm;
+        }
+
+        .newsletter-btn {
+          font-size: $font-size-sm;
         }
       }
     }
