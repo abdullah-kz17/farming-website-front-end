@@ -1,218 +1,322 @@
+@import "../../variables/global-variables";
+
 .contact-us {
-  padding: 4rem 2rem;
-  background-color: rgb(217, 217, 217);
+  // Responsive padding that adapts to screen size
+  padding: $spacing-xl $spacing-md;
+  background-color: $gray-light;
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    // Ensure container is fully responsive
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    box-sizing: border-box;
 
-    .row {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      gap: 2rem;
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-      }
+    // Responsive breakpoint adjustments for container
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0 $spacing-sm;
     }
 
-    .contact-info {
-      flex: 1;
-      max-width: 40%;
+    .row {
+      // Flexible layout with responsive behavior
+      @include flex(row, space-between, flex-start);
+      gap: $spacing-lg;
+      align-items: stretch; // Ensure equal height columns
 
-      @media (max-width: 768px) {
-        max-width: 100%;
+      // Stack columns on smaller screens
+      @media (max-width: $breakpoint-tablet) {
+        @include flex(column);
+        gap: $spacing-md;
+        align-items: stretch;
       }
 
-      img {
-        width: 100%;
-        border-radius: $border-radius;
-        margin-bottom: 2rem;
-        object-fit: cover;
-        height: 250px;
+      .contact-info {
+        flex: 1;
+        max-width: 40%;
+
+        // Full width on tablet and mobile
+        @media (max-width: $breakpoint-tablet) {
+          max-width: 100%;
+          flex: none;
+          width: 100%;
+        }
+
+        // Responsive image styling
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          border-radius: $border-radius;
+          margin-bottom: $spacing-lg;
+          object-fit: contain;
+        }
+
+        .info-box {
+          background-color: $secondary-color;
+          padding: $spacing-lg;
+          border-radius: $border-radius;
+          box-shadow: $box-shadow-light;
+
+          .info-item {
+            @include flex(row, flex-start);
+            margin-bottom: $spacing-md;
+
+            // Responsive icon sizing
+            i {
+              font-size: 1.5rem;
+              color: $primary-color;
+              margin-right: $spacing-sm;
+            }
+
+            // Adaptive typography
+            h4 {
+              font-size: $font-size-md;
+              margin-bottom: $spacing-xs;
+
+              @media (max-width: $breakpoint-mobile) {
+                font-size: $font-size-sm;
+              }
+            }
+
+            p {
+              font-size: $font-size-sm;
+              color: $grey;
+
+              @media (max-width: $breakpoint-mobile) {
+                font-size: $font-size-xs;
+              }
+            }
+          }
+        }
       }
 
-      .info-box {
-        background-color: $secondary-color;
-        padding: 1.5rem;
+      .contact-form {
+        flex: 1;
+        max-width: 55%;
+        display: flex;
+        flex-direction: column;
+
+        // Full width on tablet and mobile
+        @media (max-width: $breakpoint-tablet) {
+          max-width: 100%;
+          flex: none;
+          width: 100%;
+        }
+
+        background-color: $primary-color;
+        color: $white;
+        padding: $spacing-lg;
         border-radius: $border-radius;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-        .info-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 1rem;
-          margin-bottom: 1.5rem;
+        .form-header {
+          text-align: left;
+          margin-bottom: $spacing-md;
 
-          i {
-            font-size: 1.5rem;
-            color: $primary-color;
+          // Responsive typography
+          h4 {
+            font-size: $font-size-md;
+            color: $secondary-color;
+
+            @media (max-width: $breakpoint-mobile) {
+              font-size: $font-size-sm;
+            }
           }
 
-          h4 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
+          h2 {
+            font-size: $font-size-lg;
+            margin: $spacing-xs 0;
+
+            @media (max-width: $breakpoint-mobile) {
+              font-size: $font-size-md;
+            }
           }
 
           p {
-            font-size: 0.9rem;
-            color: $grey;
+            font-size: $font-size-sm;
+            color: white;
+            opacity: 0.8;
+
+            @media (max-width: $breakpoint-mobile) {
+              font-size: $font-size-xs;
+            }
           }
         }
-      }
-    }
 
-    .contact-form {
-      flex: 1;
-      max-width: 55%;
-
-      @media (max-width: 768px) {
-        max-width: 100%;
-      }
-
-      background-color: $primary-color;
-      color: $white;
-      padding: 2rem;
-      border-radius: $border-radius;
-
-      .form-header {
-        text-align: left;
-        margin-bottom: 1.5rem;
-
-        h4 {
-          font-size: 1rem;
-          color: $secondary-color;
-        }
-
-        h2 {
-          font-size: 1.8rem;
-          margin: 0.5rem 0;
-        }
-
-        p {
-          font-size: 0.9rem;
-          color: lighten($white, 20%);
-        }
-      }
-
-      form {
-        .form-row {
+        form {
           display: flex;
-          gap: 1rem;
-          margin-bottom: 1.5rem;
+          flex-direction: column;
 
-          @media (max-width: 480px) {
-            flex-direction: column;
+          .form-row {
+            display: flex;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-md;
+
+            // Stack inputs vertically on mobile
+            @media (max-width: $breakpoint-mobile) {
+              flex-direction: column;
+              gap: $spacing-sm;
+            }
+
+            input,
+            select {
+              flex: 1;
+              padding: $spacing-sm;
+              border: none;
+              border-radius: $border-radius / 2;
+              background-color: lighten($primary-color, 10%);
+              color: white;
+              outline: none;
+
+              // Full width on mobile
+              @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+              }
+
+              &::placeholder {
+                color: $white;
+                opacity: 0.8;
+              }
+
+              &:focus {
+                border: 2px solid $secondary-color;
+              }
+            }
           }
 
-          input,
-          select {
-            flex: 1;
-            padding: 0.8rem 1rem;
+          textarea {
+            width: 100%;
+            padding: $spacing-sm;
             border: none;
-            border-radius: $border-radius;
+            border-radius: $border-radius / 2;
             background-color: lighten($primary-color, 10%);
-            color: $white;
+            color: white;
             outline: none;
+            margin-bottom: $spacing-md;
+            resize: vertical; // Allow vertical resizing
+
+            &::placeholder {
+              color: $white;
+              opacity: 0.8;
+            }
 
             &:focus {
               border: 2px solid $secondary-color;
             }
           }
-        }
 
-        textarea {
-          width: 100%;
-          padding: 1rem;
-          border: none;
-          border-radius: $border-radius;
-          background-color: lighten($primary-color, 10%);
-          color: $white;
-          outline: none;
-          margin-bottom: 1rem;
-
-          &:focus {
-            border: 2px solid $secondary-color;
-          }
-        }
-
-        .form-footer {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          label {
-            font-size: 0.9rem;
+          .form-footer {
             display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-md;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.5rem;
-          }
 
-          button {
-            background-color: $secondary-color;
-            color: $primary-color;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: $border-radius;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: bold;
-
-            &:hover {
-              background-color: darken($secondary-color, 10%);
+            // Stacked layout on mobile
+            @media (max-width: $breakpoint-mobile) {
+              flex-direction: column;
+              align-items: stretch;
+              gap: $spacing-sm;
             }
 
-            i {
-              font-size: 1.2rem;
+            label {
+              font-size: $font-size-sm;
+              display: flex;
+              align-items: center;
+              gap: $spacing-xs;
+
+              @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+              }
+            }
+
+            button {
+              background-color: $secondary-color;
+              color: $primary-color;
+              padding: $spacing-xs $spacing-md;
+              border: none;
+              border-radius: $border-radius / 2;
+              display: flex;
+              align-items: center;
+              gap: $spacing-xs;
+              font-weight: bold;
+
+              // Full-width button on mobile
+              @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+                justify-content: center;
+              }
+
+              &:hover {
+                background-color: darken($secondary-color, 10%);
+              }
+
+              i {
+                font-size: 1.2rem;
+              }
             }
           }
         }
       }
     }
-  }
 
-  .clients {
-    padding-inline: 8rem;
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-
-    ul {
-      list-style: none;
+    .clients {
+      padding-inline: $spacing-lg;
       display: flex;
-      flex-wrap: wrap;
+      gap: $spacing-md;
+      margin-top: $spacing-lg;
 
-      li {
-        a {
-          display: block; // Ensure the link is a block element
-          img {
-            width: 100px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: $border-radius;
-            margin-right: 4rem; // Add margin if needed
-            filter: grayscale(0.8) brightness(0.8); // Apply grayscale and brightness filters
-            transition: filter 0.3s ease; // Smooth transition
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
 
-            &:hover {
-              filter: none;
+        li {
+          a {
+            display: block;
+
+            img {
+              width: 100px;
+              height: 50px;
+              object-fit: cover;
+              border-radius: $border-radius;
+              margin-right: $spacing-md;
+              filter: grayscale(0.8) brightness(0.8);
+              transition: filter 0.3s ease, transform 0.3s ease;
+
+              &:hover {
+                filter: none;
+                transform: scale(1.05);
+                cursor: pointer;
+              }
             }
           }
         }
       }
 
-      @media (max-width: 768px) {
-        flex-wrap: wrap; // Not necessary since ul already wraps
+      // Responsive adjustments for clients section
+      @media (max-width: $breakpoint-tablet) {
+        padding-inline: $spacing-md;
+        gap: $spacing-sm;
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        align-items: center;
+
         ul {
-          flex-direction: column; // Stack logos vertically on very small screens
+          flex-direction: column;
+          width: 100%;
+
           li {
-            margin-bottom: 1rem;
+            margin-bottom: $spacing-xs;
+            width: 100%;
+            text-align: center;
+
+            a {
+              display: flex;
+              justify-content: center;
+            }
           }
         }
       }
