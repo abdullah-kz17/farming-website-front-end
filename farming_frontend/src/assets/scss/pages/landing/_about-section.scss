@@ -1,8 +1,6 @@
-@import "../../variables/global-variables";
-
 .about-section {
   padding: 4rem 2rem;
-  background-color: $gray-light; // Light background for better contrast
+  background-color: $gray-light;
 
   .container {
     max-width: 1200px;
@@ -11,7 +9,7 @@
 
   .about-section-row {
     display: flex;
-    flex-wrap: wrap; // Allow wrapping for smaller screens
+    flex-wrap: wrap;
     gap: 2rem;
 
     .column {
@@ -25,7 +23,7 @@
       justify-content: center;
 
       @media (max-width: 768px) {
-        flex: 100%; // Full width on smaller screens
+        flex: 100%;
       }
     }
 
@@ -33,7 +31,7 @@
       flex: 3;
 
       @media (max-width: 768px) {
-        flex: 100%; // Full width on smaller screens
+        flex: 100%;
       }
     }
   }
@@ -97,7 +95,7 @@
           background-color: $secondary-color;
           padding: 0.1rem 0.4rem;
           border-radius: 50%;
-          margin-block: 5px; // Add space at top and bottom
+          margin-block: 5px;
         }
       }
 
@@ -117,7 +115,7 @@
     }
 
     @media (max-width: 768px) {
-      margin-top: 0; // Remove margin on smaller screens
+      margin-top: 0;
     }
   }
 
@@ -153,11 +151,11 @@
   }
 
   .about-details {
-    background-color: $primary-color; // Updated primary color
-    border-radius: 10px; // Rounded corners
+    background-color: $primary-color;
+    border-radius: 10px;
     padding: 2rem;
-    color: $white; // Text color for contrast
-    width: 100%; // Ensures responsive design
+    color: $white;
+    width: 100%;
 
     .about-us {
       border: 1px dashed $white;
@@ -180,7 +178,7 @@
           gap: 0.5rem;
 
           i {
-            color: $secondary-color; // Yellow for icons
+            color: $secondary-color;
             font-size: 1.2rem;
           }
         }
@@ -189,7 +187,7 @@
       // Divider styling
       hr {
         border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.2); // Light divider
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
         margin: 1.5rem 0;
       }
 
@@ -201,7 +199,7 @@
 
         i {
           font-size: 2rem;
-          color: $secondary-color; // Yellow for icons
+          color: $secondary-color;
           margin-right: 1rem;
         }
 
@@ -211,11 +209,10 @@
         }
       }
 
-      // Read More link
       .about-read-more {
         display: inline-block;
         margin-top: 1rem;
-        color: $secondary-color; // Highlighted text color
+        color: $secondary-color;
         text-decoration: none;
         font-size: 1rem;
         font-weight: bold;
@@ -231,35 +228,34 @@
   }
 }
 
-// Media Queries for responsiveness
 @media (max-width: 768px) {
   .about-section .about-section-row {
-    flex-direction: column; // Stack columns on smaller screens
+    flex-direction: column;
   }
 
   .about-section .about-content {
-    margin-bottom: 2rem; // Add space between sections on smaller screens
+    margin-bottom: 2rem;
   }
 
   .about-section .trust-section {
-    margin-bottom: 1rem; // Reduce margin on smaller screens
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .about-section .about-content h1 {
-    font-size: 2.5rem; // Adjust font size for smaller screens
+    font-size: 2.5rem;
   }
 
   .about-section .trust-section .trust-content h2 {
-    font-size: 2.5rem; // Adjust font size for smaller screens
+    font-size: 2.5rem;
   }
 
   .about-section .about-details .about-us .about-list li {
-    font-size: 0.9rem; // Adjust font size for smaller screens
+    font-size: 0.9rem;
   }
 
   .about-section .about-details .about-us .about-item h4 {
-    font-size: 0.9rem; // Adjust font size for smaller screens
+    font-size: 0.9rem;
   }
 }
