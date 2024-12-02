@@ -120,7 +120,7 @@
           transform: translateY(-5px);
 
           .icon-wrapper {
-            background-color: #2b7a0b;
+            background-color: $primary-color;
 
             i {
               color: white;
@@ -141,7 +141,7 @@
 
           i {
             font-size: 2rem;
-            color: #2b7a0b;
+            color: $primary-color;
             transition: color 0.3s ease;
           }
         }
@@ -165,7 +165,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
-      background-color: #2b7a0b;
+      background-color: $primary-color;
       color: white;
       padding: 1rem 2rem;
       border-radius: 4px;
@@ -174,7 +174,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: darken(#2b7a0b, 5%);
+        background-color: darken($primary-color, 5%);
         gap: 1rem;
       }
 

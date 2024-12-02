@@ -58,7 +58,6 @@
     .swiper-wrapper {
       display: flex;
       flex-wrap: nowrap;
-      gap: $spacing-lg;
 
       @media (max-width: $breakpoint-tablet) {
         gap: $spacing-md;

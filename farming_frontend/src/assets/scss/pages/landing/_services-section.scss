@@ -13,8 +13,8 @@
 
   .container {
     display: flex;
-    flex-wrap: wrap; // Allow wrapping for smaller screens
-    gap: 2rem; // Adjust gap for responsiveness
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -22,16 +22,11 @@
 
     .service-card {
       position: relative;
-      width: calc(33.33% - 2rem); // Use calc for consistent spacing
-      height: 250px; // Consistent height
+      width: calc(33.33% - 2rem);
+      height: 250px;
       border-radius: $border-radius;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
 
       img {
         width: 100%;
@@ -60,7 +55,7 @@
 
       .image-hover-overlay {
         position: absolute;
-        top: 10%;
+        top: 16%;
         left: 10%;
         width: 80%;
         height: 80%;

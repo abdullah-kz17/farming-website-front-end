@@ -127,7 +127,7 @@
           transform: translateY(-5px);
 
           .icon-wrapper {
-            background-color: #2b7a0b;
+            background-color: $primary-color;
 
             i {
               color: white;
@@ -148,7 +148,7 @@
 
           i {
             font-size: 2rem;
-            color: #2b7a0b;
+            color: $primary-color;
             transition: color 0.3s ease;
           }
         }

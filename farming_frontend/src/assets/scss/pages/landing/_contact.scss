@@ -263,8 +263,9 @@
     .clients {
       padding-inline: $spacing-lg;
       display: flex;
-      gap: $spacing-md;
-      margin-top: $spacing-lg;
+      justify-content: center;
+      gap: $spacing-xl;
+      margin-top: $spacing-xl;
 
       ul {
         list-style: none;
