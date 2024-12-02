@@ -17,11 +17,41 @@ body {
   text-align: center;
   margin-bottom: 3rem;
 
-  h1 {
-    font-family: $font-family-secondary;
+  .services-main-heading {
+    margin-left: 1.5rem;
+    display: inline-block;
     color: $primary-color;
-    @include responsive-text(2rem, 3rem);
-    margin-bottom: 1rem;
+    font-size: $spacing-lg;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
+  }
+
+  h2 {
+    color: $primary-color;
+    @include responsive-text(1rem, 2rem);
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-xs;
   }
 
   p {
@@ -77,16 +107,41 @@ body {
   padding: 4rem 0;
   text-align: center;
 
-  h2 {
+  .services-main-heading {
+    margin-left: 1.5rem;
+    display: inline-block;
     color: $primary-color;
-    margin-bottom: 2rem;
+    font-size: $spacing-lg;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
   }
 
   .detail-card {
     padding: 1.5rem;
     background-color: $gray-light;
     border-radius: $border-radius-lg;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 
     i {
       font-size: 2.5rem;
@@ -106,9 +161,34 @@ body {
   padding: 4rem 2rem;
   background-color: $gray-light;
 
-  h2 {
+  .services-main-heading {
+    margin-left: 1.5rem;
+    display: inline-block;
     color: $primary-color;
-    margin-bottom: 1.5rem;
+    font-size: $spacing-lg;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
   }
 
   .sustainability-list {
@@ -142,6 +222,35 @@ body {
   padding: 4rem 2rem;
   text-align: center;
 
+  .services-main-heading {
+    margin-left: 1.5rem;
+    display: inline-block;
+    color: $primary-color;
+    font-size: $spacing-lg;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
+  }
   h2 {
     color: $primary-color;
     margin-bottom: 3rem;
@@ -177,9 +286,37 @@ body {
   background-color: $white;
   padding: 4rem 2rem;
 
-  h2 {
+  .services-main-heading {
+    margin-left: 1.5rem;
+    display: inline-block;
     color: $primary-color;
-    margin-bottom: 1.5rem;
+    font-size: $spacing-lg;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
+  }
+  p {
+    margin-bottom: $spacing-sm;
   }
 
   .consultation-form {
@@ -233,7 +370,7 @@ body {
     }
 
     p {
-      margin-bottom: 1rem;
+      margin-bottom: $spacing-md;
 
       i {
         margin-right: 1rem;
@@ -390,14 +527,37 @@ footer {
   .cta-content {
     max-width: 800px;
     margin: 0 auto;
+    .services-main-heading {
+      margin-left: 1.5rem;
+      display: inline-block;
+      color: $secondary-color;
+      font-size: $spacing-lg;
+      font-weight: $font-weight-bolder;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0 1rem;
 
-    h2 {
-      color: $white;
-      margin-bottom: 1rem;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
     }
 
     .btn-contact {
-      @include hover-effect($secondary-color);
+      @include hover-effect($white);
       display: inline-block;
       background-color: $secondary-color;
       color: $primary-color;

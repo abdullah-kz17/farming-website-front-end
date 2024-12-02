@@ -5,10 +5,34 @@
   .commitment-heading {
     margin-bottom: $spacing-lg;
 
-    h1 {
-      font-family: $font-family-secondary;
-      font-size: 3rem;
+    .commitment-section-heading {
+      display: inline-block;
+      color: $primary-color;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
       margin-bottom: $spacing-sm;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0 $spacing-sm;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
     }
 
     p {

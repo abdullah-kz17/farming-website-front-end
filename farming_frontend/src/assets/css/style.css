@@ -648,6 +648,7 @@
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffc107), color-stop(40%, #f7f7f7));
   background: linear-gradient(to bottom, #ffc107 50%, #f7f7f7 40%);
   padding-top: 5rem;
+  margin-bottom: 3rem;
 }
 .services-section .grass-image {
   width: 100%;
@@ -843,7 +844,7 @@
   margin-left: 1.5rem;
   display: inline-block;
   color: #0d401c;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -1060,7 +1061,7 @@
 .our-expertise .section-header .sub-title {
   display: inline-block;
   color: #0d401c;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -1280,7 +1281,7 @@
   margin-left: 1.5rem;
   display: inline-block;
   color: #0d401c;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -1512,7 +1513,7 @@
   margin-left: 1.5rem;
   display: inline-block;
   color: #0d401c;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -1744,7 +1745,7 @@
 .latest-projects .section-header .subtitle {
   display: inline-block;
   color: #ffc107;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -1952,7 +1953,7 @@
 .testimonials .section-header .sub-title {
   display: inline-block;
   color: #0d401c;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -2148,10 +2149,31 @@
     max-width: 100%;
   }
 }
-.faqs .col-left h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.faqs .col-left .sub-title {
+  margin-left: 2rem;
+  display: inline-block;
   color: #0d401c;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.faqs .col-left .sub-title::before, .faqs .col-left .sub-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background-color: #0d401c;
+}
+.faqs .col-left .sub-title::before {
+  right: 100%;
+}
+.faqs .col-left .sub-title::after {
+  left: 100%;
 }
 .faqs .col-left .faq-list .faq-item {
   margin-bottom: 1.5rem;
@@ -2261,15 +2283,29 @@
   margin-bottom: 2rem;
 }
 .blog-section .container .section-header .sub-title {
-  display: block;
+  display: inline-block;
   color: #0d401c;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
 }
-@media (max-width: 576px) {
-  .blog-section .container .section-header .sub-title {
-    font-size: 0.75rem;
-  }
+.blog-section .container .section-header .sub-title::before, .blog-section .container .section-header .sub-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background-color: #0d401c;
+}
+.blog-section .container .section-header .sub-title::before {
+  right: 100%;
+}
+.blog-section .container .section-header .sub-title::after {
+  left: 100%;
 }
 .blog-section .container .section-header h1 {
   font-size: 2rem;
@@ -3045,7 +3081,7 @@
 .statistics-section .intro-text .heading {
   display: inline-block;
   color: #0d401c;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -3273,7 +3309,7 @@
   margin-left: 1.5rem;
   display: inline-block;
   color: #0d401c;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -3448,10 +3484,30 @@
 .commitment-section .commitment-heading {
   margin-bottom: 2rem;
 }
-.commitment-section .commitment-heading h1 {
-  font-family: "Dancing Script", serif;
-  font-size: 3rem;
+.commitment-section .commitment-heading .commitment-section-heading {
+  display: inline-block;
+  color: #0d401c;
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.commitment-section .commitment-heading .commitment-section-heading::before, .commitment-section .commitment-heading .commitment-section-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.commitment-section .commitment-heading .commitment-section-heading::before {
+  right: 100%;
+}
+.commitment-section .commitment-heading .commitment-section-heading::after {
+  left: 100%;
 }
 .commitment-section .commitment-heading p {
   font-family: "Poppins", sans-serif;
@@ -6495,15 +6551,40 @@ body {
   text-align: center;
   margin-bottom: 3rem;
 }
-.services-header h1 {
-  font-family: "Dancing Script", serif;
+.services-header .services-main-heading {
+  margin-left: 1.5rem;
+  display: inline-block;
   color: #0d401c;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.services-header .services-main-heading::before, .services-header .services-main-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.services-header .services-main-heading::before {
+  right: 100%;
+}
+.services-header .services-main-heading::after {
+  left: 100%;
+}
+.services-header h2 {
+  color: #0d401c;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .services-header h1 {
-    font-size: 3rem;
+  .services-header h2 {
+    font-size: 2rem;
   }
 }
 .services-header p {
@@ -6568,15 +6649,36 @@ body {
   padding: 4rem 0;
   text-align: center;
 }
-.service-details h2 {
+.service-details .services-main-heading {
+  margin-left: 1.5rem;
+  display: inline-block;
   color: #0d401c;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.service-details .services-main-heading::before, .service-details .services-main-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.service-details .services-main-heading::before {
+  right: 100%;
+}
+.service-details .services-main-heading::after {
+  left: 100%;
 }
 .service-details .detail-card {
   padding: 1.5rem;
   background-color: #f7f7f7;
   border-radius: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 .service-details .detail-card i {
   font-size: 2.5rem;
@@ -6592,9 +6694,30 @@ body {
   padding: 4rem 2rem;
   background-color: #f7f7f7;
 }
-.sustainability-commitment h2 {
+.sustainability-commitment .services-main-heading {
+  margin-left: 1.5rem;
+  display: inline-block;
   color: #0d401c;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.sustainability-commitment .services-main-heading::before, .sustainability-commitment .services-main-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.sustainability-commitment .services-main-heading::before {
+  right: 100%;
+}
+.sustainability-commitment .services-main-heading::after {
+  left: 100%;
 }
 .sustainability-commitment .sustainability-list {
   list-style: none;
@@ -6621,6 +6744,31 @@ body {
   background-color: #ffffff;
   padding: 4rem 2rem;
   text-align: center;
+}
+.training-section .services-main-heading {
+  margin-left: 1.5rem;
+  display: inline-block;
+  color: #0d401c;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.training-section .services-main-heading::before, .training-section .services-main-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.training-section .services-main-heading::before {
+  right: 100%;
+}
+.training-section .services-main-heading::after {
+  left: 100%;
 }
 .training-section h2 {
   color: #0d401c;
@@ -6654,9 +6802,33 @@ body {
   background-color: #ffffff;
   padding: 4rem 2rem;
 }
-.contact-consultation h2 {
+.contact-consultation .services-main-heading {
+  margin-left: 1.5rem;
+  display: inline-block;
   color: #0d401c;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0 1rem;
+}
+.contact-consultation .services-main-heading::before, .contact-consultation .services-main-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.contact-consultation .services-main-heading::before {
+  right: 100%;
+}
+.contact-consultation .services-main-heading::after {
+  left: 100%;
+}
+.contact-consultation p {
+  margin-bottom: 1rem;
 }
 .contact-consultation .consultation-form {
   display: -webkit-box;
@@ -6713,7 +6885,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .contact-consultation .contact-details p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .contact-consultation .contact-details p i {
   margin-right: 1rem;
@@ -6853,9 +7025,29 @@ footer .copyright {
   max-width: 800px;
   margin: 0 auto;
 }
-.contact-cta .cta-content h2 {
-  color: #ffffff;
-  margin-bottom: 1rem;
+.contact-cta .cta-content .services-main-heading {
+  margin-left: 1.5rem;
+  display: inline-block;
+  color: #ffc107;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 1rem;
+}
+.contact-cta .cta-content .services-main-heading::before, .contact-cta .cta-content .services-main-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #0d401c;
+}
+.contact-cta .cta-content .services-main-heading::before {
+  right: 100%;
+}
+.contact-cta .cta-content .services-main-heading::after {
+  left: 100%;
 }
 .contact-cta .cta-content .btn-contact {
   -webkit-transition: all 0.3s ease;
@@ -6870,7 +7062,7 @@ footer .copyright {
   font-weight: bold;
 }
 .contact-cta .cta-content .btn-contact:hover {
-  color: #ffc107;
+  color: #ffffff;
   opacity: 0.9;
 }
 

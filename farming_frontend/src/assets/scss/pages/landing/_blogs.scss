@@ -16,13 +16,32 @@
       margin-bottom: $spacing-lg;
 
       .sub-title {
-        display: block;
+        display: inline-block;
         color: $primary-color;
-        font-size: $font-size-sm;
-        margin-bottom: $spacing-xs;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-sm;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        padding: 0 $spacing-sm;
 
-        @media (max-width: $breakpoint-mobile) {
-          font-size: $font-size-xs;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 30px;
+          height: 1px;
+          background-color: $primary-color;
+        }
+
+        &::before {
+          right: 100%;
+        }
+
+        &::after {
+          left: 100%;
         }
       }
 
