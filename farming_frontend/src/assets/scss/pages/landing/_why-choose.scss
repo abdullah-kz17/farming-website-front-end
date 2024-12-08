@@ -61,6 +61,9 @@
           &::after {
             left: 100%;
           }
+          @media (max-width: $breakpoint-mobile) {
+            font-size: $font-size-md;
+          }
         }
       }
 

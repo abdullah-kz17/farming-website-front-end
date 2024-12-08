@@ -1,48 +1,41 @@
 @import "../../variables/global-variables";
 
 .contact-us {
-  // Responsive padding that adapts to screen size
   padding: $spacing-xl $spacing-md;
   background-color: $gray-light;
 
   .container {
-    // Ensure container is fully responsive
     width: 100%;
     max-width: $container-width;
     margin: 0 auto;
     padding: 0 $spacing-md;
     box-sizing: border-box;
 
-    // Responsive breakpoint adjustments for container
     @media (max-width: $breakpoint-tablet) {
       padding: 0 $spacing-sm;
     }
 
     .row {
-      // Flexible layout with responsive behavior
-      @include flex(row, space-between, flex-start);
+      display: flex;
+      justify-content: space-between;
       gap: $spacing-lg;
-      align-items: stretch; // Ensure equal height columns
+      align-items: stretch;
 
-      // Stack columns on smaller screens
       @media (max-width: $breakpoint-tablet) {
-        @include flex(column);
+        flex-direction: column;
         gap: $spacing-md;
-        align-items: stretch;
       }
 
+      // Contact Info Column
       .contact-info {
         flex: 1;
         max-width: 40%;
 
-        // Full width on tablet and mobile
         @media (max-width: $breakpoint-tablet) {
           max-width: 100%;
           flex: none;
-          width: 100%;
         }
 
-        // Responsive image styling
         img {
           width: 100%;
           max-width: 100%;
@@ -59,73 +52,73 @@
           box-shadow: $box-shadow-light;
 
           .info-item {
-            @include flex(row, flex-start);
+            display: flex;
+            align-items: center;
             margin-bottom: $spacing-md;
 
-            // Responsive icon sizing
             i {
               font-size: 1.5rem;
               color: $primary-color;
               margin-right: $spacing-sm;
+              flex-shrink: 0;
             }
 
-            // Adaptive typography
-            h4 {
-              font-size: $font-size-md;
-              margin-bottom: $spacing-xs;
+            .info-details {
+              flex-grow: 1;
 
-              @media (max-width: $breakpoint-mobile) {
-                font-size: $font-size-sm;
+              h4 {
+                font-size: $font-size-md;
+                margin-bottom: $spacing-xs;
+                color: $primary-color;
+
+                @media (max-width: $breakpoint-mobile) {
+                  font-size: $font-size-sm;
+                }
               }
-            }
 
-            p {
-              font-size: $font-size-sm;
-              color: $grey;
+              p {
+                font-size: $font-size-sm;
+                color: $grey;
+                line-height: 1.5;
 
-              @media (max-width: $breakpoint-mobile) {
-                font-size: $font-size-xs;
+                @media (max-width: $breakpoint-mobile) {
+                  font-size: $font-size-xs;
+                }
               }
             }
           }
         }
       }
 
+      // Contact Form Column
       .contact-form {
         flex: 1;
         max-width: 55%;
-        display: flex;
-        flex-direction: column;
-
-        // Full width on tablet and mobile
-        @media (max-width: $breakpoint-tablet) {
-          max-width: 100%;
-          flex: none;
-          width: 100%;
-        }
-
         background-color: $primary-color;
         color: $white;
         padding: $spacing-lg;
         border-radius: $border-radius;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $breakpoint-tablet) {
+          max-width: 100%;
+          flex: none;
+        }
 
         .form-header {
-          text-align: left;
           margin-bottom: $spacing-md;
 
-          // Responsive typography
           h4 {
-            font-size: $font-size-md;
+            font-size: $font-size-sm;
             color: $secondary-color;
-
-            @media (max-width: $breakpoint-mobile) {
-              font-size: $font-size-sm;
-            }
+            margin-bottom: $spacing-xs;
           }
 
           h2 {
             font-size: $font-size-lg;
-            margin: $spacing-xs 0;
+            color: $white;
+            margin-bottom: $spacing-sm;
 
             @media (max-width: $breakpoint-mobile) {
               font-size: $font-size-md;
@@ -134,25 +127,22 @@
 
           p {
             font-size: $font-size-sm;
-            color: white;
+            color: $white;
             opacity: 0.8;
-
-            @media (max-width: $breakpoint-mobile) {
-              font-size: $font-size-xs;
-            }
           }
         }
 
         form {
           display: flex;
           flex-direction: column;
+          width: 100%;
 
           .form-row {
             display: flex;
             gap: $spacing-sm;
             margin-bottom: $spacing-md;
+            width: 100%;
 
-            // Stack inputs vertically on mobile
             @media (max-width: $breakpoint-mobile) {
               flex-direction: column;
               gap: $spacing-sm;
@@ -161,25 +151,24 @@
             input,
             select {
               flex: 1;
+              width: 100%;
+              min-width: 0;
               padding: $spacing-sm;
-              border: none;
+              border: 2px solid transparent;
               border-radius: $border-radius / 2;
               background-color: lighten($primary-color, 10%);
-              color: white;
-              outline: none;
-
-              // Full width on mobile
-              @media (max-width: $breakpoint-mobile) {
-                width: 100%;
-              }
+              color: $white;
+              transition: border-color 0.3s ease;
+              box-sizing: border-box;
 
               &::placeholder {
                 color: $white;
-                opacity: 0.8;
+                opacity: 0.7;
               }
 
               &:focus {
-                border: 2px solid $secondary-color;
+                border-color: $secondary-color;
+                outline: none;
               }
             }
           }
@@ -187,61 +176,63 @@
           textarea {
             width: 100%;
             padding: $spacing-sm;
-            border: none;
+            border: 2px solid transparent;
             border-radius: $border-radius / 2;
             background-color: lighten($primary-color, 10%);
-            color: white;
-            outline: none;
+            color: $white;
             margin-bottom: $spacing-md;
-            resize: vertical; // Allow vertical resizing
+            resize: vertical;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
 
             &::placeholder {
               color: $white;
-              opacity: 0.8;
+              opacity: 0.7;
             }
 
             &:focus {
-              border: 2px solid $secondary-color;
+              border-color: $secondary-color;
+              outline: none;
             }
           }
 
           .form-footer {
             display: flex;
-            flex-wrap: wrap;
-            gap: $spacing-md;
             justify-content: space-between;
             align-items: center;
+            gap: $spacing-sm;
+            width: 100%;
 
-            // Stacked layout on mobile
             @media (max-width: $breakpoint-mobile) {
               flex-direction: column;
               align-items: stretch;
-              gap: $spacing-sm;
             }
 
             label {
-              font-size: $font-size-sm;
               display: flex;
               align-items: center;
-              gap: $spacing-xs;
+              font-size: $font-size-sm;
+              color: $white;
+              width: auto;
 
-              @media (max-width: $breakpoint-mobile) {
-                width: 100%;
+              input[type="checkbox"] {
+                margin-right: $spacing-xs;
               }
             }
 
             button {
               background-color: $secondary-color;
               color: $primary-color;
-              padding: $spacing-xs $spacing-md;
+              padding: $spacing-sm $spacing-md;
               border: none;
               border-radius: $border-radius / 2;
               display: flex;
               align-items: center;
               gap: $spacing-xs;
               font-weight: bold;
+              transition: background-color 0.3s ease;
+              width: auto;
 
-              // Full-width button on mobile
               @media (max-width: $breakpoint-mobile) {
                 width: 100%;
                 justify-content: center;
@@ -261,16 +252,21 @@
     }
 
     .clients {
-      padding-inline: $spacing-lg;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: $spacing-xl;
       margin-top: $spacing-xl;
+      flex-wrap: wrap;
+
+      @media (max-width: $breakpoint-tablet) {
+        gap: $spacing-md;
+      }
 
       ul {
         list-style: none;
-        display: flex;
-        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
 
         li {
           a {
@@ -279,46 +275,27 @@
             img {
               width: 100px;
               height: 50px;
-              object-fit: cover;
+              object-fit: contain;
               border-radius: $border-radius;
-              margin-right: $spacing-md;
               filter: grayscale(0.8) brightness(0.8);
-              transition: filter 0.3s ease, transform 0.3s ease;
+              transition: all 0.3s ease;
 
               &:hover {
                 filter: none;
-                transform: scale(1.05);
-                cursor: pointer;
+                transform: scale(1.1);
               }
             }
           }
         }
       }
 
-      // Responsive adjustments for clients section
-      @media (max-width: $breakpoint-tablet) {
-        padding-inline: $spacing-md;
-        gap: $spacing-sm;
-      }
-
       @media (max-width: $breakpoint-mobile) {
         flex-direction: column;
         align-items: center;
+        gap: $spacing-sm;
 
         ul {
-          flex-direction: column;
-          width: 100%;
-
-          li {
-            margin-bottom: $spacing-xs;
-            width: 100%;
-            text-align: center;
-
-            a {
-              display: flex;
-              justify-content: center;
-            }
-          }
+          margin-bottom: $spacing-sm;
         }
       }
     }

@@ -29,7 +29,7 @@
         position: absolute;
         top: 50%;
         width: 30px;
-        height: 1px;
+        height: 2px;
         background-color: $primary-color;
       }
 
@@ -39,6 +39,9 @@
 
       &::after {
         left: 100%;
+      }
+      @media (max-width: $breakpoint-mobile) {
+        font-size: $font-size-md;
       }
     }
 
@@ -55,29 +58,36 @@
   }
 
   .testimonial-swiper {
+    overflow: hidden;
+    width: 100%;
+
     .swiper-wrapper {
       display: flex;
       flex-wrap: nowrap;
-
-      @media (max-width: $breakpoint-tablet) {
-        gap: $spacing-md;
-      }
     }
 
     .swiper-slide {
       flex: 0 0 auto;
       width: auto;
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
     }
 
     .testimonial-card {
       background: $white;
       border-radius: $border-radius-lg;
       box-shadow: $box-shadow-light;
-      overflow: hidden;
       text-align: center;
-      max-width: 300px;
+      max-width: 100%;
       padding: $spacing-lg;
+      margin: auto;
       transition: transform $transition-speed-medium;
+
+      @media (max-width: $breakpoint-mobile) {
+        padding: $spacing-md;
+      }
 
       .client-avatar {
         width: 80px;
@@ -157,10 +167,6 @@
   }
 
   @media (max-width: $breakpoint-tablet) {
-    .section-header {
-      margin-bottom: $spacing-md;
-    }
-
     .testimonial-card {
       padding: $spacing-md;
     }

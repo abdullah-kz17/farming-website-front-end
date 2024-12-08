@@ -702,53 +702,53 @@
       </div>
     </section>
 
-    <section class="faqs">
-      <div class="container">
-        <div class="row">
-          <!-- FAQ Column -->
-          <div class="col-left">
-            <h2 class="sub-title">Frequently Asked Questions</h2>
-            <div x-data="{ openFaq: null }" class="faq-list">
-              <!-- FAQ Items -->
-              <template
-                x-for="(faq, index) in [
+   <section class="faqs">
+  <div class="container">
+    <div class="row">
+      <!-- FAQ Column -->
+      <div class="col-left">
+        <h2 class="sub-title">Frequently Asked Questions</h2>
+        <div x-data="{ openFaq: null }" class="faq-list">
+          <template
+            x-for="(faq, index) in [
               { question: 'What is sustainable farming?', answer: 'Sustainable farming ensures long-term agricultural productivity while minimizing environmental impact.' },
               { question: 'How does Donal Farm practice eco-friendly farming?', answer: 'We use organic methods, crop rotation, and advanced technologies to ensure sustainability and reduce environmental impact.' },
               { question: 'Do you offer farm tours?', answer: 'Yes, we organize guided tours to showcase our sustainable farming practices and facilities.' },
               { question: 'What crops do you grow on your farm?', answer: 'We grow a variety of crops, including fruits, vegetables, and grains, all using eco-friendly practices.' },
               { question: 'How can I purchase products from your farm?', answer: 'You can purchase our fresh produce directly through our website or visit our farm\'s local store.' }
             ]"
-                :key="index"
+            :key="index"
+          >
+            <div class="faq-item">
+              <div
+                @click="openFaq === index ? openFaq = null : openFaq = index"
+                class="faq-question"
               >
-                <div class="faq-item">
-                  <div
-                    @click="openFaq === index ? openFaq = null : openFaq = index"
-                    class="faq-question"
-                  >
-                    <h3 x-text="faq.question"></h3>
-                    <span x-text="openFaq === index ? '-' : '+'"></span>
-                  </div>
-                  <div
-                    x-show="openFaq === index"
-                    x-transition
-                    class="faq-answer"
-                  >
-                    <p x-text="faq.answer"></p>
-                  </div>
-                </div>
-              </template>
+                <h3 x-text="faq.question"></h3>
+                <span x-text="openFaq === index ? '-' : '+'"></span>
+              </div>
+              <div
+                x-show="openFaq === index"
+                x-transition
+                class="faq-answer"
+              >
+                <p x-text="faq.answer"></p>
+              </div>
             </div>
-          </div>
-
-          <!-- Image Column -->
-          <div class="col-right">
-            <div class="image">
-              <img src="./assets/images/faqs.png" alt="Farm FAQs" />
-            </div>
-          </div>
+          </template>
         </div>
       </div>
-    </section>
+
+      <!-- Image Column -->
+      <div class="col-right">
+        <div class="image">
+          <img src="./assets/images/faqs.png" alt="Farm FAQs" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section class="blog-section">
       <div class="container">
@@ -820,7 +820,10 @@
               </div>
             </div>
           </div>
-          <!-- Swiper Pagination -->
+     
+  
+  <!-- Add pagination -->
+  <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -1069,68 +1072,72 @@
         },
       });
 
-      // Initialize Swiper for the Testimonials section
-      var testimonialSwiper = new Swiper(".testimonial-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1, // 1 testimonial at a time on small screens
-          },
-          768: {
-            slidesPerView: 2, // 2 testimonials at a time on medium screens
-          },
-          1024: {
-            slidesPerView: 3, // 3 testimonials at a time on large screens
-          },
-        },
-      });
-
-      // Initialize Swiper for the Blog section
-   var blogSwiper = new Swiper(".blog-swiper", {
-  slidesPerView: 'auto', 
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".blog-swiper .swiper-button-next",
-    prevEl: ".blog-swiper .swiper-button-prev",
-  },
+// Initialize Swiper for the Testimonials section
+var testimonialSwiper = new Swiper(".testimonial-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
   loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".blog-swiper .swiper-pagination",
+    el: ".swiper-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   breakpoints: {
-    320: {
+    640: {
       slidesPerView: 1,
-      spaceBetween: 10
+      spaceBetween: 15,
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 20
+      slidesPerView: 2, 
+      spaceBetween: 20,
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 30
-    }
-  }
+      spaceBetween: 30,
+    },
+  },
 });
+
+
+      // Initialize Swiper for the Blog section
+document.addEventListener('DOMContentLoaded', function() {
+  var blogSwiper = new Swiper(".blog-swiper", {
+    slidesPerView: 'auto', 
+    spaceBetween: 20,
+   
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".blog-swiper .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
+  });
+});
+
 
       var swiper = new Swiper(".feature-swiper", {
         slidesPerView: 3,
